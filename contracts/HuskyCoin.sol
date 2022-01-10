@@ -9,6 +9,6 @@ import "./Stakeable.sol";
 contract HuskyCoin is ERC20, Stakeable {
     constructor() ERC20("HuskyCoin", "HUSKY") {
         uint maxSupply;
-        
+        uint totalSupply;
     }
 }
