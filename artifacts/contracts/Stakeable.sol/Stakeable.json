@@ -1,0 +1,16 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Stakeable",
+  "sourceName": "contracts/Stakeable.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212204e2b5e5309d0b21bbabe935142af0a8aa7705e0fa68d7a7644e2b955625b045f64736f6c63430008000033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212204e2b5e5309d0b21bbabe935142af0a8aa7705e0fa68d7a7644e2b955625b045f64736f6c63430008000033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
