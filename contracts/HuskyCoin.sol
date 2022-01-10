@@ -10,5 +10,6 @@ contract HuskyCoin is ERC20, Stakeable {
     constructor() ERC20("HuskyCoin", "HUSKY") {
         uint maxSupply;
         uint totalSupply;
+        _mint(msg.sender, 69420);
     }
 }
