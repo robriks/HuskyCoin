@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/robriks/HuskyCoin/contracts/HuskyCoin.sol": {
-      "lastModificationDate": 1641699435282,
-      "contentHash": "71329b999a306cc386e689eac200b902",
+      "lastModificationDate": 1642025014646,
+      "contentHash": "a3b103e992ee9303a9274be2deabeea0",
       "sourceName": "contracts/HuskyCoin.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -79,8 +79,8 @@
       ]
     },
     "/home/robriks/HuskyCoin/contracts/Stakeable.sol": {
-      "lastModificationDate": 1641699391234,
-      "contentHash": "ca739fc8df6a899cdb515404870bde6a",
+      "lastModificationDate": 1641781915494,
+      "contentHash": "368ee156527f4d892a200cfebb4207b6",
       "sourceName": "contracts/Stakeable.sol",
       "solcConfig": {
         "version": "0.8.0",

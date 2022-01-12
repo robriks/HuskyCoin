@@ -7,10 +7,41 @@
       "inputs": [],
       "stateMutability": "nonpayable",
       "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "Staked",
+      "type": "event"
     }
   ],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212204e2b5e5309d0b21bbabe935142af0a8aa7705e0fa68d7a7644e2b955625b045f64736f6c63430008000033",
-  "deployedBytecode": "0x6080604052600080fdfea26469706673582212204e2b5e5309d0b21bbabe935142af0a8aa7705e0fa68d7a7644e2b955625b045f64736f6c63430008000033",
+  "bytecode": "0x6080604052348015600f57600080fd5b50600060018160018154018082558091505003906000526020600020905050603f80603b6000396000f3fe6080604052600080fdfea26469706673582212201b2c2085aa8baf356d5fb095d3ab2712e55ed8bef541e9360e5c1c152b0d322064736f6c63430008000033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212201b2c2085aa8baf356d5fb095d3ab2712e55ed8bef541e9360e5c1c152b0d322064736f6c63430008000033",
   "linkReferences": {},
   "deployedLinkReferences": {}
 }
