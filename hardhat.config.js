@@ -1,10 +1,35 @@
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
 require("@nomiclabs/hardhat-truffle5");
 require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-web3");
+
+// const fs = require("fs");
+// const privateKey = fs.readFileSync(".secret").toString();
+// const infuraprojectId = fs.readFileSync(".env").toString();
 
 module.exports = {
-  solidity: "0.8.0",
+  /*
+  defaultNetwork: "rinkeby",
+  networks: {
+    hardhat: {
+      chainId: 1337
+    },
+    rinkeby: {
+      url: 'https://rinkeby.infura.io/v3/' + infuraprojectId,
+      accounts: [privateKey]
+    }
+  },
+  */
+
+  solidity: {
+    version: "0.8.0",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  }
 };
