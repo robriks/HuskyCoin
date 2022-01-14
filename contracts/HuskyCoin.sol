@@ -33,9 +33,16 @@ contract HuskyCoin is ERC20, Stakeable {
     }
 
     // Totally unnecessary stake functionality but is an important concept to understand for crypto n00bs
+    // It's more gas intensive to transfer tokens into a contract and then transfer them out than it is to burn and re-mint on withdrawal so the cheaper option is chosen here
     function stake(uint256 _amount) public {
         require(_amount < balanceOf(msg.sender), "You don't have enough tokens to stake that amount");
         _stake(_amount);
         _burn(msg.sender, _amount);
+    }
+
+    // Withdrawal function
+    function withdraw(uint256 amount, uint256 stakeIndex) public {
+        uint256 amountToMint = _withdrawStake(amount, stakeIndex);
+        _mint(msg.sender, amountToMint);
     }
 }

@@ -6,10 +6,9 @@ pragma solidity 0.8.0;
  * @notice This Stakeable contract is meant to be inherited by an ERC20 compliant contract to provide staking functionality
  */
 contract Stakeable {
-    constructor() {
-        stakeholders.push();
-    }
 
+    uint256 internal rewardPerHour = 1000;
+    
     struct Stake {
         address user;
         uint256 amount;
@@ -27,6 +26,10 @@ contract Stakeable {
 
     event Staked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
     
+    constructor() {
+        stakeholders.push();
+    }
+
     function _addStakeholder(address staker) internal returns (uint256) {
         // add an empty slot for the new stakeholder
         stakeholders.push();
@@ -48,5 +51,14 @@ contract Stakeable {
         }
         stakeholders[index].address_stakes.push(Stake(msg.sender, _amount, currentTime));
         emit Staked(msg.sender, _amount, index, currentTime);
+    }
+    
+    // Internal function to calculate the staking reward based on the time staked
+    function calculateStakeReward(Stake memory _current_stake) internal view returns (uint256) {
+        return (((block.timestamp - _current_stake.timeStamp) / 1 hours) * _current_stake.amount) / rewardPerHour;
+    }
+
+    function _withdrawStake() {
+        TODO;
     }
 }
