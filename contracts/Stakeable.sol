@@ -9,10 +9,13 @@ contract Stakeable {
 
     uint256 internal rewardPerHour = 1000;
     
+    // Stake struct represents the way stakes are tracked
+    // @param claimable provides a quick and simple way to view accumulated rewards
     struct Stake {
         address user;
         uint256 amount;
         uint256 timeStamp;
+        uint256 claimable;
     }
 
     struct Stakeholder {
@@ -20,8 +23,15 @@ contract Stakeable {
         Stake[] address_stakes;
     }
 
+    // @notice StakingSummary is used to contain all stakes by a given account 
+    struct StakingSummary {
+        uint256 totalAmount;
+        Stake[] stakes;
+    }
+
     Stakeholder[] internal stakeholders;
 
+    // @param stakes mapping stores user indexes
     mapping(address => uint256) internal stakes;
 
     event Staked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
@@ -49,7 +59,7 @@ contract Stakeable {
         if (index == 0) {
             index = _addStakeholder(msg.sender);
         }
-        stakeholders[index].address_stakes.push(Stake(msg.sender, _amount, currentTime));
+        stakeholders[index].address_stakes.push(Stake(msg.sender, _amount, currentTime, 0));
         emit Staked(msg.sender, _amount, index, currentTime);
     }
     
@@ -58,7 +68,42 @@ contract Stakeable {
         return (((block.timestamp - _current_stake.timeStamp) / 1 hours) * _current_stake.amount) / rewardPerHour;
     }
 
-    function _withdrawStake() {
-        TODO;
+    // Internal function to complete the logic of withdrawing staked funds, including clearing deleted array values and timestamps
+    function _withdrawStake(uint _amount, uint _index) internal returns (uint) {
+        // Grab index from the stakes mapping
+        uint userIndex = stakes[msg.sender];
+        Stake memory currentStake = stakeholders[userIndex].address_stakes[_index];
+        require(currentStake.amount >= _amount, "Cannot unstake more than your staked balance");
+        
+        uint reward = calculateStakeReward(currentStake);
+        currentStake.amount = currentStake.amount - _amount;
+        
+        // If stake is empy, remove it
+        if (currentStake.amount == 0) {
+            delete stakeholders[userIndex].address_stakes[_index];
+        } else {
+            // If stake is not empty, update its value
+            stakeholders[userIndex].address_stakes[_index].amount = currentStake.amount;
+            // Reset timer of stake
+            stakeholders[userIndex].address_stakes[_index].timeStamp = block.timestamp;
+        }
+
+        return _amount + reward;
+    }
+
+    function hasStake(address _staker) public view returns (StakingSummary memory) {
+        uint totalStakeAmount;
+        StakingSummary memory summary = StakingSummary(0, stakeholders[stakes[_staker]].address_stakes);
+        for (uint i = 0; i < summary.stakes.length; i += 1) {
+            // Iterate through all stakes for this address
+            uint availableReward = calculateStakeReward(summary.stakes[i]);
+            // Update claimable amount after having executed calculateStakeReward()
+            summary.stakes[i].claimable = availableReward;
+            // Continuously add staked amounts to the variable declared outside of this for loop's scope
+            totalStakeAmount = totalStakeAmount + summary.stakes[i].amount;
+        }
+
+        summary.totalAmount = totalStakeAmount;
+        return summary;
     }
 }
