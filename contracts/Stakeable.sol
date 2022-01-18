@@ -35,6 +35,7 @@ contract Stakeable {
     mapping(address => uint256) internal stakes;
 
     event Staked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
+    event Unstaked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
     
     constructor() {
         stakeholders.push();
@@ -75,6 +76,7 @@ contract Stakeable {
         Stake memory currentStake = stakeholders[userIndex].address_stakes[_index];
         require(currentStake.amount >= _amount, "Cannot unstake more than your staked balance");
         
+        uint currentTime = block.timestamp;
         uint reward = calculateStakeReward(currentStake);
         currentStake.amount = currentStake.amount - _amount;
         
@@ -87,6 +89,8 @@ contract Stakeable {
             // Reset timer of stake
             stakeholders[userIndex].address_stakes[_index].timeStamp = block.timestamp;
         }
+
+        emit Unstaked(msg.sender, _amount, _index, currentTime);
 
         return _amount + reward;
     }
