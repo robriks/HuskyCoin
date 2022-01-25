@@ -44,7 +44,7 @@ contract Stakeable {
     function _addStakeholder(address staker) internal returns (uint256) {
         // add an empty slot for the new stakeholder
         stakeholders.push();
-        // identify index
+        // identify index just created
         uint256 userIndex = stakeholders.length - 1;
         // set user address struct attribute
         stakeholders[userIndex].user = staker;
@@ -80,7 +80,7 @@ contract Stakeable {
         uint reward = calculateStakeReward(currentStake);
         currentStake.amount = currentStake.amount - _amount;
         
-        // If stake is empy, remove it
+        // If stake is empty, remove it
         if (currentStake.amount == 0) {
             delete stakeholders[userIndex].address_stakes[_index];
         } else {
@@ -104,7 +104,7 @@ contract Stakeable {
             // Update claimable amount after having executed calculateStakeReward()
             summary.stakes[i].claimable = availableReward;
             // Continuously add staked amounts to the variable declared outside of this for loop's scope
-            totalStakeAmount = totalStakeAmount + summary.stakes[i].amount;
+            totalStakeAmount = totalStakeAmount + summary.stakes[i].amount + availableReward;
         }
 
         summary.totalAmount = totalStakeAmount;

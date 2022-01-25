@@ -41,10 +41,37 @@ describe("HuskyCoin", function () {
         expect(withdrawnSummary.totalAmount).to.equal(75);
     });
 
-    // it("Should properly award staking rewards given a set amount of time", async (time) => {
-    //     // TODO
+    it("Should properly award staking rewards given a set amount of time", async () => {
+        await huskyCoin.connect(staker).stake(1000);
 
-    //     await ethers.provider.send("evm_increaseTime", [3600]);
-    //     await ethers.provider.send("evm_mine");
-    // });
+        await ethers.provider.send("evm_increaseTime", [3600]);
+        await ethers.provider.send("evm_mine", []);
+        
+        // These lines were used to ensure that block times are indeed changed by the following code
+        // They are such useful tools I am leaving them here to remind me for debugging knowledge
+        /*
+        let now = (await ethers.provider.getBlock(await ethers.provider.getBlockNumber())).timestamp;
+        let after = (await ethers.provider.getBlock(await ethers.provider.getBlockNumber())).timestamp;
+        expect(after).to.equal(now + 3600);
+        */
+
+         let grownStake = await huskyCoin.connect(staker).hasStake(staker.address);
+         expect(grownStake.totalAmount).to.equal(1001);
+    });
+
+    it("Should properlycalculate rewards for multiple stakes", async() => {
+      await huskyCoin.connect(staker).stake(1000);
+      await ethers.provider.send("evm_increaseTime", [3600]);
+      await ethers.provider.send("evm_mine", []);
+      let test1 = await huskyCoin.hasStake(staker.address);
+      let stake1 = test1.stakes[0];
+      expect(stake1.claimable).to.equal(1);
+
+      await huskyCoin.connect(staker).stake(2000);
+      await ethers.provider.send("evm_increaseTime", [3600]);
+      await ethers.provider.send("evm_mine", []);
+      let test2 = await huskyCoin.hasStake(staker.address);
+      let stake2 = test2.stakes[1];
+      expect(stake2.claimable).to.equal(2);
+    });
 });

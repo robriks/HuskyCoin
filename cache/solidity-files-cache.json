@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/robriks/HuskyCoin/contracts/HuskyCoin.sol": {
-      "lastModificationDate": 1642445561765,
+      "lastModificationDate": 1643081466091,
       "contentHash": "f389ce8a790042813fe2bfb0afff2a7c",
       "sourceName": "contracts/HuskyCoin.sol",
       "solcConfig": {
@@ -40,7 +40,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1642378797903,
+      "lastModificationDate": 1643081466627,
       "contentHash": "f48de0eaae9544072b8766e2eac528a7",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -79,8 +79,8 @@
       ]
     },
     "/home/robriks/HuskyCoin/contracts/Stakeable.sol": {
-      "lastModificationDate": 1642528350610,
-      "contentHash": "2111f21aa27430810ba95d1926a77196",
+      "lastModificationDate": 1643150628098,
+      "contentHash": "ca6cbea26a525a6da417128a89d8dd44",
       "sourceName": "contracts/Stakeable.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -114,7 +114,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1642378797903,
+      "lastModificationDate": 1643081466627,
       "contentHash": "302d9755e46bc69d7058b0cbe7185e37",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -149,7 +149,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1642378797903,
+      "lastModificationDate": 1643081466627,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -186,7 +186,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1642378797907,
+      "lastModificationDate": 1643081466627,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
