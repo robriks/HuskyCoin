@@ -59,7 +59,7 @@ describe("HuskyCoin", function () {
          expect(grownStake.totalAmount).to.equal(1001);
     });
 
-    it("Should properlycalculate rewards for multiple stakes", async() => {
+    it("Should properly calculate rewards for multiple stakes", async() => {
       await huskyCoin.connect(staker).stake(1000);
       await ethers.provider.send("evm_increaseTime", [3600]);
       await ethers.provider.send("evm_mine", []);
@@ -73,5 +73,15 @@ describe("HuskyCoin", function () {
       let test2 = await huskyCoin.hasStake(staker.address);
       let stake2 = test2.stakes[1];
       expect(stake2.claimable).to.equal(2);
+    });
+
+    it("Should clear claimable rewards upon withdrawal", async () => {
+      await huskyCoin.connect(staker).stake(1000);
+      await ethers.provider.send("evm_increaseTime", [7200]);
+      await ethers.provider.send("evm_mine", []);
+      let summary = await huskyCoin.hasStake(staker.address);
+      await huskyCoin.withdraw(1000, 0);
+
+      // expect().to.equal();
     });
 });
