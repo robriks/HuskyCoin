@@ -75,13 +75,15 @@ describe("HuskyCoin", function () {
       expect(stake2.claimable).to.equal(2);
     });
 
-    it("Should clear claimable rewards upon withdrawal", async () => {
+    it("Should clear claimable rewards upon withdrawal and delete empty stakes", async () => {
       await huskyCoin.connect(staker).stake(1000);
       await ethers.provider.send("evm_increaseTime", [7200]);
       await ethers.provider.send("evm_mine", []);
+      await huskyCoin.connect(staker).withdraw(1000, 0);
       let summary = await huskyCoin.hasStake(staker.address);
-      await huskyCoin.withdraw(1000, 0);
+      let newBalance = await huskyCoin.connect(staker).balanceOf(staker.address);
 
-      // expect().to.equal();
+      expect(summary.user).to.equal(undefined);
+      expect(newBalance).to.equal(10002);
     });
 });
