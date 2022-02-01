@@ -10,18 +10,20 @@ require("@nomiclabs/hardhat-waffle");
 // const infuraprojectId = fs.readFileSync(".env").toString();
 
 module.exports = {
-  /*
-  defaultNetwork: "rinkeby",
+  
+  //defaultNetwork: "rinkeby",
   networks: {
     hardhat: {
       chainId: 1337
-    },
+    }, 
+    /*
     rinkeby: {
       url: 'https://rinkeby.infura.io/v3/' + infuraprojectId,
       accounts: [privateKey]
     }
+    */
   },
-  */
+  
 
   solidity: {
     version: "0.8.0",

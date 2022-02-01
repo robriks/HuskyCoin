@@ -13,8 +13,8 @@ contract HuskyCoin is ERC20, Stakeable {
 
     constructor() ERC20("HuskyCoin", "HUSKY") {
         // owner = msg.sender;
-        // maxSupply = 6969696969;
-        // mint(msg.sender, 69420);
+        maxSupply = 6969696969;
+        mint(msg.sender, 69420);
     }
 
     // This mint function is only in place for testing and for ease of use between friends, this is a very centralized approach to tokenomics
@@ -30,6 +30,14 @@ contract HuskyCoin is ERC20, Stakeable {
         uint unmintedSupply = maxSupply - currentSupply;
         require(msg.value < unmintedSupply, "Cannot purchase more than remaining unminted supply of HUSKY!");
         _mint(msg.sender, msg.value);
+    }
+
+    // This dispense function powers the HuskyCoin faucet which will be the source of HuskyCoins until max supply is reached
+    function dispense() public payable {
+        uint currentSupply = totalSupply();
+        uint unmintedSupply = maxSupply - currentSupply;
+        require(unmintedSupply > 69420, "Maximum supply of HuskyCoins has been met. Contact hornosexual.eth and ask him to send you some instead");
+        _mint(msg.sender, 69420);
     }
 
     // Totally unnecessary stake functionality but is an important concept to understand for crypto n00bs
