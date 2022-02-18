@@ -13,8 +13,8 @@ contract HuskyCoin is ERC20, Stakeable {
 
     constructor() ERC20("HuskyCoin", "HUSKY") {
         // owner = msg.sender;
-        maxSupply = 6969696969;
-        mint(msg.sender, 69420);
+        maxSupply = 6969696969e18;
+        mint(msg.sender, 69420e18);
     }
 
     // This mint function is only in place for testing and for ease of use between friends, this is a very centralized approach to tokenomics
@@ -36,8 +36,8 @@ contract HuskyCoin is ERC20, Stakeable {
     function dispense() public payable {
         uint currentSupply = totalSupply();
         uint unmintedSupply = maxSupply - currentSupply;
-        require(unmintedSupply > 69420, "Maximum supply of HuskyCoins has been met. Contact hornosexual.eth and ask him to send you some instead");
-        _mint(msg.sender, 69420);
+        require(unmintedSupply > 69420e18, "Maximum supply of HuskyCoins has been met. Contact hornosexual.eth and ask him to send you some instead");
+        _mint(msg.sender, 69420e18);
     }
 
     // Totally unnecessary stake functionality but is an important concept to understand for crypto n00bs
@@ -52,5 +52,10 @@ contract HuskyCoin is ERC20, Stakeable {
     function withdraw(uint256 amount, uint256 stakeIndex) public {
         uint256 amountToMint = _withdrawStake(amount, stakeIndex);
         _mint(msg.sender, amountToMint);
+    }
+
+    // View function to display balances
+    function getBalance() public view returns (uint) {
+        return balanceOf(msg.sender);
     }
 }
