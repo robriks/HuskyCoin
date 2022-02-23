@@ -29,11 +29,11 @@ export default function Stake () {
         const provider = new ethers.providers.Web3Provider(connection)
         const signer = provider.getSigner()
 
-        let amt = ethers.utils.formatUnits(input.amount.toString(), 'ether')
+        let amt = ethers.utils.parseUnits(input.amount, 'ether')
 
         let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
         let transaction = await contract.stake(amt)
-        await transaction.wait()
+        let tx = await transaction.wait()
 
         //loadBalance()
     }
@@ -48,13 +48,14 @@ export default function Stake () {
             <div className={styles.card}>
                 {loadBalance}
             </div>
-            <form className='flex'>
-                <input 
-                  placeholder='Amount to stake' 
-                  onChange={e => setInput({...input, amount: e.target.value })}
-                />
-                <button onClick={stake}>Stake</button>
-            </form>
+            <div>
+              <input 
+                className='flex'
+                placeholder='Amount to stake' 
+                onChange={e => setInput({...input, amount: e.target.value })}
+              />
+              <button onClick={stake}>Stake</button>
+            </div>
           </div>
         </div>
     )
