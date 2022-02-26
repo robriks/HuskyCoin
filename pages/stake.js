@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Web3Modal from 'web3modal'
 
@@ -10,6 +10,11 @@ import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 export default function Stake () {
     const router = useRouter()
     const [input, setInput] = useState({ amount: '' })
+    const [balance, setBalance] = useState()
+
+    useEffect(() => {
+      loadBalance()
+    }, [])
     
     async function loadBalance() {
         const web3Modal = new Web3Modal()
@@ -18,9 +23,22 @@ export default function Stake () {
         const signer = provider.getSigner()
 
         let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
-        let transaction = await contract.getBalance()
+        let transaction = await contract.getBalance().then((result) => {
+          setBalance(ethers.utils.formatEther(result))
+        })
+    }
 
-        return transaction.toString()
+    async function loadStaked() {
+      const web3Modal = new Web3Modal()
+      const connection = await web3Modal.connect()
+      const provider = new ethers.providers.Web3Provider(connection)
+      const signer = provider.getSigner()
+      const staker = await signer.getAddress()
+      
+      let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
+      let transaction = await contract.hasStake(staker).then((result) => {
+        //setStaked
+      })
     }
 
     async function stake() {
@@ -35,7 +53,7 @@ export default function Stake () {
         let transaction = await contract.stake(amt)
         let tx = await transaction.wait()
 
-        //loadBalance()
+        loadBalance()
     }
 
     async function unstake() {
@@ -46,7 +64,7 @@ export default function Stake () {
         <div className={styles.container}>
           <div className={styles.main}>
             <div className={styles.card}>
-                {loadBalance}
+              Your HuskyCoin Balance: <h4>{balance}</h4>
             </div>
             <div>
               <input 
@@ -56,6 +74,10 @@ export default function Stake () {
               />
               <button onClick={stake}>Stake</button>
             </div>
+            <div className={styles.card}>
+              Claimable stake rewards: <h4>TODO</h4>
+            </div>
+            
           </div>
         </div>
     )
