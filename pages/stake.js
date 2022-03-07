@@ -5,7 +5,6 @@ import Web3Modal from 'web3modal'
 
 import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
-//import { web3, Web3 } from 'hardhat'
 
 export default function Stake () {
     const [input, setInput] = useState({ amount: '', stakeAmt: '' })
@@ -63,19 +62,17 @@ export default function Stake () {
 
     async function unstake() {
       loadStaked()
-      const { amount, stakeAmt } = input
-      if (!stakeAmt) return
       const web3Modal = new Web3Modal()
       const connection = await web3Modal.connect()
       const provider = new ethers.providers.Web3Provider(connection)
       const signer = provider.getSigner()
-      //const staker = await signer.getAddress()
-
-      let stakeAmount = ethers.utils.parseUnits(input.stakeAmt, 'ether')
+      const staker = await signer.getAddress()
 
       let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
       let stakeIndex = await contract.getStakeholderIndex()
-      let transaction = await contract.withdraw(stakeAmount, stakeIndex)
+      let unstakeSummary = await contract.hasStake(staker)
+      let unstakeAmount = unstakeSummary.originalStake
+      let transaction = await contract.withdraw(unstakeAmount, stakeIndex)
       let tx = await transaction.wait()
 
       loadBalance()
@@ -86,6 +83,10 @@ export default function Stake () {
     return (
         <div className={styles.container}>
           <div className={styles.main}>
+            <div className={styles.title}>
+              Introduction to 
+              <a href='https://www.coinbase.com/learn/crypto-basics/what-is-proof-of-work-or-proof-of-stake'> Staking</a>
+            </div>
             <div className={styles.card}>
               Available $HUSKY balance: <h4>{balance}</h4>
               <div>
@@ -97,16 +98,10 @@ export default function Stake () {
                 <button onClick={stake}>Stake</button>
               </div>
             </div>
-            
             <div className={styles.card}>
-              Staked $HUSKY balance: <h4>{staked}</h4>
+              Currently staked $HUSKY balance: <h4>{staked}</h4>
               <div>
-                <input 
-                  className='flex'
-                  placeholder='Amount to unstake'
-                  onChange={e => setInput({...input, stakeAmt: e.target.value })}
-                />
-                <button onClick={unstake}>Withdraw</button>
+                <button onClick={unstake}>Withdraw All</button>
               </div>
             </div>
           </div>

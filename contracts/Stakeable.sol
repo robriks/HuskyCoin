@@ -25,6 +25,7 @@ contract Stakeable {
 
     // @notice StakingSummary is used to contain all stakes by a given account 
     struct StakingSummary {
+        uint256 originalStake;
         uint256 totalAmount;
         Stake[] stakes;
     }
@@ -97,9 +98,13 @@ contract Stakeable {
 
     function hasStake(address _staker) public view returns (StakingSummary memory) {
         uint totalStakeAmount;
-        StakingSummary memory summary = StakingSummary(0, stakeholders[stakes[_staker]].address_stakes);
+
+        uint originalAmount;
+
+        StakingSummary memory summary = StakingSummary(0, 0, stakeholders[stakes[_staker]].address_stakes);
         for (uint i = 0; i < summary.stakes.length; i += 1) {
-            // Iterate through all stakes for this address
+            // Iterate through all stakes for this address, add up staked originalAmounts
+            originalAmount += summary.stakes[i].amount;
             uint availableReward = calculateStakeReward(summary.stakes[i]);
             // Update claimable amount after having executed calculateStakeReward()
             summary.stakes[i].claimable = availableReward;
@@ -107,6 +112,7 @@ contract Stakeable {
             totalStakeAmount = totalStakeAmount + summary.stakes[i].amount + availableReward;
         }
 
+        summary.originalStake = originalAmount;
         summary.totalAmount = totalStakeAmount;
         return summary;
     }

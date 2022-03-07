@@ -79,8 +79,8 @@
       ]
     },
     "/home/robriks/HuskyCoin/contracts/Stakeable.sol": {
-      "lastModificationDate": 1646611809767,
-      "contentHash": "ca6cbea26a525a6da417128a89d8dd44",
+      "lastModificationDate": 1646625269415,
+      "contentHash": "41c0ea0e0e8c70c6afd37de83d0d5eac",
       "sourceName": "contracts/Stakeable.sol",
       "solcConfig": {
         "version": "0.8.0",
