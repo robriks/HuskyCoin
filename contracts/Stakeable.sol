@@ -7,7 +7,7 @@ pragma solidity 0.8.0;
  */
 contract Stakeable {
 
-    uint256 internal rewardPerHour = 100;
+    uint256 internal rewardPerHour = 100000;
     
     // Stake struct represents the way stakes are tracked
     // @param claimable provides a quick and simple way to view accumulated rewards
