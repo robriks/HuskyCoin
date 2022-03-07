@@ -7,7 +7,7 @@ pragma solidity 0.8.0;
  */
 contract Stakeable {
 
-    uint256 internal rewardPerHour = 1000;
+    uint256 internal rewardPerHour = 100;
     
     // Stake struct represents the way stakes are tracked
     // @param claimable provides a quick and simple way to view accumulated rewards
@@ -55,7 +55,7 @@ contract Stakeable {
     }
 
     function _stake(uint256 _amount) internal {
-        require(_amount > 0, "Amount provided cannot be == 0");
+        require(_amount > 0, "Amount provided cannot be 0");
         uint256 index = stakes[msg.sender];
         uint256 currentTime = block.timestamp;
         if (index == 0) {
@@ -67,7 +67,7 @@ contract Stakeable {
     
     // Internal function to calculate the staking reward based on the time staked
     function calculateStakeReward(Stake memory _current_stake) internal view returns (uint256) {
-        return (((block.timestamp - _current_stake.timeStamp) / 1 hours) * _current_stake.amount) / rewardPerHour;
+        return (((block.timestamp - _current_stake.timeStamp) / 10 seconds) * _current_stake.amount) / rewardPerHour;
     }
 
     // Internal function to complete the logic of withdrawing staked funds, including clearing deleted array values and timestamps

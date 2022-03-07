@@ -34,6 +34,7 @@ contract HuskyCoin is ERC20, Stakeable {
 
     // This dispense function powers the HuskyCoin faucet which will be the source of HuskyCoins until max supply is reached
     function dispense() public payable {
+        require(balanceOf(msg.sender) == 0, "You already have HuskyCoins! Go stake them or send to your friends.");
         uint currentSupply = totalSupply();
         uint unmintedSupply = maxSupply - currentSupply;
         require(unmintedSupply > 69420e18, "Maximum supply of HuskyCoins has been met. Contact hornosexual.eth and ask him to send you some instead");

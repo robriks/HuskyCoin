@@ -42,9 +42,9 @@ describe("HuskyCoin", function () {
     });
 
     it("Should properly award staking rewards given a set amount of time", async () => {
-        await huskyCoin.connect(staker).stake(1000);
+        await huskyCoin.connect(staker).stake(100);
 
-        await ethers.provider.send("evm_increaseTime", [3600]);
+        await ethers.provider.send("evm_increaseTime", [10]);
         await ethers.provider.send("evm_mine", []);
         
         // These lines were used to ensure that block times are indeed changed by the following code
@@ -56,19 +56,19 @@ describe("HuskyCoin", function () {
         */
 
          let grownStake = await huskyCoin.connect(staker).hasStake(staker.address);
-         expect(grownStake.totalAmount).to.equal(1001);
+         expect(grownStake.totalAmount).to.equal(101);
     });
 
     it("Should properly calculate rewards for multiple stakes", async() => {
-      await huskyCoin.connect(staker).stake(1000);
-      await ethers.provider.send("evm_increaseTime", [3600]);
+      await huskyCoin.connect(staker).stake(100);
+      await ethers.provider.send("evm_increaseTime", [10]);
       await ethers.provider.send("evm_mine", []);
       let test1 = await huskyCoin.hasStake(staker.address);
       let stake1 = test1.stakes[0];
       expect(stake1.claimable).to.equal(1);
 
-      await huskyCoin.connect(staker).stake(2000);
-      await ethers.provider.send("evm_increaseTime", [3600]);
+      await huskyCoin.connect(staker).stake(200);
+      await ethers.provider.send("evm_increaseTime", [10]);
       await ethers.provider.send("evm_mine", []);
       let test2 = await huskyCoin.hasStake(staker.address);
       let stake2 = test2.stakes[1];
@@ -76,10 +76,10 @@ describe("HuskyCoin", function () {
     });
 
     it("Should clear claimable rewards upon withdrawal and delete empty stakes", async () => {
-      await huskyCoin.connect(staker).stake(1000);
-      await ethers.provider.send("evm_increaseTime", [7200]);
+      await huskyCoin.connect(staker).stake(100);
+      await ethers.provider.send("evm_increaseTime", [20]);
       await ethers.provider.send("evm_mine", []);
-      await huskyCoin.connect(staker).withdraw(1000, 0);
+      await huskyCoin.connect(staker).withdraw(100, 0);
       let summary = await huskyCoin.hasStake(staker.address);
       let newBalance = await huskyCoin.connect(staker).balanceOf(staker.address);
 

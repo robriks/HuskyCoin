@@ -11,9 +11,16 @@ export default function Stake () {
     const [balance, setBalance] = useState()
     const [staked, setStaked] = useState()
 
-    useEffect(() => {
-      loadBalance()
-      loadStaked()
+
+    useEffect(async() => {
+      const web3Modal = new Web3Modal()
+      const connection = await web3Modal.connect()
+      const provider = new ethers.providers.Web3Provider(connection)
+      
+      provider.on("block", (blockNumber) => {
+        loadBalance()
+        loadStaked()
+      })
     }, [])
     
     async function loadBalance() {
@@ -45,6 +52,7 @@ export default function Stake () {
       loadBalance()
       const { amount, stakeAmt } = input
       if (!amount) return
+      if (amount < 100) alert("Minimum stake is 100 $HUSKY")
       const web3Modal = new Web3Modal()
       const connection = await web3Modal.connect()
       const provider = new ethers.providers.Web3Provider(connection)
@@ -90,6 +98,7 @@ export default function Stake () {
             <div className={styles.card}>
               Available $HUSKY balance: <h4>{balance}</h4>
               <div>
+                <p>Minimum stake: 100 $HUSKY</p>
                 <input 
                   className='flex'
                   placeholder='Amount to stake' 
