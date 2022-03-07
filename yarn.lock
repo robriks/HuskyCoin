@@ -830,6 +830,16 @@
   dependencies:
     "glob" "7.1.7"
 
+"@next/swc-linux-arm64-gnu@12.0.9":
+  "integrity" "sha512-AphxilJDf95rUxJDHgM9Ww1DaYXZWqTvoKwXeej/0SgSvICcRZrLaFDrkojdXz0Rxr4igX2OdYR1S4/Hj1jWOQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-12.0.9.tgz"
+  "version" "12.0.9"
+
+"@next/swc-linux-arm64-musl@12.0.9":
+  "integrity" "sha512-K5jbvNNzF3mRjWmPdxP5Bg87i7FHivfBj/L0KJlxpkLSC8sffBJDmB6jtMnI7wiPj9J6vmLkbGtSosln78xAlQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-12.0.9.tgz"
+  "version" "12.0.9"
+
 "@next/swc-linux-x64-gnu@12.0.9":
   "integrity" "sha512-bJZ9bkMkQzsY+UyWezEZ77GWQ4TzwKeXdayX3U3+aEkL8k5C6eKBXlidWdrhu0teLmaUXIyWerWrLnJzwGXdfw=="
   "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.0.9.tgz"
@@ -4189,7 +4199,7 @@
     "uuid" "2.0.1"
     "xmlhttprequest" "1.8.0"
 
-"ethers@^5.0.0", "ethers@^5.0.1", "ethers@^5.0.2", "ethers@^5.4.7", "ethers@^5.5.2":
+"ethers@^5.0.0", "ethers@^5.0.1", "ethers@^5.4.7", "ethers@^5.5.2":
   "integrity" "sha512-N9IAXsF8iKhgHIC6pquzRgPBJEzc9auw3JoRkaKe+y4Wl/LFBtDDunNe7YmdomontECAcC5APaAgWZBiu1kirw=="
   "resolved" "https://registry.npmjs.org/ethers/-/ethers-5.5.4.tgz"
   "version" "5.5.4"

@@ -5,9 +5,10 @@ import Web3Modal from 'web3modal'
 
 import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
+//import { web3, Web3 } from 'hardhat'
 
 export default function Stake () {
-    const [input, setInput] = useState({ amount: '' })
+    const [input, setInput] = useState({ amount: '', stakeAmt: '' })
     const [balance, setBalance] = useState()
     const [staked, setStaked] = useState()
 
@@ -42,25 +43,45 @@ export default function Stake () {
     }
 
     async function stake() {
-        const web3Modal = new Web3Modal()
-        const connection = await web3Modal.connect()
-        const provider = new ethers.providers.Web3Provider(connection)
-        const signer = provider.getSigner()
+      loadBalance()
+      const { amount, stakeAmt } = input
+      if (!amount) return
+      const web3Modal = new Web3Modal()
+      const connection = await web3Modal.connect()
+      const provider = new ethers.providers.Web3Provider(connection)
+      const signer = provider.getSigner()
 
-        let amt = ethers.utils.parseUnits(input.amount, 'ether')
+      let amt = ethers.utils.parseUnits(input.amount, 'ether')
 
-        let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
-        let transaction = await contract.stake(amt)
-        let tx = await transaction.wait()
+      let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
+      let transaction = await contract.stake(amt)
+      let tx = await transaction.wait()
 
-        loadBalance()
+      loadBalance()
+      loadStaked()
     }
 
     async function unstake() {
-      // TODO
+      loadStaked()
+      const { amount, stakeAmt } = input
+      if (!stakeAmt) return
+      const web3Modal = new Web3Modal()
+      const connection = await web3Modal.connect()
+      const provider = new ethers.providers.Web3Provider(connection)
+      const signer = provider.getSigner()
+      //const staker = await signer.getAddress()
 
-      //loadStaked()
+      let stakeAmount = ethers.utils.parseUnits(input.stakeAmt, 'ether')
+
+      let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
+      let stakeIndex = await contract.getStakeholderIndex()
+      let transaction = await contract.withdraw(stakeAmount, stakeIndex)
+      let tx = await transaction.wait()
+
+      loadBalance()
+      loadStaked()
     }
+    
 
     return (
         <div className={styles.container}>
@@ -83,10 +104,9 @@ export default function Stake () {
                 <input 
                   className='flex'
                   placeholder='Amount to unstake'
-                  onChange={e => /* does using setInput again screw up the staking value state? */}
+                  onChange={e => setInput({...input, stakeAmt: e.target.value })}
                 />
-                <button onClick={/* unstake */}>Withdraw</button>
-                TODO: Withdraw button
+                <button onClick={unstake}>Withdraw</button>
               </div>
             </div>
           </div>

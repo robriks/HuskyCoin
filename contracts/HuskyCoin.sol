@@ -55,7 +55,12 @@ contract HuskyCoin is ERC20, Stakeable {
     }
 
     // View function to display balances
-    function getBalance() public view returns (uint) {
+    function getBalance() public view returns (uint256) {
         return balanceOf(msg.sender);
+    }
+
+    function getStakeholderIndex() public view returns (uint256) {
+        uint256 index = stakes[msg.sender];
+        return index -= 1;
     }
 }
