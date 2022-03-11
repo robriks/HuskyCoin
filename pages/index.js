@@ -22,13 +22,13 @@ export default function Home() {
         <p>Get started below:</p>
 
         <div className={styles.grid}>
-          <a href="https://metamask.io" className={styles.card}>
-            <h2>Setting up MetaMask &rarr;</h2>
+          <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
+            <h2>1. Setting up MetaMask &rarr;</h2>
             <p>A crypto wallet is your gateway to Web3 infrastructure. Other crypto wallet options include Coinbase Wallet and Brave Wallet.</p>
           </a>
 
           <a href="https://info.etherscan.com/what-is-an-ethereum-address/" className={styles.card}>
-            <h2>Generate an Ethereum address &rarr;</h2>
+            <h2>2. Generate an Ethereum address &rarr;</h2>
             <p>Learn about the insane things an Ethereum address is capable of and explore Etherscan, where all of Web3 is publically visible.</p>
           </a>
           
@@ -36,7 +36,7 @@ export default function Home() {
           <a
             className={styles.card}
           >
-            <h2>HuskyCoin Faucet &rarr;</h2>
+            <h2>3. Claim HuskyCoins Faucet &rarr;</h2>
             <p>Claim your first 69420 ERC20 tokens from the HuskyCoin faucet.</p>
           </a>
           </Link>
@@ -45,7 +45,7 @@ export default function Home() {
           <a
             className={styles.card}
           >
-            <h2>Stake HuskyCoins &rarr;</h2>
+            <h2>4. Stake HuskyCoins &rarr;</h2>
             <p>
               Grow your token balance by staking HuskyCoins and earning passive income!
             </p>
