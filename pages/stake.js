@@ -91,26 +91,45 @@ export default function Stake () {
     return (
         <div className={styles.container}>
           <div className={styles.main}>
-            <div className={styles.title}>
-              Introduction to 
-              <a href='https://www.coinbase.com/learn/crypto-basics/what-is-proof-of-work-or-proof-of-stake'> Staking</a>
-            </div>
-            <div className={styles.card}>
-              Available $HUSKY balance: <h4>{balance}</h4>
-              <div>
-                <p>Minimum stake: 100 $HUSKY</p>
-                <input 
-                  className='flex'
-                  placeholder='Amount to stake' 
-                  onChange={e => setInput({...input, amount: e.target.value })}
-                />
-                <button onClick={stake}>Stake</button>
+            <div className='p-12'>
+              <div className={styles.title}>
+                Introduction to 
+                <a href='https://www.coinbase.com/learn/crypto-basics/what-is-proof-of-work-or-proof-of-stake'> Staking</a>
               </div>
             </div>
-            <div className={styles.card}>
-              Currently staked $HUSKY balance: <h4>{staked}</h4>
-              <div>
-                <button onClick={unstake}>Withdraw All</button>
+            <div className='flex justify-center p-10'>
+              <div className={styles.card}>
+                Available $HUSKY balance: 
+                <div className='flex'>
+                  <a className='font-bold p-1 text-2xl'>{balance}</a>
+                </div>
+                <div>
+                  <p className='flex justify-center p-1'>Minimum stake: 100 $HUSKY</p>
+                  <form>
+                    <input 
+                      className='flex p-1 mt-2 border rounded'
+                      placeholder='Amount to stake' 
+                      onChange={e => setInput({...input, amount: e.target.value })}
+                    />
+                    <button 
+                      className={`flex w-${"36"} mt-3 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
+                      onClick={stake}>Stake
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div className={styles.card}>
+                Currently staked $HUSKY balance: 
+                <div className='flex'>
+                  <a className='font-bold p-1 text-2xl'>{staked}</a>
+                </div>
+                <div>
+                  <p className='flex justify-center p-1'>Staked $HUSKY balances increase every block</p>
+                  <form className='p-1'></form>
+                  <button 
+                    className={`flex w-${"36"} mt-12 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
+                    onClick={unstake}>Withdraw All</button>
+                </div>
               </div>
             </div>
           </div>

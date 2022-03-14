@@ -23,14 +23,17 @@ export default function Faucet () {
 
     return (
         <div className={styles.container}>
+          
           <div className={styles.main}>
-            <h1>HuskyCoin Faucet</h1>
+            <div className={styles.title}>
+              <h1 className='text-blue-500 p-12'>HuskyCoin Faucet</h1>
+            </div>
               <button
                 onClick={dispenseHuskyCoins}
-                className={`flex w-${"36"} mt-2 p-1 rounded-md bg-gray-500 hover:bg-gray-900 shadow-lg justify-center`}
+                className={`flex w-${"36"} mt-2 p-3 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center text-white`}
               >Receive HuskyCoins
               </button>
-            <p>The above will raise a MetaMask prompt for you to pay gas and execute the transaction, giving you 69420 HuskyCoins</p>
+            <p className='p-7 flex justify-center'>The above will raise a MetaMask prompt for you to pay gas and execute the transaction, giving you 69420 HuskyCoins</p>
           </div>
         </div>
     )

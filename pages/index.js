@@ -16,10 +16,12 @@ export default function Home() {
           Welcome to the <a href="https://polygonscan.com/">HuskyCoin</a> Dapp!
         </h1>
 
-        <p className={styles.description}>
-          An Interactive Introductory Tutorial to Web3 on Ethereum
+        <div className={styles.description}>
+          <a className='text-2xl'>An Interactive Introductory Tutorial to Web3 on Ethereum</a>
+        </div>
+        <p className='font-bold text-1xl'>Get Started
+          <a className='nav-link text-1xl font-bold text-green-500' href='/about'> Here</a>
         </p>
-        <p>Get started below:</p>
 
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
@@ -45,7 +47,7 @@ export default function Home() {
           <a
             className={styles.card}
           >
-            <h2>4. Stake HuskyCoins &rarr;</h2>
+            <h2>4. Stake to Earn More HuskyCoins &rarr;</h2>
             <p>
               Grow your token balance by staking HuskyCoins and earning passive income!
             </p>
