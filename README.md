@@ -59,9 +59,11 @@ You'll notice a 0 $ETH balance and no other token balances displayed yet. Before
 #### Understanding Ethereum Layer 2s
 We've covered that Ethereum is a blockchain that permanently stores code and functions as a global computer housing all sorts of programs mostly comprising of various tokens. But transacting on Ethereum's mainnet is very expensive as it prioritizes decentralization, security, and immutability above all else; foregoing speed and cheap transaction/gas fees in favor of the former attributes.  This is important as it provides net neutrality (yes, that thing that the Trump administration absolutely destroyed by handing over throttling priveleges and other dystopian controls over the internet to corporations like Verizon/ATT/TMobile/Google. Screw you, Ajit Pai!) But it comes at high cost, making transacting on the Ethereum network very expensive.
 
-So smart developers had an idea: why not put more blockhains on the Ethereum blockchain?
+So smart developers had an idea: why not put more blockchains on the Ethereum blockchain?
 
-That means you're ready for the next step, obtaining a (small) amount of crypto to pay for the gas needed to make transactions on the Ethereum network.
+
+
+Now you're finally ready for the next step, obtaining a (small) amount of crypto to pay for the gas needed to make transactions on the Ethereum network.
 
 On gas:
 I thought you told me HuskyCoin was free! Why is there a transaction/gas fee?!
