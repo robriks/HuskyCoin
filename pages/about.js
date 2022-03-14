@@ -5,13 +5,20 @@ export default function About() {
     return(
       <div className={styles.container}>
         <div className='p-12'>
+        <div>
           <h1 className={styles.title}>
             Why Crypto?
           </h1>
-          <p className='flex justify-center p-8'>
+          <a className='flex justify-center p-8'>
             Cryptocurrency protocols leverage cryptography and decentralized computing architecture to achieve the first ever verifiable and immutable digital scarcity on the internet. 
             Networks like the Bitcoin blockchain maintain a public, transparent ledger of balances corresponding to individual addresses (think email addresses but for money) that are controlled by a cryptographically secure password called the private key.
-          </p>
+          </a>
+          <a  
+            className='text-blue-500' 
+            href='https://www.coinbase.com/learn/crypto-basics/what-is-bitcoin'>
+              Read more details about the Bitcoin protocol and its high level implications here.
+          </a>
+          </div>
           <h1 className='flex justify-center text-4xl p-6'>
             So What? I have Venmo and a bank.
           </h1>

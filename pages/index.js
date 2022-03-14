@@ -18,6 +18,8 @@ export default function Home() {
 
         <div className={styles.description}>
           <a className='text-2xl'>An Interactive Introductory Tutorial to Web3 on Ethereum</a>
+          <p className='text-sm'>If you find this tutorial helpful, send a tip!</p>
+          <p className='text-xs'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
         </div>
         <p className='font-bold text-1xl'>Get Started
           <a className='nav-link text-1xl font-bold text-green-500' href='/about'> Here</a>
