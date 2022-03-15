@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,7 +14,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to the <a href="https://polygonscan.com/">HuskyCoin</a> Dapp!
+          Welcome to the 
+          <a 
+            className='font-bold text-6xl text-blue-500'
+            href="https://polygonscan.com/">{' '}HuskyCoin
+          </a> Dapp!
         </h1>
 
         <div className={styles.description}>
@@ -40,7 +45,7 @@ export default function Home() {
           <a
             className={styles.card}
           >
-            <h2>3. Claim HuskyCoins Faucet &rarr;</h2>
+            <h2>3. Claim HuskyCoins from my faucet &rarr;</h2>
             <p>Claim your first 69420 ERC20 tokens from the HuskyCoin faucet.</p>
           </a>
           </Link>
@@ -49,7 +54,7 @@ export default function Home() {
           <a
             className={styles.card}
           >
-            <h2>4. Stake to Earn More HuskyCoins &rarr;</h2>
+            <h2>4. Stake to earn more HuskyCoins &rarr;</h2>
             <p>
               Grow your token balance by staking HuskyCoins and earning passive income!
             </p>
@@ -57,9 +62,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-      </footer>
     </div>
   )
 }
