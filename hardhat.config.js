@@ -1,27 +1,18 @@
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
-
 require("@nomiclabs/hardhat-truffle5");
 require("@nomiclabs/hardhat-waffle");
-
-// const fs = require("fs");
-// const privateKey = fs.readFileSync(".secret").toString();
-// const infuraprojectId = fs.readFileSync(".env").toString();
+require('dotenv').config()
 
 module.exports = {
   
-  //defaultNetwork: "rinkeby",
+  defaultNetwork: "rinkeby",
   networks: {
     hardhat: {
       chainId: 1337
     }, 
-    /*
     rinkeby: {
-      url: 'https://rinkeby.infura.io/v3/' + infuraprojectId,
-      accounts: [privateKey]
+      url: process.env.DEPLOY_API_RINKEBY,
+      accounts: [process.env.DEPLOY_SECRET_RINKEBY]
     }
-    */
   },
   
 
