@@ -2,7 +2,6 @@ import { ethers } from 'ethers'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import Web3Modal from 'web3modal'
-
 import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 
@@ -22,19 +21,31 @@ export default function Faucet () {
     }
 
     return (
-        <div className={styles.container}>
-          
-          <div className={styles.main}>
-            <div className={styles.title}>
-              <h1 className='text-blue-500 p-12'>HuskyCoin Faucet</h1>
-            </div>
-              <button
-                onClick={dispenseHuskyCoins}
-                className={`flex w-${"36"} mt-2 p-3 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center text-white`}
-              >Receive HuskyCoins
-              </button>
-            <p className='p-7 flex justify-center'>The above will raise a MetaMask prompt for you to pay gas and execute the transaction, giving you 69420 HuskyCoins</p>
+      <div className={styles.container}>
+        <main className={styles.description}>
+          <div className={styles.description}>
+            <h1 className='text-5xl text-blue-500 p-4'>HuskyCoin
+              <a className='font-normal text-black'>{' '}Dispensing Faucet
+              </a>
+            </h1>
+          </div>
+        </main>
+        <div className='flex justify-center'>
+          <div className='flex justify-center'>
+            <button
+              onClick={dispenseHuskyCoins}
+              className={`flex w-${36} mt-2 p-3 rounded-lg bg-green-500 hover:bg-green-700 shadow-lg justify-center text-white`}
+            >Receive HuskyCoins
+            </button>
           </div>
         </div>
+        <p 
+          className='text-sm p-2 mt-4 flex justify-center'>
+          Click to claim your 69420 HuskyCoins
+        </p>
+        <p className='text-sm flex justify-center'>
+          Note: Make sure to configure MetaMask first; you will be prompted to pay gas and execute the transaction
+        </p>
+      </div>
     )
 }

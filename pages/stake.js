@@ -11,7 +11,6 @@ export default function Stake () {
     const [balance, setBalance] = useState()
     const [staked, setStaked] = useState()
 
-
     useEffect(async() => {
       const web3Modal = new Web3Modal()
       const connection = await web3Modal.connect()
@@ -59,7 +58,6 @@ export default function Stake () {
       const signer = provider.getSigner()
 
       let amt = ethers.utils.parseUnits(input.amount, 'ether')
-
       let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
       let transaction = await contract.stake(amt)
       let tx = await transaction.wait()
@@ -90,46 +88,50 @@ export default function Stake () {
 
     return (
         <div className={styles.container}>
-          <div className={styles.main}>
-            <div className='p-12'>
-              <div className={styles.title}>
+          <main className={styles.description}>
+            <div className={styles.description}>
+              <h1 className='text-5xl p-4'>
                 Introduction to 
-                <a href='https://www.coinbase.com/learn/crypto-basics/what-is-proof-of-work-or-proof-of-stake'> Staking</a>
+                <a 
+                  href='https://www.coinbase.com/learn/crypto-basics/what-is-proof-of-work-or-proof-of-stake'
+                  className='text-blue-500'>
+                  {' '} Staking
+                </a>
+              </h1>
+            </div>
+          </main>
+          <div className='flex justify-center'>
+            <div className={styles.card}>
+              Available $HUSKY balance: 
+              <div className='flex'>
+                <a className='font-bold p-1 text-2xl'>{balance}</a>
+              </div>
+              <div>
+                <p className='flex justify-center p-1'>Minimum stake: 100 $HUSKY</p>
+                <form>
+                  <input 
+                    className='flex p-1 mt-2 border rounded'
+                    placeholder='Amount to stake' 
+                    onChange={e => setInput({...input, amount: e.target.value })}
+                  />
+                  <button 
+                    className={`flex w-${"36"} mt-3 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
+                    onClick={stake}>Stake
+                  </button>
+                </form>
               </div>
             </div>
-            <div className='flex justify-center p-10'>
-              <div className={styles.card}>
-                Available $HUSKY balance: 
-                <div className='flex'>
-                  <a className='font-bold p-1 text-2xl'>{balance}</a>
-                </div>
-                <div>
-                  <p className='flex justify-center p-1'>Minimum stake: 100 $HUSKY</p>
-                  <form>
-                    <input 
-                      className='flex p-1 mt-2 border rounded'
-                      placeholder='Amount to stake' 
-                      onChange={e => setInput({...input, amount: e.target.value })}
-                    />
-                    <button 
-                      className={`flex w-${"36"} mt-3 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
-                      onClick={stake}>Stake
-                    </button>
-                  </form>
-                </div>
+            <div className={styles.card}>
+              Currently staked $HUSKY balance: 
+              <div className='flex'>
+                <a className='font-bold p-1 text-2xl'>{staked}</a>
               </div>
-              <div className={styles.card}>
-                Currently staked $HUSKY balance: 
-                <div className='flex'>
-                  <a className='font-bold p-1 text-2xl'>{staked}</a>
-                </div>
-                <div>
-                  <p className='flex justify-center p-1'>Staked $HUSKY balances increase every block</p>
-                  <form className='p-1'></form>
-                  <button 
-                    className={`flex w-${"36"} mt-12 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
-                    onClick={unstake}>Withdraw All</button>
-                </div>
+              <div>
+                <p className='flex justify-center p-1'>Staked $HUSKY balances increase every block</p>
+                <form className='p-1'></form>
+                <button 
+                  className={`flex w-${"36"} mt-12 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
+                  onClick={unstake}>Withdraw All</button>
               </div>
             </div>
           </div>
