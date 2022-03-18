@@ -23,7 +23,7 @@ export default function Home() {
           <p className='text-xs'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
         </div>
         <p className='font-bold text-1xl'>Get Started
-          <a className='nav-link text-1xl font-bold text-green-500' href='/about'> Here</a>
+          <a className='nav-link text-1xl font-bold text-green-500' href='/tutorial'> Here</a>
         </p>
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
@@ -32,7 +32,7 @@ export default function Home() {
           </a>
           <a href="https://info.etherscan.com/what-is-an-ethereum-address/" className={styles.card}>
             <h2>2. Generate an Ethereum address &rarr;</h2>
-            <p>Learn about the insane things an Ethereum address is capable of and explore Etherscan, where all of Web3 is publically visible.</p>
+            <p>Learn about the insane things an Ethereum address is capable of and explore Etherscan, where all of Web3 is publicly visible.</p>
           </a>
           <Link href="/faucet">
             <a

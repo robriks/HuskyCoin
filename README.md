@@ -37,16 +37,6 @@ Note: These skills & concepts are transferable between any EVM compatible blockc
 
 Your Ethereum address (a long string of hexadecimal digits, 0->9 & a->f, which starts with 0x and can be represented by a .eth domain) is your public-facing account where you can store any tokens on the network. This includes cryptos like $ETH, which is the base layer token of the Ethereum blockchain which is responsible for securing the network, maintaining the ever-changing state of the global computer known as the Ethereum Virtual Machine (EVM for short), and paying for computations known as transactions in the form of gas. We'll cover gas a bit more later, but basically you must pay $ETH for every transaction you make, with more computation-intensive transactions costing more gas.
 
-Think of your Ethereum address as your on-chain bank account. Except it kicks your bank's ass because:
-
-1. Current interest rates on US dollar tokens like USDC/GUSD/USDT are anywhere from 3-8% APY, 300 times higher than your savings account. That's just stablecoins (aka crypto dollars), too!  Staking $ETH for example earns you 4.5% APY denominated in $ETH, which can appreciate further as demand for Web3 increases. :D
-
-2. Crypto wallets are self-custodial, meaning you AND ONLY YOU CONTROL your funds, 24/7. None of that 3-5 business day, Mon-Fri 9-5, credit check/transfer limit bullshit. If you haven't yet noticed, a checking/savings account is fundamentally an UNSECURED loan of YOUR money that your bank takes to fund mortgages and other risky ventures that earn them 5-20% using YOUR money. Then they pay you 0.03% interest, hoard all the profits for themselves, and maybe even cause a world economic recession a la 2008! But I digress... ;P
-
-3. Ethereum addresses support much more than just money. Dollars are cool and all but you can also store and stake fungible tokens called ERC20s. Some popular examples include $USDC, $DAI, Shiba Inu $SHIB, UniSwap $UNI, Chainlink $LINK, Wrapped Bitcoin $WBTC, Polygon $MATIC, you get the point. 
-
-4. You can even store non-fungible tokens, NFTs for short, which are provably unique tokens that can do basically anything a computer can. Most people associate NFTs with digital art, but that barely touches the surface of what NFTs are capable of. They can represent physical-world objects, serve as concert tickets, work as club memberships, stream music, or even contain marriage certificates. Yes, people have gotten married on-chain on Ethereum. I plan to! Tokens (fungible and non-fungible) are a vital primitive of the Ethereum protocol- tokens are to Web3 as websites are to the TCP/IP protocol we know as the Internet. :)
-
 #### Generate An Ethereum Address
 Okay enough talk, we get it- tokens are cool! Follow the MetaMask instructions for setting up your own secure Ethereum address.
 

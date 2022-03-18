@@ -31,7 +31,10 @@ export default function Header() {
               <a className='nav-link text-3xl text-green-500'>Staking</a>
             </Link>
             <Link href='/about'>
-              <a className='nav-link text-3xl text-green-500'>About</a>
+              <a className='nav-link text-3xl text-green-500'>Web3</a>
+            </Link>
+            <Link href='/tutorial'>
+              <a className='nav-link text-3xl text-green-500'>Tutorial</a>
             </Link>
           </div>
         </div>
