@@ -8,6 +8,8 @@ import instagramNFTs from '../assets/instagramNFTs.png'
 import energy from '../assets/energy.png'
 import hyperinflation from '../assets/hyperinflation.png'
 import miners from '../assets/miners.png'
+import web3 from '../assets/web3.png'
+import web3Tweet from '../assets/web3tweet.png'
 
 export default function About() {
     return(
@@ -176,22 +178,23 @@ export default function About() {
             The technical details surrounding PoW are fascinating, making use of cryptographic hashes and signatures which are not important for me to delve into here.
             In short, Bitcoin incentivizes computers to work at brute-forcing (by trial and error) a sha256 hash of dynamically adjusted difficulty, known as $BTC mining.
             These computers operate and secure the network in exchange for payment in Bitcoins; unfortunately this work has the drawback of consuming a lot of electricity.
-            Some miners like Giga are working to only implement bitcoin mining infrastructure that provide net environmental benefit by reducing carbon dioxide and methane emissions, here's a snip from CNBC:
+            Thankfully, the wild predictions like the above headline have not come to pass; Bitcoin currently consumes 0.1% of worldwide energy production (99.9% less than predicted!) and in so doing provides over 100 million users with a secure, immutable, permissionless financial system.
+            In addition, some savvy miners like Giga are working to only implement Bitcoin mining infrastructure that provide net environmental benefit by reducing carbon dioxide and methane emissions, here's a snip from CNBC:
           </p>
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={miners}></Image>
           </div>
           <p className='flex justify-center mb-2 indent-8'>
-            Many savvy miners have found ways to offset the electricity costs by making use of excess waste energy, like when power grids are underutilized during evening hours while people sleep or using natural gas waste flares.
-            Recently, there have been numerous widely-circulated articles claiming that a Bitcoin transaction requires a wildly large amount of electricity; most of these claims cite a University of Cambridge study that demonstrated poor understanding of the protocol.
+            Recently, there have been numerous widely-circulated articles claiming that a single Bitcoin transaction requires a wildly large amount of electricity; most of these claims cite a University of Cambridge study that demonstrated poor understanding of the protocol.
             Individual transactions in fact cost no electricity at all!
             Instead, it is each block, which can contain any number of transactions, that consumes a lot of energy.
-            Others point to the fact that the Bitcoin network consumes more electricity than small countries like Iceland; this is to be expected, considering the Bitcoin economy is larger and faster than the entire economic GDP of Iceland (Iceland's GDP is ~$22 billion; Bitcoin secures ~$1 trillion 24/7, over 40x larger).
+            Others point to the fact that the Bitcoin network consumes more electricity than small countries like Iceland; this is to be expected, considering the Bitcoin economy is larger and faster than the entire economic GDP of Iceland (Iceland's GDP is ~$22 billion and restricted to business hours; Bitcoin secures ~$1 trillion, a figure that is over 40x larger, working globally 24 hours a day and 7 days a week).
+            There are many other uses of electricity that consume more energy/waste than PoW that we do not decry for damaging the environment: Christmas lights, cruise ships, household driers, private jets, or YouTube, for example.
           </p>
           <p className='flex justify-center indent-8'>
-            There are many other uses of electricity that consume more energy/waste than PoW that we do not decry for damaging the environment: Christmas lights, cruise ships, household driers, private jets, or YouTube, for example.
-            You'll find misinformation about the energy consumption of Proof of Work algorithms all over the internet, but ultimately these concerns are based in fact, simply because securing a trillion dollar economy larger than most countries is very costly.
-            PoW consensus is very energy intensive, and though many miners do offset their emissions and sometimes even provide a net carbon benefit to the environment, just as many miners operate using dirty energy sources and carbon intensive techniques.
+            You'll find misinformation about the energy consumption of Proof of Work mechanisms all over the internet, but ultimately these concerns are valid. 
+            Securing a trillion dollar economy larger than most countries is a very difficult endeavor and decade-old technology like PoW is proving costly.
+            Since, PoW consensus is very energy intensive, regardless of the many miners who offset their emissions or even provide a net carbon benefit to the environment, just as many or more miners operate using dirty energy sources and carbon intensive techniques.
             This is one reason why Ethereum has chosen to end its reliance on PoW in favor of another consensus mechanism that will drop Ethereum's carbon footprint by 99% while simultaneously improving decentralization: Proof of Stake.
           </p>
           <div className='justify-center text-4xl mt-12 mb-10'>
@@ -204,15 +207,64 @@ export default function About() {
             Rather than having miners rapidly brute force solutions to a sha256 hash, PoS nodes confirm transactions in each block by putting up a stake of funds that allows the node to be chosen for proposing blocks.
             If the node proposes and attests to legitimate blocks, benefitting the network, it is rewarded with issuance of newly minted $ETH; if it behaves maliciously or supports invalid blocks, a portion of its stake is slashed.
             The goals of switching to PoS are manifold: 
-            </p>
-            <ul class='list-disc justify-center mt-6'>
-              <li>Dropping energy consumption and environmental impact by 99%</li> 
-              <li>Eliminating the need for expensive specialized mining hardware (ASICs cost nearly $10k and GPUs are difficult + expensive to obtain)</li>
-              <li>Allowing every user in the network to delegate or stake their funds to earn rewards and for greater say over the protocol</li>
-            </ul>
-            <p className='flex justify-center indent-8 mt-6'>
-              Reducing the barrier to entry for hardware requirements and giving every user the ability to earn staking rewards on their funds should result in more nodes on the network and better user representation via delegates will improve decentralization over current PoW mechanisms.
-            </p>
+          </p>
+          <ul class='list-disc justify-center mt-6'>
+            <li className='ml-16'>Dropping energy consumption and environmental impact by 99%</li> 
+            <li className='ml-16'>Eliminating the need for expensive specialized mining hardware (ASICs cost nearly $10k and GPUs are difficult + expensive to obtain)</li>
+            <li className='ml-16'>Allowing every user in the network to delegate or stake their funds to earn rewards and for greater say over the protocol</li>
+          </ul>
+          <p className='flex justify-center indent-8 mt-6'>
+            Reducing the barrier to entry for hardware requirements and giving every user the ability to earn staking rewards on their funds should result in more nodes on the network and better user representation via delegates will improve decentralization over current PoW mechanisms.
+            This is paramount because Web3 is only made possible by resilient decentralization that provides net neutrality and prevents network downtime or censorship by eliminating any potential single point of failure.
+            It's absolutely vital to understand that a centralized blockchain, of which many exist, is no better than a database being run from someone's garage or corporate office.
+            Such a network provides no net neutrality and no resistance to censorship, corruption, or network downtime- all of which are unacceptable when handling the livelihoods of millions of people worldwide.
+          </p>
+          <div className='flex justify-center text-4xl mt-12 mb-10'>
+            <h1 className='flex justify-center'>
+              Just explain Web3 already!
+            </h1>
+          </div>
+          <p className='flex justify-center indent-8'>
+            Web3 refers to the decentralized internet that enables ownership of fully interoperable digital assets and trustless transactions for the first time, while prioritizing fairness, equity, and permissionlessness by eliminating gatekeepers.
+            These attributes of crypto networks take censorship and permission power away from gatekeeping middlemen like banks, massive tech companies, and other corporations who have exploited that power for profit, and instead gives that power to everyday users like you and me.
+          </p>
+          <p className='flex justify-center indent-8'>
+            Web1 was the first inception of the internet (~1990-2004) where the web featured static websites owned by companies like news organisations. 
+            Using these read-only websites, individuals internet users rarely interacted with one another.
+            Web2 on the other hand began in 2004 with the emergence of social media platforms.
+            This period saw growth in read-write interactions and platforms that featured users generating content and sharing it to other users.
+          </p>
+          <div className='flex justify-center mt-6 mb-6'>
+            <Image className='justify-center' src={web3Tweet}></Image>
+          </div>
+          <p className='flex justify-center indent-8'>
+            Unfortunately, a small handful of powerful corporations have become arbitrators of the vast majority of online traffic.
+            Internet Service Providers like Verizon/Comcast possess the power to throttle your connection to any site they wish.
+            Facebook and Google have implemented echo chamber algorithms that have engendered misinformation factories profiting from outrage engagement as well as mass radicalization of users who don't fact check the content presented to them.
+            The January 6th insurrection, for example, was a direct consequence of such immense online power.
+            Even worse, all of these companies collect massive swathes of data on each user and either exploits it to extract profit from our behaviors or sells it to another company that does so.
+          </p>
+          <div className='flex justify-center mt-6 mb-6'>
+            <Image className='justify-center' src={web3}></Image>
+          </div>
+          <p className='flex justify-center indent-8'>
+            Web3 aims to fix all this. 
+            Digital property rights give rise to a number of important potential solutions, like taking back ownership of your own data from Google or cryptographically preventing voter fraud to securely combat 'rigged election' misinformation.
+            The native interoperability of digital assets on a blockchain also bears powerful implications: consider a gamer playing World of Warcraft on Web2.
+            This gamer's entire metaversal gaming experience is entirely dependent on the servers at the game's data center.
+            Said gamer may pour hundreds of hours of hard work into honing their PvP/PvE skills and thereby collecting awards, items, and notoriety within the community.
+            None of these digital assets and achievements are portable into the next game play. Not a one.
+            This means if there's a flood at the game's data center, a bug/hack in the servers, a developer layoff, or a problem with the parent company, the servers go down and the game (along with the gamers' hard-earned assets) goes down with it!
+          </p>
+          <p className='flex justify-center indent-8'>
+            In Web3, all digital assets, identity, and history are portable between all platforms by default.
+            This includes all games, dapps, or social media sites powered by crypto.
+            Your Ethereum address can serve as your Web3 Twitter profile, your video game login credentials, your credential history, your bank account, all while storing your digital assets.
+            Imagine how convenient it would be to have one social media account that seamlessly ported between FB, Insta, Twitter, Linkedin, Call of Duty, drivers' license, professional resume, and bank/investment accounts.
+            Any cool item you earn as a reward in a game (like a dope hat!) can be worn in every other Web3 game or social media platform you post to.
+            Any in-game currency can be exchanged for actual money like stablecoins or $ETH at any hour of the day.
+            That's the reality of what the Metaverse will look like, and it's already being built.
+          </p>
         </div>
       </div>
     )
