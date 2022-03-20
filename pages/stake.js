@@ -102,36 +102,51 @@ export default function Stake () {
           </main>
           <div className='flex justify-center'>
             <div className={styles.card}>
-              Available $HUSKY balance: 
-              <div className='flex'>
+              <h1 className='text-base flex justify-center'>
+                Available $HUSKY balance: 
+              </h1>
+              <div className='flex justify-center'>
                 <a className='font-bold p-1 text-2xl'>{balance}</a>
               </div>
               <div>
-                <p className='flex justify-center p-1'>Minimum stake: 100 $HUSKY</p>
-                <form>
+                <p className='flex justify-center p-1'>
+                  Minimum stake: 100 $HUSKY
+                </p>
+                <form className='justify-center'>
                   <input 
-                    className='flex p-1 mt-2 border rounded'
-                    placeholder='Amount to stake' 
+                    className='flex justify-center mt-3 border-2 rounded-md'
+                    placeholder=' Amount to stake' 
                     onChange={e => setInput({...input, amount: e.target.value })}
                   />
-                  <button 
-                    className={`flex w-${"36"} mt-3 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
-                    onClick={stake}>Stake
-                  </button>
+                  <div className='flex justify-center'>
+                    <button 
+                      className={`flex w-${"36"} mt-3 p-2 rounded-full bg-green-500 hover:bg-green-700 shadow-xl justify-center text-white`}
+                      onClick={stake}>Stake
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
             <div className={styles.card}>
-              Currently staked $HUSKY balance: 
-              <div className='flex'>
+              <h1 className='text-base flex justify-center'>
+                Currently staked $HUSKY balance: 
+              </h1>
+              <div className='flex justify-center'>
                 <a className='font-bold p-1 text-2xl'>{staked}</a>
               </div>
               <div>
-                <p className='flex justify-center p-1'>Staked $HUSKY balances increase every block</p>
-                <form className='p-1'></form>
-                <button 
-                  className={`flex w-${"36"} mt-12 p-2 rounded-md bg-green-500 hover:bg-green-700 shadow-lg justify-center`}
-                  onClick={unstake}>Withdraw All</button>
+                <p className='flex justify-center p-1'>
+                  Staked $HUSKY balances increase every block
+                </p>
+                <form className='justify-center'>
+                  <input className='flex justify-center mt-4'></input>
+                  <div className='flex justify-center'>
+                    <button 
+                      className={`flex w-${"36"} mt-3 p-2 rounded-full bg-green-500 hover:bg-green-700 shadow-xl justify-center text-white`}
+                      onClick={unstake}>Withdraw All
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

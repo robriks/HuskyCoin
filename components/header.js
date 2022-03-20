@@ -5,18 +5,17 @@ export default function Header() {
       <div>
         <header className='bg-header'>
         <nav className='p-6 mx-auto justify-between  max-w-screen-x1'>
-            <div 
-            class='flow-root' 
-            className='p-4 mt-2'>
-            <a href='/' className='text-5xl font-bold text-blue-500'>HuskyCoin</a>
-            <a
-                class='float-right p-5' 
-                href='https://github.com/robriks/HuskyCoin' 
-                > A Web3 Tutorial by {' '}
-                <a className='text-blue-500'>{''} Robriks / 👦🏻👦🏻.eth
+          <div 
+            className='flow-root p-4 mt-2'>
+              <a href='/' className='text-5xl font-bold text-blue-500'>HuskyCoin</a>
+                <a
+                  className='float-right p-5' 
+                  href='https://github.com/robriks/HuskyCoin' 
+                  > A Web3 Tutorial by {' '}
+                  <a className='text-blue-500'>{''} Robriks / 👦🏻👦🏻.eth
+                  </a>
                 </a>
-                </a>
-            </div>
+              </div>
         </nav>
         </header>
         <div className='flex justify-center'>

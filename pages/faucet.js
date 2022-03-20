@@ -34,7 +34,7 @@ export default function Faucet () {
           <div className='flex justify-center'>
             <button
               onClick={dispenseHuskyCoins}
-              className={`flex w-${36} mt-2 p-3 rounded-lg bg-green-500 hover:bg-green-700 shadow-lg justify-center text-white`}
+              className={`flex w-${36} mt-2 p-3 rounded-full bg-green-500 hover:bg-green-700 shadow-2xl justify-center text-white`}
             >Receive HuskyCoins
             </button>
           </div>

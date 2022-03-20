@@ -18,7 +18,14 @@ export default function Home() {
           </a> Dapp!
         </h1>
         <div className={styles.description}>
-          <a className='text-2xl'>An Interactive Introductory Tutorial to Web3 on Ethereum</a>
+          <a className='text-2xl'>An Introductory Tutorial to Web3 on Ethereum</a>
+          <p className='text-xs mb-6'>Dedicated to 
+            <a 
+              className='text-blue-500'
+              href='https://instagram.com/cleo.thehusky'>
+              {''} Cleo the Husky
+            </a>
+          </p>
           <p className='text-sm'>If you find this tutorial helpful, send a tip!</p>
           <p className='text-xs'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
         </div>

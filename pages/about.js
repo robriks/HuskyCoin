@@ -208,7 +208,7 @@ export default function About() {
             If the node proposes and attests to legitimate blocks, benefitting the network, it is rewarded with issuance of newly minted $ETH; if it behaves maliciously or supports invalid blocks, a portion of its stake is slashed.
             The goals of switching to PoS are manifold: 
           </p>
-          <ul class='list-disc justify-center mt-6'>
+          <ul className='list-disc justify-center mt-6'>
             <li className='ml-16'>Dropping energy consumption and environmental impact by 99%</li> 
             <li className='ml-16'>Eliminating the need for expensive specialized mining hardware (ASICs cost nearly $10k and GPUs are difficult + expensive to obtain)</li>
             <li className='ml-16'>Allowing every user in the network to delegate or stake their funds to earn rewards and for greater say over the protocol</li>
