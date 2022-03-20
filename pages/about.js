@@ -7,6 +7,7 @@ import matcha from '../assets/matcha.png'
 import instagramNFTs from '../assets/instagramNFTs.png'
 import energy from '../assets/energy.png'
 import hyperinflation from '../assets/hyperinflation.png'
+import miners from '../assets/miners.png'
 
 export default function About() {
     return(
@@ -175,7 +176,11 @@ export default function About() {
             The technical details surrounding PoW are fascinating, making use of cryptographic hashes and signatures which are not important for me to delve into here.
             In short, Bitcoin incentivizes computers to work at brute-forcing (by trial and error) a sha256 hash of dynamically adjusted difficulty, known as $BTC mining.
             These computers operate and secure the network in exchange for payment in Bitcoins; unfortunately this work has the drawback of consuming a lot of electricity.
+            Some miners like Giga are working to only implement bitcoin mining infrastructure that provide net environmental benefit by reducing carbon dioxide and methane emissions, here's a snip from CNBC:
           </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={miners}></Image>
+          </div>
           <p className='flex justify-center mb-2 indent-8'>
             Many savvy miners have found ways to offset the electricity costs by making use of excess waste energy, like when power grids are underutilized during evening hours while people sleep or using natural gas waste flares.
             Recently, there have been numerous widely-circulated articles claiming that a Bitcoin transaction requires a wildly large amount of electricity; most of these claims cite a University of Cambridge study that demonstrated poor understanding of the protocol.
@@ -196,8 +201,18 @@ export default function About() {
           </div>
           <p className='flex justify-center indent-8'>
             Proof of Stake (abbreviated PoS) aims to replace Proof of Work by removing miners and introducing validators in their stead.
-            Rather than having miners rapidly brute force solutions to a sha256 hash, PoS nodes confirm transactions in each block by putting up a stake that earns 
-          </p>
+            Rather than having miners rapidly brute force solutions to a sha256 hash, PoS nodes confirm transactions in each block by putting up a stake of funds that allows the node to be chosen for proposing blocks.
+            If the node proposes and attests to legitimate blocks, benefitting the network, it is rewarded with issuance of newly minted $ETH; if it behaves maliciously or supports invalid blocks, a portion of its stake is slashed.
+            The goals of switching to PoS are manifold: 
+            </p>
+            <ul class='list-disc justify-center mt-6'>
+              <li>Dropping energy consumption and environmental impact by 99%</li> 
+              <li>Eliminating the need for expensive specialized mining hardware (ASICs cost nearly $10k and GPUs are difficult + expensive to obtain)</li>
+              <li>Allowing every user in the network to delegate or stake their funds to earn rewards and for greater say over the protocol</li>
+            </ul>
+            <p className='flex justify-center indent-8 mt-6'>
+              Reducing the barrier to entry for hardware requirements and giving every user the ability to earn staking rewards on their funds should result in more nodes on the network and better user representation via delegates will improve decentralization over current PoW mechanisms.
+            </p>
         </div>
       </div>
     )
