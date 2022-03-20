@@ -14,7 +14,7 @@ import web3Tweet from '../assets/web3tweet.png'
 export default function About() {
     return(
       <div className={styles.container}>
-        <div className='p-12 mr-12 ml-12'>
+        <div className='p-12 mr-8 ml-8'>
           <div className='mt-6 mb-10'>
             <div className='mt-8 mb-12'>
               <h1 className={styles.title}>
@@ -47,12 +47,17 @@ export default function About() {
           </p>  
           <ol className='justify-center space-y-5 mr-24 ml-24'>
             <li 
-              className='text-sm flex justify-center indent-2'>
+              className='text-sm justify-center indent-2'>
                 1. Current interest rates on US dollar tokens (like USDC/GUSD/USDT, which are always redeemable for $1) are anywhere from 3-8% APY, over 300 times higher than your 0.03% APY savings account. 
                 That's just stablecoins (aka crypto dollars), too!  
                 Staking $ETH for example earns you 4.5% APY denominated in $ETH, which can appreciate further as demand for Web3 increases.</li>
             <div className='flex justify-center'>
-              <Image className='flex justify-center' src={geminiEarn}></Image>
+              <Image 
+                src={geminiEarn} 
+                layout='fixed' 
+                width={600} 
+                height={600}>
+              </Image>
             </div>
             <li 
               className='text-sm flex justify-center mt-2'>
@@ -72,7 +77,12 @@ export default function About() {
               </div>
             </li>
             <div className='flex justify-center'>
-              <Image className='flex justify-center' src={bOfA}></Image>
+              <Image 
+                className='flex justify-center' 
+                src={bOfA}
+                width={600}
+                height={300}>
+              </Image>
             </div>
             <li 
               className='text-sm flex justify-center mt-2 indent-2'>
@@ -82,7 +92,12 @@ export default function About() {
                 Being programmable money, these tokens are capable of anything a regular computer running software can do.
             </li>
             <div className='flex justify-center'>
-              <Image className='flex justify-center' src={matcha}></Image>
+              <Image 
+                className='flex justify-center' 
+                src={matcha}
+                width={500}
+                height={500}>
+              </Image>
             </div>
             <li 
               className='text-sm flex justify-center mt-2 indent-2'>
@@ -93,7 +108,12 @@ export default function About() {
                 Yes, people have put their marriage licenses on-chain on Ethereum! I plan to!
             </li>
             <div className='flex justify-center'>
-              <Image className='flex justify-center' src={instagramNFTs}></Image>
+              <Image 
+                className='flex justify-center' 
+                src={instagramNFTs}
+                width={600}
+                height={250}>
+              </Image>
             </div>
           </ol>
           <div className='justify-center mt-12 mb-10'>
@@ -145,9 +165,14 @@ export default function About() {
             The simple ability to trade your tanking fiat currency (ie the Turkish Lyra) for stablecoins pegged to the dollar has become a humanitarian solution to geopolitical issues.
           </p>
           <div className='flex justify-center'>
-            <Image className='flex justify-center' src={hyperinflation}></Image>
+            <Image 
+              className='flex justify-center' 
+              src={hyperinflation}
+              width={350}
+              height={550}>
+            </Image>
           </div>
-          <div className='justify-center text-4xl mt-12 mb-10'>
+          <div className='justify-center text-4xl mt-14 mb-10'>
             <h1 className='flex justify-center'>
               DeFi fights dictators?
             </h1>
@@ -169,9 +194,13 @@ export default function About() {
           <div className='justify-center text-4xl mt-12 mb-10'>
             <h1 className='flex justify-center mb-10'>
               What about Crypto's carbon footprint?
-            </h1>
-            <Image className='flex justify-center' src={energy}></Image>
-          </div>
+            </h1></div>
+            <div className='flex justify-center mb-8'>
+              <Image 
+                className='flex justify-center' 
+                src={energy}>
+              </Image>
+            </div>
           <p className='flex justify-center mb-2 indent-8'>
             One of Bitcoin's groundbreaking technological innovations is the solution to the Byzantine General's Dilemma and the Double Spend Problem.
             It achieves this by reaching consensus among many decentralized nodes using an algorithm known as Proof-Of-Work, abbreviated as PoW.
@@ -182,7 +211,11 @@ export default function About() {
             In addition, some savvy miners like Giga are working to only implement Bitcoin mining infrastructure that provide net environmental benefit by reducing carbon dioxide and methane emissions, here's a snip from CNBC:
           </p>
           <div className='flex justify-center mt-8 mb-8'>
-            <Image src={miners}></Image>
+            <Image 
+              src={miners}
+              width={600}
+              height={300}>
+            </Image>
           </div>
           <p className='flex justify-center mb-2 indent-8'>
             Recently, there have been numerous widely-circulated articles claiming that a single Bitcoin transaction requires a wildly large amount of electricity; most of these claims cite a University of Cambridge study that demonstrated poor understanding of the protocol.
@@ -263,8 +296,15 @@ export default function About() {
             Imagine how convenient it would be to have one social media account that seamlessly ported between FB, Insta, Twitter, Linkedin, Call of Duty, drivers' license, professional resume, and bank/investment accounts.
             Any cool item you earn as a reward in a game (like a dope hat!) can be worn in every other Web3 game or social media platform you post to.
             Any in-game currency can be exchanged for actual money like stablecoins or $ETH at any hour of the day.
-            That's the reality of what the Metaverse will look like, and it's already being built.
+            That's the reality of what the Metaverse will look like, and it's already being built at breakneck speed.
           </p>
+          <div className='justify-center text-4xl mt-8'>
+            <h1 
+              className='flex justify-center'>
+                Thanks for reading!
+            </h1>
+            <h2 className='flex justify-center'>Now go learn some Web3 skills!</h2>
+          </div>
         </div>
       </div>
     )

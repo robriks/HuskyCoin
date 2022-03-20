@@ -26,7 +26,7 @@ export default function Home() {
               {''} Cleo the Husky
             </a>
           </p>
-          <p className='text-sm'>If you find this tutorial helpful, send a tip!</p>
+          <p className='text-xs'>If you find this tutorial helpful, send a tip!</p>
           <p className='text-xs'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
         </div>
         <p className='font-bold text-1xl'>Get Started
@@ -37,7 +37,7 @@ export default function Home() {
             <h2>1. Setting up MetaMask &rarr;</h2>
             <p>A crypto wallet is your gateway to Web3 infrastructure. Other crypto wallet options include Coinbase Wallet and Brave Wallet.</p>
           </a>
-          <a href="https://info.etherscan.com/what-is-an-ethereum-address/" className={styles.card}>
+          <a href="https://etherscan.io/" className={styles.card}>
             <h2>2. Generate an Ethereum address &rarr;</h2>
             <p>Learn about the insane things an Ethereum address is capable of and explore Etherscan, where all of Web3 is publicly visible.</p>
           </a>
