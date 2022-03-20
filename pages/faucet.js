@@ -14,8 +14,14 @@ export default function Faucet () {
         const signer = provider.getSigner()
 
         let contract = new ethers.Contract(huskycoinaddress, HuskyCoin.abi, signer)
+        try {
         let transaction = await contract.dispense()
         let tx = await transaction.wait()
+        } catch(err) {
+          if (err) {
+            alert("You already have HuskyCoins! Import the token address to MetaMask and go stake them or send to your friends.")
+          }
+        }
 
         router.push('/stake')
     }

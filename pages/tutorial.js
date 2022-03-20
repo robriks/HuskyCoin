@@ -1,3 +1,5 @@
 export default function Tutorial() {
-    //TODO
+    return(
+        <h1>not built yet!</h1>
+    )
 }
