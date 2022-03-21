@@ -2,12 +2,23 @@ import styles from '../styles/Home.module.css'
 
 export default function Tutorial() {
     return(
-        <div className={styles.container}>
-          <div className='p-12 mr-8 ml-8'>
-            For First Time n00Bs
-Welcome to your first Web3 tutorial! If you've never made a cryptocurrency address or submitted a transaction on-chain before, start here. There's a lot of high level math, computation, and unprecedented technological concepts happening behind the scenes so don't be discouraged if you get confused at any point. If you have questions/issues anytime reading this tutorial, or if you want recommendations for further Web3 exploration, contact me on twitter or instagram, @marsterlund, and I will happily assist.
-
-What is a crypto wallet, you ask? While you're at it, wtf is a blockchain anyway? Private key? Public address? Are .eth domains like .com or .org DNS domains? What about NFTs!? Is DeFi only for shadowy super coders like @marsterlund? Elizabeth Warren seems to think so. What are crypto loans? How does Cryptography work? Can I mine cryptocurrency with my computer to make money? How do I stake crypto for passive income? Facebook = Meta...verse... Right? Is _insertRandomDogCoinTokenHere_ the next Bitcoin? IS KRIPTO PONZI SCHEME, SER??? (no, lmeow...)
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <h1 className='flex justify-center mt-20 mb-12'>For First Time n00Bs ;)</h1>
+        </div>
+        <p className='indent-8'>Welcome to your first Web3 tutorial! If you don't have a cryptocurrency address or have never submitted a transaction on-chain before, start here. 
+        This tutorial assumes you're unfamiliar with the cryptography, math, and computer science concepts happening behind the scenes, but don't be discouraged if you get confused at any point. 
+        Don't hesitate to contact me with questions/issues while you work through this tutorial.
+        If you want recommendations for further Web3/DeFi exploration, shoot me a DM on GitHub/Twitter or Instagram (see icons at the bottom of the page) and I will happily assist.
+        </p>
+        <div className='flex justify-center text-4xl mt-8 mb-8'> What is a crypto wallet, you ask? 
+        </div>
+        <p className='indent-8'>
+          While you're at it, wtf is a blockchain anyway? Private key? Public address? 
+          Are ENS (.eth) domains just like the more familiar DNS (.com or .org) domains? 
+          What about NFTs!? 
+          Is the wild west of DeFi only for shadowy super coders like robriks/👦🏻👦🏻.eth/@marsterlund? Elizabeth Warren seems to think so. 
+          What are crypto loans? How does Cryptography work? Can I mine cryptocurrency with my computer to make money? How do I stake crypto for passive income? Facebook = Meta...verse... Right? Is _insertRandomDogCoinTokenHere_ the next Bitcoin? IS KRIPTO PONZI SCHEME, SER??? (no, lmeow...)</p>
 
 All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to read as possible for you.
 
@@ -57,7 +68,6 @@ I thought you told me HuskyCoin was free! Why is there a transaction/gas fee?!
 -Gas costs serve two main purposes: 
 1. Preventing spam on the network by incurring costs that disincentivize clogging the network with low-quality transactions.
 2. Paying the miners/validators who maintain the state of the network by solving and finalizing blocks in chronological sequences. These are the maintainers of a distributed blockchain architecture who facilitate every transfer and transaction on the network, and they don't work for free!
-        </div>
         </div>
     )
 }
