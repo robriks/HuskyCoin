@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Footer from '../components/footer'
 import Header from '../components/header'
-import Modal from '../components/modal'
+import Modal from '../components/modal2'
 import { isMobile } from 'react-device-detect'
 
 
