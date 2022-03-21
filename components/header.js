@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return(
-      <div className='justify-center h-screen h-auto w-screen'>
+      <div className='justify-center h-auto w-screen'>
         <header className='bg-header'>
           <nav className='p-6 mx-auto justify-between max-w-screen-x1'>
             <div 

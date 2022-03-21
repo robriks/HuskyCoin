@@ -100,7 +100,7 @@ export default function Stake () {
               </h1>
             </div>
           </main>
-          <div className='flex justify-center'>
+          <div className='justify-center sm:flex'>
             <div className={styles.card}>
               <h1 className='text-base flex justify-center'>
                 Available $HUSKY balance: 

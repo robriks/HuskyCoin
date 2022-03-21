@@ -14,7 +14,7 @@ import web3Tweet from '../assets/web3tweet.png'
 export default function About() {
     return(
       <div className={styles.container}>
-        <div className='p-12 mr-8 ml-8'>
+        <div className='p-12 sm:mr-8 sm:ml-8'>
           <div className='mt-6 mb-10'>
             <div className='mt-8 mb-12'>
               <h1 className={styles.title}>
@@ -45,22 +45,22 @@ export default function About() {
             Think of your Ethereum address as your on-chain bank account,
             except it kicks your bank's ass because:
           </p>  
-          <ol className='justify-center space-y-5 mr-24 ml-24'>
+          <ol className='justify-center space-y-5 md:mr-20 md:ml-20'>
             <li 
               className='text-sm justify-center indent-2'>
                 1. Current interest rates on US dollar tokens (like USDC/GUSD/USDT, which are always redeemable for $1) are anywhere from 3-8% APY, over 300 times higher than your 0.03% APY savings account. 
                 That's just stablecoins (aka crypto dollars), too!  
-                Staking $ETH for example earns you 4.5% APY denominated in $ETH, which can appreciate further as demand for Web3 increases.</li>
-            <div className='flex justify-center'>
-              <Image 
-                src={geminiEarn} 
-                layout='fixed' 
-                width={600} 
-                height={600}>
-              </Image>
-            </div>
+                Staking $ETH for example earns you 4.5% APY denominated in $ETH, which can appreciate further as demand for Web3 increases.
+              <div className='flex justify-center mt-6 mb-4'>
+                <Image 
+                  src={geminiEarn} 
+                  layout='intrinsic' 
+                  >
+                </Image>
+              </div>
+            </li>
             <li 
-              className='text-sm flex justify-center mt-2'>
+              className='text-sm justify-center mt-2'>
               <div>
               <p className='flex justify-center mb-2 indent-2'>2. Crypto wallets are self-custodial, meaning you, AND ONLY YOU, control your funds with your private key, 24/7. 
                 None of that 3-5 business day, Mon-Fri 9-5, credit check/transfer limit crap. 
@@ -75,46 +75,41 @@ export default function About() {
                 That's not even skimming the surface of other heinous rent extraction like overdraft fees, account maintenance balances, etc.  But I digress...
               </p>
               </div>
+              <div className='flex justify-center mt-6 mb-4'>
+                <Image 
+                  src={bOfA}
+                  layout='intrinsic'
+                  >
+                </Image>
+              </div>
             </li>
-            <div className='flex justify-center'>
-              <Image 
-                className='flex justify-center' 
-                src={bOfA}
-                width={600}
-                height={300}>
-              </Image>
-            </div>
             <li 
-              className='text-sm flex justify-center mt-2 indent-2'>
+              className='text-sm justify-center mt-2 indent-2'>
                 3. Ethereum addresses support much more than just money. 
                 Dollars and stablecoins are cool and all but you can also store and stake fungible tokens called ERC20s. 
                 Some popular examples include $USDC, $DAI, Shiba Inu $SHIB, UniSwap $UNI, Chainlink $LINK, Wrapped Bitcoin $WBTC, Polygon $MATIC, each possessing different capabilites from governance to membership all while being tradeable 24/7 for other tokens like $ETH or crypto dollars. 
                 Being programmable money, these tokens are capable of anything a regular computer running software can do.
-            </li>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-6 mb-4'>
               <Image 
-                className='flex justify-center' 
                 src={matcha}
-                width={500}
-                height={500}>
+                layout='intrinsic'>
               </Image>
             </div>
+            </li>
             <li 
-              className='text-sm flex justify-center mt-2 indent-2'>
+              className='text-sm justify-center mt-2 indent-2'>
                 4. You can even store non-fungible tokens, NFTs for short, which are provably unique tokens that expand on the programmability of tokens. 
                 Most people associate NFTs with digital art, but that barely touches the surface of what NFTs are capable of. 
                 Digital ownership bears powerful implications on the internet economy, as evidenced by the rapid rise in NFT speculation and the emergence of the term "Metaverse".
                 They can for example represent/mirror physical-world objects, serve as concert tickets, function as club memberships, stream music, stream viewership royalty payments, codify digital contractual obligations, or even contain marriage certificates. 
                 Yes, people have put their marriage licenses on-chain on Ethereum! I plan to!
-            </li>
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-6 mb-4'>
               <Image 
-                className='flex justify-center' 
                 src={instagramNFTs}
-                width={600}
-                height={250}>
+                layout='intrinsic'>
               </Image>
             </div>
+            </li>
           </ol>
           <div className='justify-center mt-12 mb-10'>
             <h1 className='flex justify-center text-4xl'>
