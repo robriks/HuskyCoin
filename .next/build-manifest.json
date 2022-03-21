@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tutorial": [
+    "/faucet": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tutorial.js"
+      "static/chunks/pages/faucet.js"
     ]
   },
   "ampFirstPages": []
