@@ -1,4 +1,6 @@
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import warren from '../assets/warren.png'
 
 export default function Tutorial() {
     return(
@@ -7,7 +9,7 @@ export default function Tutorial() {
           <h1 className='flex justify-center mt-20 mb-12'>For First Time n00Bs ;)</h1>
         </div>
         <p className='indent-8'>Welcome to your first Web3 tutorial! If you don't have a cryptocurrency address or have never submitted a transaction on-chain before, start here. 
-        This tutorial assumes you're unfamiliar with the cryptography, math, and computer science concepts happening behind the scenes, but don't be discouraged if you get confused at any point. 
+        Don't worry, this tutorial assumes you're unfamiliar with the cryptography, math, and computer science concepts happening behind the scenes in Web3, but don't be discouraged if you get confused at any point. 
         Don't hesitate to contact me with questions/issues while you work through this tutorial.
         If you want recommendations for further Web3/DeFi exploration, shoot me a DM on GitHub/Twitter or Instagram (see icons at the bottom of the page) and I will happily assist.
         </p>
@@ -17,7 +19,12 @@ export default function Tutorial() {
           While you're at it, wtf is a blockchain anyway? Private key? Public address? 
           Are ENS (.eth) domains just like the more familiar DNS (.com or .org) domains? 
           What about NFTs!? 
-          Is the wild west of DeFi only for shadowy super coders like robriks/👦🏻👦🏻.eth/@marsterlund? Elizabeth Warren seems to think so. 
+          Is the wild west of DeFi only for shadowy super coders like robriks/👦🏻👦🏻.eth/@marsterlund? Elizabeth Warren seems to think so!
+        </p>
+        <div className='flex justify-center mt-8 mb-8'>
+          <Image src={warren}></Image>
+        </div>
+        <p className='indent-8'>
           What are crypto loans? How does Cryptography work? Can I mine cryptocurrency with my computer to make money? How do I stake crypto for passive income? Facebook = Meta...verse... Right? Is _insertRandomDogCoinTokenHere_ the next Bitcoin? IS KRIPTO PONZI SCHEME, SER??? (no, lmeow...)</p>
 
 All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to read as possible for you.
