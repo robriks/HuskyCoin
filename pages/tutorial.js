@@ -25,11 +25,18 @@ export default function Tutorial() {
           <Image src={warren}></Image>
         </div>
         <p className='indent-8'>
-          What are crypto loans? How does Cryptography work? Can I mine cryptocurrency with my computer to make money? How do I stake crypto for passive income? Facebook = Meta...verse... Right? Is _insertRandomDogCoinTokenHere_ the next Bitcoin? IS KRIPTO PONZI SCHEME, SER??? (no, lmeow...)</p>
-
-All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to read as possible for you.
-
-##### What you will learn: 
+          What are crypto loans? How does Cryptography work? 
+          Can I mine cryptocurrency with my computer to make money? 
+          How do I stake crypto for passive income? 
+          Facebook = Meta...verse... Right? 
+          Is <a className='font-bold'>_insertRandomDogCoinTokenHere_</a> the next Bitcoin? 
+          IS KRIPTO PONZI SCHEME, SER??? 
+          <p className='flex justify-center mt-2 mb-2'>(no, lmeow...)</p>
+        </p>
+        <p className='indent-8'>All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to read as possible for you.</p>
+        <div className='flex justify-center mt-8 mb-8'>
+          <h1 className='text-4xl'>What you will learn: </h1>
+        </div>
 -Set up a crypto wallet via MetaMask
 -Make your first on-chain transaction by claiming 69420 free educational tokens (HuskyCoins $HUSKY) that I have coded and deployed for your convenience
 -How you can get paid by contributing to network security and decentralization, termed "staking". Stake your $HUSKY balance to earn passive "income" ($HUSKY is for education purposes only, not income)
