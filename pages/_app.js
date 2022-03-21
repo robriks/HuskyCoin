@@ -1,16 +1,26 @@
 import '../styles/globals.css'
-import Link from 'next/link'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import Modal from '../components/modal'
+import { isMobile } from 'react-device-detect'
+
 
 function MyApp({ Component, pageProps }) {
+  if (isMobile) {
+    return (
+      <div>
+        <Modal></Modal>
+      </div>
+    )
+  } else {
   return (
-    <div className='min-h-screen h-full align-content-center'>
-      <Header></Header>
-      <Component {...pageProps} />
-      <Footer></Footer>
-    </div>
-  )
+      <div className='min-h-screen h-auto align-content-center'>
+        <Header></Header>
+        <Component {...pageProps} />
+        <Footer></Footer>
+      </div>
+    )
+  }
 }
 
 export default MyApp
