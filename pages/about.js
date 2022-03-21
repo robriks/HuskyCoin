@@ -39,7 +39,7 @@ export default function About() {
           <h1 className='flex justify-center text-4xl mt-8 mb-8'>
             So what? I have Venmo and a bank.
           </h1>
-          <p className='flex justify-center mb-8 indent-8'>
+          <p className='justify-center mb-8 indent-8'>
             Blockchain tokens are non-custodial and permissionless, which is what enables a 24/7 peer-to-peer network of economic activity.
             This means they inherently disintermediate the institutional middlemen that extract rent/interest from you while also restricting your economic activity to weekday business hours as well as delaying settlement by 3-5 business days.
             Think of your Ethereum address as your on-chain bank account,
@@ -51,7 +51,7 @@ export default function About() {
                 1. Current interest rates on US dollar tokens (like USDC/GUSD/USDT, which are always redeemable for $1) are anywhere from 3-8% APY, over 300 times higher than your 0.03% APY savings account. 
                 That's just stablecoins (aka crypto dollars), too!  
                 Staking $ETH for example earns you 4.5% APY denominated in $ETH, which can appreciate further as demand for Web3 increases.
-              <div className='flex justify-center mt-6 mb-4'>
+              <div className='justify-center mt-6 mb-4'>
                 <Image 
                   src={geminiEarn} 
                   layout='intrinsic' 
@@ -62,12 +62,12 @@ export default function About() {
             <li 
               className='text-sm justify-center mt-2'>
               <div>
-              <p className='flex justify-center mb-2 indent-2'>2. Crypto wallets are self-custodial, meaning you, AND ONLY YOU, control your funds with your private key, 24/7. 
+              <p className='justify-center mb-2 indent-2'>2. Crypto wallets are self-custodial, meaning you, AND ONLY YOU, control your funds with your private key, 24/7. 
                 None of that 3-5 business day, Mon-Fri 9-5, credit check/transfer limit crap. 
                 A checking/savings account is at its core an unsecured loan of YOUR money that your bank uses to fund mortgages and other risky ventures that earn them 5-20% profit using YOUR money. 
                 From that yield, they pay you 0.03% interest to your "high yield" savings account and then hoard all the rest of the profits for themselves and their CEOs/shareholders. 
               </p>
-              <p className='flex justify-center indent-4'>Along the way, they may even cause a world economic recession a la 2008! 
+              <p className='justify-center indent-4'>Along the way, they may even cause a world economic recession a la 2008! 
                 In which case, FDIC Insurance for $250,000 on your deposits is helpful... right?
                 Except FDIC Insurance is funded by... you guessed it: taxpayers. You!
                 So, in essence, you're "FDIC Insured" by taxpayer money, which is, again, your money. 
