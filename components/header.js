@@ -2,43 +2,45 @@ import Link from 'next/link'
 
 export default function Header() {
     return(
-      <div className='justify-center'>
+      <div className='justify-center h-screen h-auto w-screen'>
         <header className='bg-header'>
-        <nav className='p-6 mx-auto justify-between max-w-screen-x1'>
-          <div 
-            className='flow-root p-4 mt-2'>
-              <a 
-                href='/' 
-                className='text-5xl font-bold text-blue-500'>
-                  HuskyCoin
-              </a>
-              <a
-                className='float-right p-5' 
-                href='https://github.com/robriks/HuskyCoin' 
-                > A Web3 Tutorial by {' '}
-                <a className='text-blue-500'>{''} Robriks / 👦🏻👦🏻.eth
+          <nav className='p-6 mx-auto justify-between max-w-screen-x1'>
+            <div 
+              className='flow-root ml-4 mt-2'>
+                <a 
+                  href='/' 
+                  className='text-5xl font-bold text-blue-500'>
+                    HuskyCoin
                 </a>
-              </a>
-              </div>
-        </nav>
+                <div>
+                  <a
+                    className='float-left text-xs mt-4 sm:text-sm sm:float-right sm:-mt-6 sm:mr-4' 
+                    href='https://github.com/robriks/HuskyCoin' 
+                    > A Web3 Tutorial by {' '}
+                    <a className='text-blue-500'>{''} Robriks / 👦🏻👦🏻.eth
+                    </a>
+                  </a>
+                </div>
+            </div>
+          </nav>
         </header>
-        <div className='flex justify-center'>
-          <div className='flex justify-center bg-gray-100 p-6 shadow-2xl rounded-full'>
-            <div className='flex justify-items-stretch space-x-10 w-auto'>
+        <div className='flex justify-center w-auto'>
+          <div className='justify-center bg-gray-100 p-4 sm:p-6 shadow-2xl rounded-full'>
+            <div className='flex justify-items-stretch sm:text-3xl space-x-10 w-auto'>
               <Link href="/">
-                <a className="nav-link text-3xl text-blue-500">Home</a>
+                <a className="nav-link text-blue-500">Home</a>
               </Link>
               <Link href='/faucet'>
-                <a className='nav-link text-3xl text-blue-500'>Faucet</a>
+                <a className='nav-link text-blue-500'>Faucet</a>
               </Link>
               <Link href='/stake'>
-                <a className='nav-link text-3xl text-blue-500'>Staking</a>
+                <a className='nav-link text-blue-500'>Staking</a>
               </Link>
               <Link href='/about'>
-                <a className='nav-link text-3xl text-blue-500'>Web3</a>
+                <a className='nav-link text-blue-500'>Web3</a>
               </Link>
               <Link href='/tutorial'>
-                <a className='nav-link text-3xl text-blue-500'>Tutorial</a>
+                <a className='nav-link text-blue-500'>Tutorial</a>
               </Link>
             </div>
           </div>

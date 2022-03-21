@@ -37,16 +37,29 @@ export default function Tutorial() {
         <div className='flex justify-center mt-8 mb-8'>
           <h1 className='text-4xl'>What you will learn: </h1>
         </div>
--Set up a crypto wallet via MetaMask
--Make your first on-chain transaction by claiming 69420 free educational tokens (HuskyCoins $HUSKY) that I have coded and deployed for your convenience
--How you can get paid by contributing to network security and decentralization, termed "staking". Stake your $HUSKY balance to earn passive "income" ($HUSKY is for education purposes only, not income)
--There is no next Bitcorn. Sry. :(
-
-##### What you will not find here: 
--Financial advice, lel.
-
-#### Download Metamask
-This tutorial focuses on the industry standards that are ubiquitous and have the most documentation. MetaMask is the most widespread crypto wallet, although other awesome wallets like Coinbase Wallet/Brave Wallet/Rainbow Wallet exist, all of which connect to the blockchain and safely handle your private keys.
+        <ol className='list-disc justify-center ml-16'>
+          <li>Set up a crypto wallet via MetaMask</li>
+          <li>Make your first on-chain transaction by claiming 69420 free tokens (HuskyCoins $HUSKY) that I have coded and deployed for your convenience</li>
+          <li>How you can earn passive income by contributing to network security and decentralization via staking. 
+            I've implemented staking functionality for $HUSKY so you can watch your balance grow in real time! 
+            ($HUSKY is for educational purposes only)</li>
+          <li>There is no next Bitcorn. Sry. :(</li>
+        </ol>
+        <div>
+          <h1 className='flex justify-center text-4xl mt-8 mb-8'>What you will not find here: </h1>
+        </div>
+        <ol className='list-disc justify-center ml-16'> 
+          <li className=''>Financial advice, lel.</li>
+        </ol>
+        <div className='flex justify-center mt-8 mb-8'>
+          <h1 className='text-4xl font-bold'>Let's Get Started!</h1>
+        </div>
+        <div className='mt-8 mb-8'>
+          <h2 className='text-3xl'>Download MetaMask</h2>
+        </div>
+        <p className='indent-8'>
+          This tutorial focuses on the industry standards that are ubiquitous and have the most documentation. MetaMask is the most widespread crypto wallet, although other awesome wallets like Coinbase Wallet/Brave Wallet/Rainbow Wallet exist, all of which connect to the blockchain and safely handle your private keys.
+        </p>
 
 Note: I have been asked many times if a Coinbase, Robinhood, Venmo, CashApp, or Paypal account will adequately serve as a crypto wallet. As of writing, these companies/services do NOT offer a native web3 wallet that allow you to interact with the Ethereum or Bitcoin networks. (Coinbase Wallet is a separate app/browser extension than the Coinbase app you use to buy crypto). They simply allow you to buy and sell the assets for price speculation. Boring!
 
