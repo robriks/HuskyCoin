@@ -9,15 +9,16 @@ export default function Header() {
               className='flow-root ml-4 mt-2'>
                 <a 
                   href='/' 
-                  className='text-5xl font-bold text-blue-500'>
+                  className='flex justify-center text-5xl font-bold text-blue-500 sm:float-left'>
                     HuskyCoin
                 </a>
-                <div>
+                <div className='sm:mt-12'>
                   <a
-                    className='float-left text-xs mt-4 sm:text-sm sm:float-right sm:-mt-6 sm:mr-4' 
+                    className='flex justify-center text-xs mt-4 sm:text-sm sm:float-right sm:-mt-6 sm:mr-4' 
                     href='https://github.com/robriks/HuskyCoin' 
                     > A Web3 Tutorial by {' '}
-                    <a className='text-blue-500'>{''} Robriks / 👦🏻👦🏻.eth
+                    <a className='text-blue-500'>
+                      &nbsp; Robriks / 👦🏻👦🏻.eth
                     </a>
                   </a>
                 </div>

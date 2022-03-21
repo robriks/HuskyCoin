@@ -43,7 +43,7 @@ export default function Modal() {
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
                   <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                    <a className="h-6 w-6 text-red-600 justify-center" aria-hidden="true">{' '}!!!!!</a>
+                    <a className="h-6 w-6 text-red-600 justify-center" aria-hidden="true">{' '}!!!!!!</a>
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
@@ -51,9 +51,11 @@ export default function Modal() {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        This tutorial, as well as Web3 at large, is generally not configured for mobile devices due to security and compatibility issues. 
-                        Switching to desktop is required to complete the tutorial. 
-                        You may go read my Web3 writeup page without issue, but keep in mind this site is formatted for desktop and will not be pretty on mobile.
+                        This tutorial, as well as Web3 at large, is not configured for mobile devices due to security and compatibility issues. 
+                        To complete the tutorial, please switch to desktop. 
+                        If you're only looking to read my Web3 writeup without transacting on Web3, click "Proceed anyway." 
+                        Keep in mind this site is formatted for desktop and not for mobile.
+                        Happy learning!
                       </p>
                     </div>
                   </div>
