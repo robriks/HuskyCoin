@@ -1,17 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import Modal from '../components/modal'
-import { isMobile } from 'react-device-detect'
 
 export default function Home() {
-  if (isMobile) {
-    return (
-      <div>
-        <Modal></Modal>
-      </div>
-    )
-  } else {
   return (
     <div className={styles.container}>
       <Head>
@@ -73,4 +64,4 @@ export default function Home() {
     </div>
   )
 }
-}
+
