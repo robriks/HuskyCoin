@@ -2,6 +2,8 @@ import { ethers } from 'ethers'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import Web3Modal from 'web3modal'
+import Modal from '../components/modal'
+import { isMobile } from 'react-device-detect'
 import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 
@@ -25,7 +27,14 @@ export default function Faucet () {
 
         router.push('/stake')
     }
-
+    
+    if (isMobile) {
+      return (
+        <div>
+          <Modal></Modal>
+        </div>
+      )
+    } else {
     return (
       <div className={styles.container}>
         <main className={styles.description}>
@@ -54,4 +63,5 @@ export default function Faucet () {
         </p>
       </div>
     )
+  }
 }

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import geminiEarn from '../assets/geminiEarn.png'
@@ -10,6 +9,7 @@ import hyperinflation from '../assets/hyperinflation.png'
 import miners from '../assets/miners.png'
 import web3 from '../assets/web3.png'
 import web3Tweet from '../assets/web3tweet.png'
+import signin from '../assets/signin.png'
 
 export default function About() {
     return(
@@ -143,8 +143,8 @@ export default function About() {
           <p className='justify-center indent-8'>
             The cryptography that secures blockchains like Bitcoin and Ethereum is impenetrable. 
             The encryption algorithms like sha256/keccak256 utilize numbers so massive that they are impervious to brute-force attack.
-            Your BTC/ETH public address and private key, for example, are unimaginably large numbers (in base58 and hexadecimal respectively), closer to the number of atoms in the observable universe than anything else quantifiable by words.
-            Guessing a private key to steal someone's money is like finding a needle in the haystack, except much, much harder- it's more akin to trying to pinpoint a single specific atom anywhere in the universe.
+            Your BTC/ETH public address and private key, for example, are unimaginably large numbers (in base58 and hexadecimal respectively), closer to the number of atoms in the observable universe than any other comparison quantifiable by words.
+            Guessing a private key to steal someone's money is like finding a needle in a haystack, except much, much harder- it's more akin to trying to pinpoint a single specific atom anywhere in the universe.
           </p>
           <p className='justify-center indent-8 mt-2'>
             Banks don't use protocols anywhere near this level of security. 
@@ -153,7 +153,7 @@ export default function About() {
           <p className='justify-center indent-8 mt-2'>
             Decentralized cryptocurrencies on the other hand feature open-source code, meaning anyone anywhere in the world can copy-paste the protocol software and run a node to contribute by verifying and propagating transactions, greatly bolstering network resilience.
             As a result, only a worldwide power outage or nuclear war that destroys every computer on Earth could realistically stop the Bitcoin and Ethereum networks from functioning.
-            The $BTC and $ETH blockchains have never gone down in a decade, unlike Facebook/Instagram or Google which have proven vulnerable to CDN/DNS outages every few months.
+            The $BTC and $ETH blockchains have never gone down in a decade, unlike Facebook/Instagram or Google which have proven vulnerable to CDN and DNS outages every few months.
           </p>
           <p 
             className='text-sm flex justify-center indent-4 mt-6 mr-8 ml-8'>
@@ -178,7 +178,7 @@ export default function About() {
             Every fiat currency in history to date has ultimately failed.
             Fiat refers to money that is backed by trust in a central bank/government authority, and NOT backed by a scarce commodity like gold.
             Because the Euro, the Dollar, the Yuan, and the Yen are not redeemable for gold, they are examples of such fiat currencies- even the British Pound is not redeemable for a pound of silver as it once was!
-            For every surviving fiat on the globe, there is a large graveyard of fiat currencies that failed to hyperinflation or deflationary spirals or some other economic woe.
+            For every one of these surviving fiat currencies, there exists a graveyard of fiat currencies that failed, either to hyperinflation or deflationary spirals or some other economic woe.
           </p>
           <p className='justify-center indent-8 mt-2'>
             It's fine to stick with US dollars if you're lucky enough to live in the west. 
@@ -205,17 +205,21 @@ export default function About() {
           </div>
           <p className='justify-center indent-8'>
             Given that the most powerful nation states in the world cannot stop the Bitcoin and Ethereum blockchains from confirming blocks, a number of powerful attributes arise as a result.
-            Censorship-resistance is an attribute that bears little weight in our luxurious western economies run by trustworthy governments, but it's a different story when you're living under an authoritarian regime that specializes in censoring free speech and has the banking system under its thumb.
+            Censorship-resistance is a feature that bears little weight in our luxurious western economies run by trustworthy governments, but it's a different story when you're living under an authoritarian regime that specializes in censoring free speech and has the banking system under its thumb.
           </p>
           <p className='justify-center indent-8 mt-2'>
             Web3 and DeFi provides freedom from the threat of an authoritarian freezing your bank accounts or restricting the internet content you can view via national firewall.
             Any person with a dirt cheap smartphone and data plan can permissionlessly use Web3, without risk of censorship, so long as you remain connected to the internet.
           </p>
           <p className='justify-center indent-8 mt-2'>
-            Computers are the ones running blockchains and, thankfully, they are incapable of discrimination, be it racism, sexism, sexual orientation bigotry, or political affiliation.
+            Computers are the ones running blockchains and, thankfully, they are incapable of discrimination, be it racism, sexism, sexual orientation bigotry, or political affiliation censorship.
             Nearly 2 billion people in the world are unbanked, meaning they do not have a bank account and are unable to acquire one.
-            That's nearly 1/4 the entire world population that is unable to join us, the western banked elite, in our luxury exclusionary financial system.
-            The current financial system is discriminatory and exclusionary by default (eg redlining), Web3 on the other hand is inclusive by default.
+            That's nearly 1/4 the entire world population that is unable to join us, the white, western banked elite, in our luxurious exclusionary financial system.
+          </p>
+          <p className='justify-center indent-8 mt-2'>
+            Because it was built over centuries by less-than woke incumbents, the legacy financial system is discriminatory and exclusionary by default: redlining, the gender pay gap, and white collar crime sentencing discrepancies come to mind. 
+            For reference, Chuck Grassley has been making laws as a senator since 1959; years before the civil rights movement!
+            Web3 on the other hand is inclusive by default.
           </p>
           <div className='justify-center text-4xl mt-12 mb-10'>
             <h1 className='flex justify-center mb-10'>
@@ -229,7 +233,7 @@ export default function About() {
             </div>
           <p className='justify-center mb-2 indent-8'>
             One of Bitcoin's groundbreaking technological innovations is the solution to the Byzantine General's Dilemma and the Double Spend Problem.
-            It achieves this by reaching consensus among many decentralized nodes using an algorithm known as Proof-Of-Work, abbreviated as PoW.
+            It achieves this by reaching consensus among many decentralized nodes using a mechanism known as Proof-Of-Work, abbreviated as PoW.
           </p>
           <p className='justify-center mb-2 indent-8'>
             The technical details surrounding PoW are fascinating, making use of cryptographic hashes and signatures which are not important for me to delve into here.
@@ -284,7 +288,7 @@ export default function About() {
             Rather than having miners rapidly brute force solutions to a sha256 hash, PoS nodes confirm transactions in each block by putting up a stake of funds that allows the node to be chosen for proposing blocks.
           </p>
           <p className='justify-center mb-2 indent-8'>
-            If the node proposes and attests to legitimate blocks, benefitting the network, it is rewarded with issuance of newly minted $ETH; if it behaves maliciously or supports invalid blocks, a portion of its stake is slashed.
+            If the node proposes and attests to legitimate blocks, benefitting the network, it is rewarded with issuance of newly minted $ETH; if it behaves maliciously or propagates invalid blocks, a portion of its stake is slashed.
             The goals of switching to PoS are manifold: 
           </p>
           <ul className='list-disc justify-center text-sm mt-6'>
@@ -324,11 +328,11 @@ export default function About() {
           <p className='justify-center indent-8 mb-2'>
             To really understand the term, it's worth providing a brief overview of Internet history.
             Web1 was the first inception of the internet (~1990 - 2004) where the web featured static websites owned by companies like news organisations. 
-            Using these read-only websites, individuals internet users rarely interacted with one another, instead just reading static html content.
+            Using these read-only websites, individual internet users rarely interacted with one another, instead just reading static HTML content.
           </p>  
           <p className='justify-center indent-8 mb-2'>
             Web2 on the other hand began in 2004 with the emergence of social media platforms.
-            This period saw growth in read-write interactions and platforms that featured users generating content in the form of posts, pictures, & videos and sharing it to other users via messages and public user pages.
+            This still-ongoing period saw growth in read-write interactions and platforms that featured user-generated content in the form of posts, pictures, & videos and sharing it to other users via messages and public user pages.
           </p>
           <div className='flex justify-center mt-6 mb-6'>
             <Image className='justify-center' src={web3Tweet}></Image>
@@ -339,7 +343,7 @@ export default function About() {
             Facebook and Google have implemented echo chamber algorithms that have engendered misinformation factories and troll farms that profit from outrage engagement.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Even worse, all of these companies collect massive swaths of data on each user and either exploits it to extract profit from our behaviors or sells it to another company that does so.
+            Even worse, all of these companies collect massive swaths of location + browsing data on each user and either exploits it to extract profit from our behaviors via targeted ads or sells it to another company that does so.
             This has directly resulted in mass radicalization of unscrupulous (or uneducated) users who don't fact check the content presented to them by Russian troll farms and other malicious geopolitical actors who benefit from political turmoil.
           </p>
           <p className='justify-center indent-8 mb-2'>
@@ -348,36 +352,43 @@ export default function About() {
             The stated goal of these insurrectionists, who erected a noose intended for capital punishment on government grounds, was to stop the peaceful transfer of power after a legitimate democratic election.
           </p>  
           <p className='justify-center indent-8 mb-2'>
-            We cannot afford to wait any longer without addressing the state of our online political landscape.
+            We cannot afford to wait any longer without addressing the state of our online landscape.
             We need net neutrality.
           </p>
           <div className='flex justify-center mt-6 mb-6'>
             <Image className='justify-center' src={web3}></Image>
           </div>
-          <p className='flex justify-center indent-8 mb-2'>
+          <p className='justify-center indent-8 mb-2'>
             Web3 aims to fix all this. 
-            Digital property rights give rise to a number of important potential solutions, from taking back ownership of your own data from Google to cryptographically preventing voter fraud to securely combat 'rigged election' misinformation.
+            Digital property rights give rise to a number of important potential solutions, from taking back ownership of your own data from Google to building cryptographically secure federal voting systems in order to combat 'rigged election' misinformation.
           </p>  
-          <p className='flex justify-center indent-8 mb-2'>
-            The native interoperability of digital assets on a blockchain also bears powerful implications. 
+          <p className='justify-center indent-8 mb-2'>
+            The native interoperability of digital assets on a blockchain also carries powerful implications. 
             Consider a gamer named Alice playing World of Warcraft on Web2.
             Alice's entire metaversal gaming experience is entirely dependent on the servers at the game's data center.
             Alice may pour hundreds of hours of hard work into honing their PvP/PvE skills and thereby collecting awards, items, and notoriety within the community.
           </p>
-          <p className='flex justify-center indent-8 mb-2'>
+          <p className='justify-center indent-8 mb-2'>
             None of these digital assets and achievements are portable into the next game that Alice plays. Not a one.
             This means if there's a flood at the game's data center, a bug/hack in the servers, a developer layoff, or a problem with the parent company, the servers go down and the game (along with the gamers' hard-earned assets) goes down with it!
           </p>
-          <p className='flex justify-center indent-8 mb-2'>
+          <p className='justify-center indent-8 mb-2'>
             In Web3, all digital assets, identity, and history are portable between all platforms by default.
             This includes all games, dapps, or social media sites powered by crypto.
-            Your Ethereum address can serve as your Web3 Twitter profile, your video game login credentials, your credential history, your bank account, all while storing your digital assets.
+            Your Ethereum address can serve as your Web3 Twitter profile, your video game login credentials, your educational degrees, your bank account, and whatever else hasn't been built yet; all while storing your digital assets.
           </p>
-          <p className='flex justify-center indent-8 mb-2'>
+          <div className='flex justify-center mb-8 mt-8'>
+            <Image
+             src={signin}
+             layout='intrinsic'
+             >
+            </Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
             Imagine how convenient it would be to have one account that seamlessly ported between your FaceBook, Insta, Twitter, Linkedin, Call of Duty, held your drivers' license, professional resume, and your bank/investment accounts.
             Any cool item you earn as a reward in a game (like a dope hat!) or social media platform (like your Snapchat BitMoji!) can be worn/displayed in every other Web3 game or social media platform.
           </p>
-          <p className='flex justify-center indent-8'>
+          <p className='justify-center indent-8'>
             By enabling ownership of your own data, your posts, & your social media content, you gain control over all your in-game currencies, blog posts, instagram photos. 
             Not only that but they can be configured to pay you royalties or can be exchanged for actual money like stablecoins or $ETH at any hour of the day.
             That's the reality of what the Metaverse will look like, and it's already being built at breakneck speed.
@@ -387,10 +398,20 @@ export default function About() {
               className='flex justify-center text-4xl'>
                 Thanks for reading!
             </h1>
-            <p className='flex justify-center indent-8 mt-8'>
+            <p className='justify-center indent-8 mt-8'>
               Hopefully you've enjoyed learning about what Web3 powered by crypto can enable.
-              I wrote all this under the Web3 about page to help readers understand why Web3 skills like learning to transact on-chain are very valuable skills.
-              Ideally this writeup has inspired you to go complete the tutorial!
+              I haven't even touched on some of the more recent developments in Web3, like the prevalence of highly profitable airdrops (such as ENS, dYdX, Axies), which are token rewards to users like you and me that are comparable to traditional bonuses/dividends that would normally go to CEOs/shareholders.
+            </p>
+            <p className='justify-center indent-8 mt-2'>
+              On the topic of a CEO-less shareholder-less internet, Web3 also features DAOs (Decentralized Autonomous Organizations) enabling rapid and unprecedented social coordination, as well as P2E (Play to Earn) game economies providing livable wages higher than physical-world job compensation to citizens of developing countries.
+              If you're interested in these concepts, reach out to me using any of the social media links below and I'll provide you with further reading.
+            </p>
+            <p className='justify-center indent-8 mt-2'>
+              I wrote all this under the 'about Web3' page to help readers understand why Web3 skills like learning to transact on-chain are very valuable skills.
+              I believe these technologies will become widespread alongside the massive digitalization we've seen in recent years, partly accelerated by the pandemic and society's shift to working from home.
+            </p>
+            <p className='justify-center indent-8 mt-2'>
+              Ideally this writeup has inspired you to go complete the tutorial and conduct your first Web3 transactions!
               So go open up a desktop browser, head back to the home page, and get started!
             </p>
             <h2 className='flex justify-center text-4xl mt-8'>Now go learn some Web3 skills!</h2>
