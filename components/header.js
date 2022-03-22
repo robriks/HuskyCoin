@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return(
-      <div className='justify-center h-auto w-screen'>
+      <div className='justify-center h-auto w-auto'>
         <header className='bg-header'>
           <nav className='p-6 mx-auto justify-between max-w-screen-x1'>
             <div 
@@ -26,8 +26,8 @@ export default function Header() {
           </nav>
         </header>
         <div className='flex justify-center w-auto'>
-          <div className='justify-center bg-gray-100 p-4 sm:p-6 shadow-2xl rounded-full'>
-            <div className='flex justify-items-stretch sm:text-3xl space-x-10 w-auto'>
+          <div className=' bg-gray-100 p-4 sm:p-6 shadow-2xl rounded-full'>
+            <div className='flex justify-items-stretch sm:text-2xl space-x-6 sm:space-x-10 w-auto'>
               <Link href="/">
                 <a className="nav-link text-blue-500">Home</a>
               </Link>
