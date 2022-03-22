@@ -14,24 +14,21 @@ export default function Home() {
           Welcome to the 
           <a 
             className='font-bold text-6xl text-blue-500'
-            href="https://polygonscan.com/">{' '}HuskyCoin
+            href="https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee">{' '}HuskyCoin
           </a> Dapp!
         </h1>
         <div className={styles.description}>
           <a className='text-2xl'>An Introductory Tutorial to Web3 on Ethereum</a>
-          <p className='text-xs mb-6'>Dedicated to 
+          <p className='text-sm mb-6'>Dedicated to 
             <a 
               className='text-blue-500'
               href='https://instagram.com/cleo.thehusky'>
               {''} Cleo the Husky
             </a>
           </p>
-          <p className='text-xs'>If you find this tutorial helpful, send a tip!</p>
-          <p className='text-xs'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
+          <p className='text-xs mt-6'>If you find this tutorial helpful, send a tip!</p>
+          <p className='text-xs -mb-6'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
         </div>
-        <p className='font-bold text-1xl'>Get Started
-          <a className='nav-link text-1xl font-bold text-green-500' href='/tutorial'> Here</a>
-        </p>
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
             <h2>1. Setting up MetaMask &rarr;</h2>
