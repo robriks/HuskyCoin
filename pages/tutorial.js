@@ -59,7 +59,7 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to follow as possible for you.</p>
           <p className='justify-center indent-8'>Again, if you're just looking to read about these concepts head over to the 
             <a href='/about' className='text-blue-500'>{' '}Web3{' '}</a>
-            section
+            section.
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>What you will learn: </h1>
