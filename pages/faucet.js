@@ -31,11 +31,10 @@ export default function Faucet () {
     }
     
     function catchMobile() {
-      const router = useRouter()
       let bool = isMobile
       
       for (let i = 0; i < 2; i++) {
-        if (!bool) continue; 
+        if (!isMobile) continue; 
 
         if (bool = true) {
           bool = false;
@@ -47,7 +46,7 @@ export default function Faucet () {
         }
       }
     }
-    
+
     catchMobile()
     return (
       <div className={styles.container}>
