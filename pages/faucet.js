@@ -46,7 +46,6 @@ export default function Faucet () {
           )
         }
       }
-      router.reload()
     }
 
     return (
