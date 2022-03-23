@@ -4,16 +4,14 @@ import { useRouter } from 'next/router'
 
 export default function Modal() {
   const [open, setOpen] = useState(true)
-
   const cancelButtonRef = useRef(null)
-
+  const router = useRouter
     
   function goToWriteup() {
     setOpen(false)    
   }
 
   function keepLooking() {
-    const router = useRouter
     setOpen(false)
     //router.reload()
   }

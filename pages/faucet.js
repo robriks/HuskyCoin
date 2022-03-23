@@ -12,7 +12,8 @@ import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 export default function Faucet () {
   const router = useRouter()
     async function dispenseHuskyCoins() {
-        if (isMobile) {
+        let bool = isMobile  
+        if (bool) {
           return(
             <div><Modal></Modal></div>
           )
@@ -31,9 +32,8 @@ export default function Faucet () {
             alert("You already have HuskyCoins! Import the token address to MetaMask and go stake them or send to your friends.")
           }
         }
-
         router.push('/stake')
-        }
+      }
     }
 
     // function catchMobile() {
