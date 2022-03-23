@@ -2,6 +2,8 @@ import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import warren from '../assets/warren.png'
 import MMwallet from '../assets/MMwallet.png'
+import MMsetup from '../assets/MMsetup.png'
+import MMbalance from '../assets/MMbalance.png'
 
 export default function Tutorial() {
     return(
@@ -93,7 +95,26 @@ export default function Tutorial() {
             These services simply allow you to buy and sell the assets for price speculation. Boring!
           </p>
           <p className='justify-center indent-8 mb-2'>
-            With that out of the way, let's get started. On the home page, click the link titled: "1. Setting up MetaMask" and follow the instructions on downloading and installing the MetaMask browser extension.
+            With that out of the way, let's get started. 
+            On the home page, click the box titled: "1. Setting up MetaMask" and follow the instructions on downloading and installing the MetaMask browser extension.
+            Keep in mind that Safari is not supported;{' '} 
+              <a href='https://brave.com' className='text-blue-500'>Brave</a> 
+            {' '}is the most Web3-friendly (and my favorite!) browser.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Once you've successfully installed MetaMask for your browser, click "Create a Wallet" under the "New to MetaMask" page. 
+            Select whichever data sharing option you wish and set a secure passphrase.
+            Unless you are using a hardware wallet, this passphrase will grant access to your funds on this device so be sure to take security seriously.
+          </p>
+          <div className='flex justify-center mt-6 mb-2'>
+            <Image src={MMsetup} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Be sure to watch the short video on your secret recovery phrase.
+            This phrase is derived to obtain your private key, which controls all of the tokens associated with your Ethereum address.
+            Write it down out of view of any cameras and store it safely!
+            If you plan to store any valuable sum of tokens, you should absolutely obtain a hardware wallet.
+            In fact, this is so important to understand, that I've reiterated it for you just below this paragraph.
           </p>
           <p className='justify-center text-xs indent-4 mb-2 mr-8 ml-8'>
             <a className='font-bold'>URGENT:{' '}</a> 
@@ -106,24 +127,89 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              2. Understanding Ethereum Addresses
+              2. Understanding Your Ethereum Address
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Your Ethereum address is a long string of hexadecimal digits starting with 0x, which indicates hexadecimal. For example: 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe.
+            Congratulations on generating your first Ethereum address!
+            You can see it at the top of MetaMask, under "Account 1".
+            Your address is a long string of hexadecimal digits starting with 0x, which indicates hexadecimal. 
+            For example, my address is: 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe.
             This long address can be represented by a .eth domain, such as 👦🏻👦🏻.eth - this is called an ENS domain.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            This address is your public-facing account where you can store any tokens, fungible or not, on the network. 
+            The address displayed on your MetaMask is your public-facing account where you can store any tokens, fungible or not, on the network. 
             This includes cryptocurrencies like $ETH, which is the base layer token of the Ethereum blockchain and is responsible for securing the network.
-            In addition to security, $ETH maintains the ever-changing state of the global computer known as the Ethereum Virtual Machine (EVM for short).
-            It's also used to pay for all EVM computation, called transactions, in the form of gas. 
+            It can also store any fungible ERC20 tokens such as $UNI, $SHIB, or $LINK as well as any NFTs that you purchase from an NFT marketplace like 
+            <a href='https://opensea.io' className='text-blue-500'>{' '}OpenSea.</a>
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={MMbalance} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Back on the subject of $ETH, not only does $ETH secure the network but it also is necessary to maintain the ever-changing state of the global computer known as the Ethereum Virtual Machine, called the EVM for short.
+            It's used to pay for all EVM computation, what we call transactions, in the form of gas. 
           </p>
           <p className='justify-center indent-8 mb-2'>
-            We'll cover gas a bit more later, but basically you must pay $ETH for every transaction you make in order to prevent spammers from clogging the network.
-            Any transaction changes the global state of the global Ethereum Virtual Machine, with more computation-intensive transactions requiring more gas to execute.
+            We'll cover gas a bit more later, but basically you must pay $ETH for every transaction you make since it results in a change in the global Ethereum Virtual Machine state.
+            Not only does every transaction change the state of the EVM, but more computationally intensive transactions require more gas to execute and are therefore more expensive.
           </p>
-
+          <p className='justify-center indent-8 mb-2'>
+            This kind of fee mechanic may be frustrating and confusing at times, but some form of it exists on all blockchains in order to prevent spammers from clogging the network.
+            Think of it this way: if transactions were totally free to change computational state, a disgruntled person would write bots to send an infinite number of spam transactions and crowd out legitimate users submitting their transactions.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Even though it is annoying and sometimes very expensive on Ethereum's mainnet to pay gas fees for every little transaction, the alternative is a broken blockchain completely clogged by spam.
+            How many spam emails do you think are sent every day? 
+            <a href='https://securelist.com/spam-and-phishing-in-2021/105713/' className='text-blue-500'>{' '}It's roughly 50% of all emails. Yikes.</a>
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>Wen HuskyCoins, ser?!</h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Not so fast!
+            I just got through explaining how annoyingly expensive gas fees are on Ethereum's mainnet!
+            You think I'm gonna make you transact on Ethereum mainnet?!
+            No way! 
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Thankfully Ethereum's big-brained core protocol developers have come up with a wild idea to solve these high gas fees:
+            why not have even more blockchains settle their transaction hashes onto Ethereum blocks?
+            I get that you're probably drooling for HuskyCoins right now, but you won't know how to claim them until I teach you how to access these aforementioned nested blockchains that live on Ethereum.
+            You'll get your $HUSKY soon enough, I promise.
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              Understanding Ethereum Layer 2s
+            </h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Separate blockchains that execute computation off of the Ethereum mainnet (also referred to as layer 1) and then settle their hashed proofs to Ethereum's layer 1 are called layer 2 blockchains.
+            These layer 2 chains, also known as rollups, generally make use of either optimistic execution which is checked by fraud proofs or zero-knowledge proofs which is an actively researched field in mathematics.
+            The technical details between either L2 rollup type are not important for me to go over here but rest assured they are cutting-edge and extremely interesting.
+            Definitely worth further reading if you're interested.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Anyway, these rollup chains run alongside the layer 1 mainnet, handling their own ecosystem of users and smart contracts.
+            They essentially lock up tokens like $ETH on mainnet and then only periodically settle hashes called merkle roots from the L2 to the L1, to prove that all funds are accounted for and all transactions are valid.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            It's important for you to understand this concept because the smart contract I've written and deployed for you, HuskyCoin, exists on the 
+            <a href='https://polygonscan.com' className='text-blue-500'>{' '}Polygon layer 2 rollup chain.</a>
+            {' '}Technically it's a side-chain, but again that's beside the point.
+            The point is that the bytecode I wrote and compiled for the HuskyCoin token exists at the following smart contract address on Polygon L2:
+            <a href='https://polygonscan.com' className='text-blue-500 text-4xl'>CHANGE THIS ADDRESS ONCE DEPLOYED</a>
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Keep in mind that this smart contract address only exists on the Polygon L2; if you try to find it on mainnet or any of Ethereum's other rollup networks, you won't find it.
+            While developing HuskyCoin, I also deployed to Ethereum's Rinkeby testnet at this address:
+            <a 
+              href='https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee' 
+              className='text-blue-500'>
+                {' '}0x8cfb42a80291737cb62cef7b665fe1304d112fee
+            </a>
+            {' '}Feel free to interact with it however you like there.
+          </p>
 
 
           <div className={styles.description}>
@@ -157,15 +243,7 @@ export default function Tutorial() {
           </p>
 
 
-  #### Generate An Ethereum Address
-  Okay enough talk, we get it- tokens are cool! Follow the MetaMask instructions for setting up your own secure Ethereum address.
-
-  When you've finished, you should see your account in your MetaMask as follows:
-
-  ![MetaMask Account Image](./assets/metamask-account.png)
-
-  You'll notice a 0 $ETH balance and no other token balances displayed yet. Before moving on to the fun stuff, we'll need to switch to Ethereum's cheapest layer 2 network, the Polygon ecosystem.
-
+  
   #### Understanding Ethereum Layer 2s
   We've covered that Ethereum is a blockchain that permanently stores code and functions as a global computer housing all sorts of programs mostly comprising of various tokens. But transacting on Ethereum's mainnet is very expensive as it prioritizes decentralization, security, and immutability above all else; foregoing speed and cheap transaction/gas fees in favor of the former attributes.  This is important as it provides net neutrality (yes, that thing that the Trump administration absolutely destroyed by handing over throttling priveleges and other dystopian controls over the internet to corporations like Verizon/ATT/TMobile/Google. Screw you, Ajit Pai!) But it comes at high cost, making transacting on the Ethereum network very expensive.
 
