@@ -12,12 +12,6 @@ import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 export default function Faucet () {
   const router = useRouter()
     async function dispenseHuskyCoins() {
-        let bool = isMobile  
-        if (bool) {
-          return(
-            <div><Modal></Modal></div>
-          )
-        } else {
         const web3Modal = new Web3Modal()
         const connection = await web3Modal.connect()
         const provider = new ethers.providers.Web3Provider(connection)
@@ -33,23 +27,22 @@ export default function Faucet () {
           }
         }
         router.push('/stake')
-      }
     }
 
-    // function catchMobile() {
-    //   let bool = isMobile;
-    //   if (bool) {
-    //     for (let i = 0; i < 2; i++) {
-    //       if (!bool) {
-    //         break;
-    //       }
-    //       bool = false;
-    //       return (
-    //         <div><Modal></Modal></div>
-    //       )        
-    //     }
-    //   }
-    // }
+    function catchMobile() {
+      let bool = isMobile;
+      if (bool) {
+        for (let i = 0; i < 2; i++) {
+          if (!bool) {
+            break;
+          }
+          bool = false;
+          return (
+            <div><Modal></Modal></div>
+          )        
+        }
+      }
+    }
 
     return (
       <div className={styles.container}>
@@ -77,6 +70,7 @@ export default function Faucet () {
                 className={`flex w-${36} mt-2 p-3 rounded-full bg-green-500 hover:bg-green-700 shadow-xl justify-center text-white`}>
                   Receive HuskyCoins
               </button>
+              {catchMobile}
             </div>
           </div>
         </div>
