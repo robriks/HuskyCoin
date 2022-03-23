@@ -10,13 +10,13 @@ import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 
 export default function Faucet () {
+  const router = useRouter()
     async function dispenseHuskyCoins() {
         if (isMobile) {
           return(
             <div><Modal></Modal></div>
           )
         } else {
-        const router = useRouter()
         const web3Modal = new Web3Modal()
         const connection = await web3Modal.connect()
         const provider = new ethers.providers.Web3Provider(connection)
