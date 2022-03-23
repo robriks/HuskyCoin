@@ -15,7 +15,7 @@ export default function Modal() {
   function keepLooking() {
     const router = useRouter
     setOpen(false)
-    router.reload()
+    //router.reload()
   }
 
   return (
