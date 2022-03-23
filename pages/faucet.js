@@ -30,24 +30,38 @@ export default function Faucet () {
         router.push('/stake')
     }
     
-    function catchMobile() {
-      let bool = isMobile
+    // function catchMobile() {
+    //   let bool = isMobile
       
-      for (let i = 0; i < 2; i++) {
-        if (!isMobile) continue; 
+    //   for (let i = 0; i < 2; i++) {
+    //     if (!isMobile) continue; 
 
-        if (bool = true) {
-          bool = false;
-          return (
-            <div>
-              <Modal></Modal>
-            </div>
-          )
+    //     if (bool) {
+    //       bool = false;
+    //       return (
+    //         <div>
+    //           <Modal></Modal>
+    //         </div>
+    //       )
+    //     }
+    //   }
+    // }
+
+    //catchMobile()
+    
+    let bool = true;
+    if (isMobile) {
+      for (let i = 0; i < 2; i++) {
+        if (!bool) {
+          break;
         }
+        bool = false;
+        return (
+          <div><Modal></Modal></div>
+        )
       }
     }
 
-    catchMobile()
     return (
       <div className={styles.container}>
         <main className={styles.description}>
