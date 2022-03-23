@@ -10,8 +10,8 @@ import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 
 export default function Faucet () {
-    const router = useRouter()
     async function dispenseHuskyCoins() {
+        const router = useRouter()
         const web3Modal = new Web3Modal()
         const connection = await web3Modal.connect()
         const provider = new ethers.providers.Web3Provider(connection)
@@ -31,6 +31,7 @@ export default function Faucet () {
     }
     
     function catchMobile() {
+      const router = useRouter()
       let bool = isMobile
       
       for (let i = 0; i < 2; i++) {
@@ -48,9 +49,9 @@ export default function Faucet () {
       router.reload()
     }
 
-    catchMobile()
     return (
       <div className={styles.container}>
+        {catchMobile}
         <main className={styles.description}>
           <div className={styles.description}>
             <a 
