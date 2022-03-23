@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import huskycolor from '../assets/huskycolor.gif'
 import warren from '../assets/warren.png'
 import MMwallet from '../assets/MMwallet.png'
 import MMsetup from '../assets/MMsetup.png'
@@ -10,6 +11,11 @@ export default function Tutorial() {
       <div className={styles.container}>
         <div className={styles.title}>
           <h1 className='flex justify-center mt-20 mb-12'>For n00Bs</h1>
+        </div>
+        <div className='flex justify-center mb-6'>
+          <div className='max-w-2xl'>
+            <Image src={huskycolor} layout='intrinsic'></Image>
+          </div>
         </div>
         <div className='p-2 sm:p-6 sm:mr-8 sm:ml-8'>
           <p className='justify-center indent-8 mb-2'>

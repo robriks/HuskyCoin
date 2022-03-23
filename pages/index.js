@@ -32,7 +32,7 @@ export default function Home() {
             </a>
           </p>
           <p className='text-xs mt-6'>If you find this tutorial helpful, send a tip!</p>
-          <a href='https://etherscan.io/' className='text-xs -mb-6'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</a>
+          <a href='https://etherscan.io/address/0x65b54a4646369d8ad83cb58a5a6b39f22fcd8cee' className='text-xs text-blue-500 -mb-6'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</a>
         </div>
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
