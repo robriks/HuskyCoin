@@ -31,6 +31,7 @@ export default function Faucet () {
     }
     
     function catchMobile() {
+      const router = useRouter()
       let bool = isMobile
       
       for (let i = 0; i < 2; i++) {
@@ -45,6 +46,7 @@ export default function Faucet () {
           )
         }
       }
+      router.push('/faucet')
     }
 
     catchMobile()
