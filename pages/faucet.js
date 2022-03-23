@@ -51,7 +51,7 @@ export default function Faucet () {
 
     return (
       <div className={styles.container}>
-        {catchMobile}
+       <div>{catchMobile}</div>
         <main className={styles.description}>
           <div className={styles.description}>
             <a 
