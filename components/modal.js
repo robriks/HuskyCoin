@@ -52,9 +52,9 @@ export default function Modal() {
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
                         This tutorial, as well as Web3 at large, is not configured for mobile devices due to security and compatibility issues. 
-                        To complete the tutorial, please switch to desktop. 
-                        If you're only looking to read my Web3 writeup without transacting on Web3, click "Proceed anyway." 
-                        Keep in mind this site is formatted for desktop and not for mobile.
+                        If you wish to complete the tutorial, please switch to desktop. 
+                        If you're only looking to read my Web3 writeup without transacting on Web3, click "Take me to Web3 writeup!" 
+                        You're also welcome to keep looking around, just keep in mind this site is formatted for desktop and not for mobile.
                         Happy learning!
                       </p>
                     </div>
@@ -62,15 +62,22 @@ export default function Modal() {
                 </div>
               </div>
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <a href='https://huskycoin.vercel.app/about'>
+                <a href='/about'>
                   <button
                     type="button"
-                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-xl px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={goToWriteup}
                   >
-                    Proceed anyway to Web3 writeup
+                    Take me to the Web3 writeup!
                   </button>
                 </a>
+                <button
+                  type='button'
+                  className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-xl px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
+                  onClick={() => setOpen(false)}
+                >
+                  Close & keep looking around
+                </button>
               </div>
             </div>
           </Transition.Child>

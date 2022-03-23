@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import huskyColor from '../assets/huskycolor.gif'
 
 export default function Home() {
   return (
@@ -18,8 +20,11 @@ export default function Home() {
           </a> Dapp!
         </h1>
         <div className={styles.description}>
-          <a className='text-2xl'>An Introductory Tutorial to Web3 on Ethereum</a>
-          <p className='text-sm mb-6'>Dedicated to 
+          <a className='text-2xl sm:text-3xl'>An Introductory Tutorial to Web3 on Ethereum</a>
+          <div className='flex justify-center mt-6'>
+            <Image src={huskyColor} layout='intrinsic'></Image>
+          </div>
+          <p className='text-base sm:text-lg sm:font-medium mt-6 mb-4'>Dedicated to 
             <a 
               className='text-blue-500'
               href='https://instagram.com/cleo.thehusky'>

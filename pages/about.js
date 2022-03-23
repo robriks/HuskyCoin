@@ -55,7 +55,7 @@ export default function About() {
                 For reference, that's over 300 times higher than your 0.03% APY "high yield" savings account. 
                 That's just stablecoins, aka crypto dollars, too!  
                 Other tokens, like $ETH, can be staked to earn you 4.5% APY denominated in $ETH, which can in turn appreciate further as demand for Web3 increases.
-              <div className='justify-center mt-6 mb-4'>
+              <div className='flex justify-center mt-6 mb-4'>
                 <Image 
                   src={geminiEarn} 
                   layout='intrinsic' 

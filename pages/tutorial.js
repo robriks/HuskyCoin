@@ -174,7 +174,7 @@ export default function Tutorial() {
           </p>
           <p className='justify-center indent-8 mb-2'>
             Thankfully Ethereum's big-brained core protocol developers have come up with a wild idea to solve these high gas fees:
-            why not have even more blockchains settle their transaction hashes onto Ethereum blocks?
+            why not have even more blockchains settle bundled transaction hashes onto Ethereum blocks?
             I get that you're probably drooling for HuskyCoins right now, but you won't know how to claim them until I teach you how to access these aforementioned nested blockchains that live on Ethereum.
             You'll get your $HUSKY soon enough, I promise.
           </p>
