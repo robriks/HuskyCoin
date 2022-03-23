@@ -14,7 +14,7 @@ import signin from '../assets/signin.png'
 export default function About() {
     return(
       <div className={styles.container}>
-        <div className='p-12 sm:mr-8 sm:ml-8'>
+        <div className='p-2 sm:p-6 sm:mr-8 sm:ml-8'>
           <div className='mt-6 mb-10'>
             <div className='mt-8 mb-12'>
               <h1 className={styles.title}>
@@ -37,16 +37,18 @@ export default function About() {
                 More technical details about the Bitcoin protocol and its high level implications here.
             </a>
           </div>
-          <h1 className='flex justify-center text-4xl mt-8 mb-8'>
-            So what? I have Venmo and a bank.
-          </h1>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl'>
+              So what? I have Venmo and a bank.
+            </h1>
+          </div>
           <p className='justify-center mb-8 indent-8'>
             Blockchain tokens are non-custodial and permissionless, which is what enables a 24/7 peer-to-peer network of economic activity.
             This means they inherently disintermediate the institutional middlemen that extract rent/interest from you while they restrict your economic activity to weekday business hours while also delaying settlement by 3-5 business days.
             Think of your Ethereum address as your on-chain bank account,
             except it kicks your bank's ass because:
           </p>  
-          <ol className='justify-center space-y-5 md:mr-20 md:ml-20'>
+          <ol className='justify-center space-y-5 mr-6 ml-6 md:mr-20 md:ml-20'>
             <li 
               className='text-sm justify-center indent-2'>
                 1. Current interest rates on US dollar tokens (like USDC/GUSD/USDT, which are always redeemable for $1) are anywhere from 3-8% APY.
@@ -132,8 +134,8 @@ export default function About() {
             </div>
             </li>
           </ol>
-          <div className='justify-center mt-12 mb-10'>
-            <h1 className='flex justify-center text-4xl'>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl mb-2'>
               Okay, I get it: banks suck. 
             </h1>
             <h2 className='flex justify-center text-4xl'>
@@ -162,11 +164,11 @@ export default function About() {
             <p className='text-sm justify-center indent-4 mr-8 ml-8'>
               That said, keep in mind that (most) other cryptocurrencies are not anywhere near as decentralized or open-sourced and are therefore not as secure.
           </p>
-          <div className='justify-center text-4xl mt-12 mb-10'>
-            <h1 className='flex justify-center'>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl mb-2'>
               So Crypto improves cybersecurity,
               </h1>
-            <h2 className='flex justify-center'>
+            <h2 className='flex justify-center text-4xl'>
               But I might still stick to dollars
             </h2>
           </div>
@@ -195,11 +197,11 @@ export default function About() {
               layout='intrinsic'>
             </Image>
           </div>
-          <div className='justify-center text-4xl mt-14 mb-10'>
-            <h1 className='flex justify-center'>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl mb-2'>
               DeFi fights dictators?
             </h1>
-            <h2 className='flex justify-center'>
+            <h2 className='flex justify-center text-4xl'>
               Sounds far-fetched.
             </h2>
           </div>
@@ -221,11 +223,11 @@ export default function About() {
             For reference, Chuck Grassley has been making laws as a senator since 1959; years before the civil rights movement!
             Web3 on the other hand is inclusive by default.
           </p>
-          <div className='justify-center text-4xl mt-12 mb-10'>
-            <h1 className='flex justify-center mb-10'>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl'>
               What about Crypto's carbon footprint?
             </h1></div>
-            <div className='flex justify-center mb-8'>
+            <div className='flex justify-center mb-10'>
               <Image 
                 layout='intrinsic' 
                 src={energy}>
@@ -278,8 +280,8 @@ export default function About() {
           <p className='justify-center mb-2 indent-8'>
             This is one reason why Ethereum has chosen to end its reliance on PoW in favor of another consensus mechanism that will drop Ethereum's carbon footprint by 99% while simultaneously improving decentralization: Proof of Stake.
           </p>
-          <div className='justify-center text-4xl mt-12 mb-10'>
-            <h1 className='flex justify-center'>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl'>
               What is Proof of Stake?
             </h1>
           </div>
@@ -309,8 +311,8 @@ export default function About() {
             Such centralized architecture provides no net neutrality and no resistance to censorship, corruption, or network downtime.
             A blockchain lacking these traits is absolutely unacceptable when handling the livelihoods of millions of people worldwide.
           </p>
-          <div className='flex justify-center text-4xl mt-12 mb-10'>
-            <h1 className='justify-center'>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-4xl'>
               Just explain Web3 already!
             </h1>
           </div>
@@ -393,28 +395,30 @@ export default function About() {
             Not only that but they can be configured to pay you royalties or can be exchanged for actual money like stablecoins or $ETH at any hour of the day.
             That's the reality of what the Metaverse will look like, and it's already being built at breakneck speed.
           </p>
-          <div className='justify-center mt-8'>
+          <div className={styles.description}>
             <h1 
               className='flex justify-center text-4xl'>
                 Thanks for reading!
             </h1>
-            <p className='justify-center indent-8 mt-8'>
-              Hopefully you've enjoyed learning about what Web3 powered by crypto can enable.
-              I haven't even touched on some of the more recent developments in Web3, like the prevalence of highly profitable airdrops (such as ENS, dYdX, Axies), which are token rewards to users like you and me that are comparable to traditional bonuses/dividends that would normally go to CEOs/shareholders.
-            </p>
-            <p className='justify-center indent-8 mt-2'>
-              On the topic of a CEO-less shareholder-less internet, Web3 also features DAOs (Decentralized Autonomous Organizations) enabling rapid and unprecedented social coordination, as well as P2E (Play to Earn) game economies providing livable wages higher than physical-world job compensation to citizens of developing countries.
-              If you're interested in these concepts, reach out to me using any of the social media links below and I'll provide you with further reading.
-            </p>
-            <p className='justify-center indent-8 mt-2'>
-              I wrote all this under the 'about Web3' page to help readers understand why Web3 skills like learning to transact on-chain are very valuable skills.
-              I believe these technologies will become widespread alongside the massive digitalization we've seen in recent years, partly accelerated by the pandemic and society's shift to working from home.
-            </p>
-            <p className='justify-center indent-8 mt-2'>
-              Ideally this writeup has inspired you to go complete the tutorial and conduct your first Web3 transactions!
-              So go open up a desktop browser, head back to the home page, and get started!
-            </p>
-            <h2 className='flex justify-center text-4xl mt-8'>Now go learn some Web3 skills!</h2>
+          </div>
+          <p className='justify-center indent-8 mt-8'>
+            Hopefully you've enjoyed learning about what Web3 powered by crypto can enable.
+            I haven't even touched on some of the more recent developments in Web3, like the prevalence of highly profitable airdrops (such as ENS, dYdX, Axies), which are token rewards to users like you and me that are comparable to traditional bonuses/dividends that would normally go to CEOs/shareholders.
+          </p>
+          <p className='justify-center indent-8 mt-2'>
+            On the topic of a CEO-less shareholder-less internet, Web3 also features DAOs (Decentralized Autonomous Organizations) enabling rapid and unprecedented social coordination, as well as P2E (Play to Earn) game economies providing livable wages higher than physical-world job compensation to citizens of developing countries.
+            If you're interested in these concepts, reach out to me using any of the social media links below and I'll provide you with further reading.
+          </p>
+          <p className='justify-center indent-8 mt-2'>
+            I wrote all this under the 'about Web3' page to help readers understand why Web3 skills like learning to transact on-chain are very valuable skills.
+            I believe these technologies will become widespread alongside the massive digitalization we've seen in recent years, partly accelerated by the pandemic and society's shift to working from home.
+          </p>
+          <p className='justify-center indent-8 mt-2'>
+            Ideally this writeup has inspired you to go complete the tutorial and conduct your first Web3 transactions!
+            So go open up a desktop browser, head back to the home page, and get started!
+          </p>
+          <div className={styles.description}>
+            <h2 className='flex justify-center text-4xl'>Now go learn some Web3 skills!</h2>
           </div>
         </div>
       </div>

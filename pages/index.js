@@ -27,14 +27,14 @@ export default function Home() {
             </a>
           </p>
           <p className='text-xs mt-6'>If you find this tutorial helpful, send a tip!</p>
-          <p className='text-xs -mb-6'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</p>
+          <a href='https://etherscan.io/' className='text-xs -mb-6'>👦🏻👦🏻.eth / 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe</a>
         </div>
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
             <h2>1. Setting up MetaMask &rarr;</h2>
             <p>A crypto wallet is your gateway to Web3 infrastructure. Other crypto wallet options include Coinbase Wallet and Brave Wallet.</p>
           </a>
-          <a href="https://etherscan.io/" className={styles.card}>
+          <a href="https://etherscan.io/address/0x65b54a4646369d8ad83cb58a5a6b39f22fcd8cee" className={styles.card}>
             <h2>2. Generate an Ethereum address &rarr;</h2>
             <p>Learn about the insane things an Ethereum address is capable of and explore Etherscan, where all of Web3 is publicly visible.</p>
           </a>
