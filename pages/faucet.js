@@ -11,6 +11,10 @@ import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
 
 export default function Faucet () {
     async function dispenseHuskyCoins() {
+        if (isMobile) {
+          catchMobile()
+        }
+        
         const router = useRouter()
         const web3Modal = new Web3Modal()
         const connection = await web3Modal.connect()
@@ -29,17 +33,19 @@ export default function Faucet () {
 
         router.push('/stake')
     }
-    
-    let bool = isMobile;
-    if (bool) {
-      for (let i = 0; i < 2; i++) {
-        if (!bool) {
-          break;
+
+    function catchMobile() {
+      let bool = isMobile;
+      if (bool) {
+        for (let i = 0; i < 2; i++) {
+          if (!bool) {
+            break;
+          }
+          bool = false;
+          return (
+            <div><Modal></Modal></div>
+          )        
         }
-        bool = false;
-        return (
-          <div><Modal></Modal></div>
-        )        
       }
     }
 
