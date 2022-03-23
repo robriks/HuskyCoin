@@ -65,12 +65,14 @@ export default function Faucet () {
               <Image src={husky} layout='intrinsic'></Image>
             </div>
             <div className='flex justify-center mt-6'>
+              <a>
               <button
                 onClick={dispenseHuskyCoins}
                 className={`flex w-${36} mt-2 p-3 rounded-full bg-green-500 hover:bg-green-700 shadow-xl justify-center text-white`}>
                   Receive HuskyCoins
               </button>
               {catchMobile}
+              </a>
             </div>
           </div>
         </div>
