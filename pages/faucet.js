@@ -49,14 +49,14 @@ export default function Faucet () {
 
     //catchMobile()
     
-    let bool = true;
-    if (isMobile) {
+    let bool = isMobile;
+    if (bool) {
       for (let i = 0; i < 2; i++) {
         if (!bool) {
           break;
         }
         bool = false;
-        return (
+        return ( //turn this into a func
           <div><Modal></Modal></div>
         )
       }
