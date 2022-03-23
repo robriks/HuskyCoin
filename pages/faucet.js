@@ -47,10 +47,10 @@ export default function Faucet () {
         }
       }
     }
-
+    
+    catchMobile()
     return (
       <div className={styles.container}>
-       <div>{catchMobile}</div>
         <main className={styles.description}>
           <div className={styles.description}>
             <a 
