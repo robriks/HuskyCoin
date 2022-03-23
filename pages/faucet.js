@@ -29,12 +29,6 @@ export default function Faucet () {
 
         router.push('/stake')
     }
-
-    async function conditionalRender() {
-      return (
-          <div><Modal></Modal></div>
-      )
-    }
     
     async function catchMobile() {
       let bool = isMobile;
@@ -44,8 +38,9 @@ export default function Faucet () {
             break;
           }
           bool = false;
-          await conditionalRender()
-        }
+          return (
+            <div><Modal></Modal></div>
+        )        }
       }
     }
 
