@@ -45,7 +45,7 @@ export default function Faucet () {
           )
         }
       }
-      router.push('/faucet')
+      router.reload()
     }
 
     catchMobile()
