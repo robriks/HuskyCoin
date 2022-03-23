@@ -47,9 +47,9 @@ export default function Faucet () {
       }
     }
 
+    catchMobile()
     return (
       <div className={styles.container}>
-        {catchMobile}
         <main className={styles.description}>
           <div className={styles.description}>
             <a 
@@ -86,5 +86,4 @@ export default function Faucet () {
         </p>
       </div>
     )
-  }
 }
