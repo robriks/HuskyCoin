@@ -9,6 +9,9 @@ import rollups from '../assets/rollups.png'
 import networks from '../assets/network.png'
 import chainlist from '../assets/chainlist.png'
 import polygon from '../assets/polygon.png'
+import faucet from '../assets/faucet.png'
+import txConfirmed from '../assets/tx-confirmed.png'
+import pending from '../assets/pending.png'
 
 export default function Tutorial() {
     return(
@@ -313,12 +316,62 @@ export default function Tutorial() {
               Hit up a $MATIC faucet
             </h1>
           </div>
-          <p className='justify-center indent-8 mb-2'>
+          <p className='justify-center indent-8 mb-4'>
             Moving on, in order to make your first transaction claiming your $HUSKY allocation, we first must hit up a faucet to collect a bit of $MATIC.
             Go to:
-            <a href='https://matic.zayd.info/' className='text-blue-500'>{' '}https://matic.zayd.info/</a>
-            And click "Connect Wallet".
+            <a href='https://matic.zayd.info/' className='text-blue-500'>{' '}https://matic.zayd.info/{' '}</a>
+            and click "Connect Wallet".
             Once you've done so, click the same button now labeled "Get Some MATIC" to be sent a dust amount of $MATIC to pay for your first polygon transaction.
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={faucet} layout='intrinsic'></Image>
+          </div>
+          <p className='text-center text-xs indent-8 ml-10 mr-10 mb-4'>
+            I actually went through 7 different Polygon $MATIC faucets trying to find one that works!
+            I came really close to forking an open-source one and customizing it for this tutorial!
+            Thankfully I came across this one, the only functional one I could find, but it was completely drained.
+            So of course, I refilled it with my own $MATIC funds. 
+            This means the faucet is now dispensing my money! Enjoy using it for your gas. Lol.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            If you have any trouble using the faucet linked above, message me using one of the social media links at the bottom of the page and I'll either top up the faucet again or personally send you some $MATIC to use to claim your HuskyCoin allocation.
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              The moment you've been waiting for! Claim your $HUSKY tokens!
+            </h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            It's finally time to do what you came here for!
+            By this point, we've discussed all the prerequisite knowledge you need to understand wtf is going on when you use a crypto network.
+            So let's buckle down and use the Polygon network on top of Ethereum.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Preferably in a new window/tab, head back to the HuskyCoin dApp home page and click on the box marked "3. Claim HuskyCoins from my faucet".
+            This will take you to the $HUSKY faucet that I built for you to claim 69420 HuskyCoin tokens.
+            Click on the pretty green button labeled "Receive HuskyCoins" and a MetaMask transaction prompt should appear.
+            Feel free to observe the uber cheap $MATIC gas fee and click "Confirm".
+            Once the transaction is confirmed by miners around the globe, you'll receive a browser notification from MetaMask that looks something like the one below.
+            This means the global computer known as the Ethereum Virtual Machine has updated its state to include your transaction that allocated 69420 $HUSKY tokens to your address!
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={txConfirmed} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            If you didn't get a notification like this, either the transaction has not yet been confirmed by miners (give it a few minutes) or your browser just sucks, sorry.
+            Lmeow just kidding. If MetaMask for some reason didn't set a high enough gas value, it could get temporarily stuck because no miner wants to confirm a transaction that pays them too little.
+            If you think that's the error, click the "Activity" tab on the right of your MetaMask UI and you'll see a pending transaction queue at the top where your most recent activity resides.
+            It'd look something like this:
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={pending} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            In the case it actually is stuck on the "Pending" state like that, just click on the "Speed Up" button, which will increase the gas amount and resend the transaction.
+            If you're having issues with this or you run into some other issue, again just DM me using one of the social media links at the bottom of the page and I'll help you out.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Assuming you successfully claimed your HuskyCoins, you'll notice that your $MATIC token balance went down from 0.001 MATIC to 0.0009something
           </p>
 
           
