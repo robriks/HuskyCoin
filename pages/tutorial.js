@@ -12,6 +12,8 @@ import polygon from '../assets/polygon.png'
 import faucet from '../assets/faucet.png'
 import txConfirmed from '../assets/tx-confirmed.png'
 import pending from '../assets/pending.png'
+import tokenImport from '../assets/import.png'
+import importFields from '../assets/importFields.png'
 
 export default function Tutorial() {
     return(
@@ -305,6 +307,18 @@ export default function Tutorial() {
             I know I went on and on about how $ETH is the base-layer token that pays gas on Ethereum, but the Polygon L2 is slightly different because it uses its own custom token to pay gas.
             All the concepts I discussed still apply to Polygon, the only difference being that $MATIC is the base-layer token on this rollup instead of $ETH.
           </p>
+          <p className='justify-center indent-8 mb-4'>
+            You'll recall that gas is a mechanic which serves two main purposes.
+          </p>
+          <ol className='justify-center mb-4'>
+            <li className='flex text-center'>
+              1. Preventing spam on the network by incurring costs that disincentivize clogging the network with low-quality transactions (ie spam).
+              </li>
+            <li className='flex text-center'>
+              2. Paying the miners/validators who maintain the state of the network by solving and finalizing blocks in chronological sequences. 
+              These are the on-chain maintainers who facilitate every code execution on the network, and they don't work for free!
+            </li>
+          </ol>
           <p className='justify-center indent-8 mb-2'>
             Thankfully gas fees on the Polygon L2 are extraordinarily cheap!
             Each transaction costs a fraction of a cent: roughly 0.0004 $MATIC each, which in USD terms is roughly $0.0006.
@@ -349,7 +363,8 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>
             Preferably in a new window/tab, head back to the HuskyCoin dApp home page and click on the box marked "3. Claim HuskyCoins from my faucet".
             This will take you to the $HUSKY faucet that I built for you to claim 69420 HuskyCoin tokens.
-            Click on the pretty green button labeled "Receive HuskyCoins" and a MetaMask transaction prompt should appear.
+            MetaMask may open a popup for you prompting you to connect your wallet to the HuskyCoin dApp page- in this case, click connect.
+            Then click on the pretty green button labeled "Receive HuskyCoins" and a MetaMask transaction prompt should appear.
             Feel free to observe the uber cheap $MATIC gas fee and click "Confirm".
             Once the transaction is confirmed by miners around the globe, you'll receive a browser notification from MetaMask that looks something like the one below.
             This means the global computer known as the Ethereum Virtual Machine has updated its state to include your transaction that allocated 69420 $HUSKY tokens to your address!
@@ -357,9 +372,23 @@ export default function Tutorial() {
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={txConfirmed} layout='intrinsic'></Image>
           </div>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl mb-2'>
+              Quick Troubleshooting
+            </h1>
+            <h2 className='flex justify-center text-xl'>
+              (Skip this if your transaction confirmed)
+            </h2>
+          </div>
           <p className='justify-center indent-8 mb-2'>
-            If you didn't get a notification like this, either the transaction has not yet been confirmed by miners (give it a few minutes) or your browser just sucks, sorry.
-            Lmeow just kidding. If MetaMask for some reason didn't set a high enough gas value, it could get temporarily stuck because no miner wants to confirm a transaction that pays them too little.
+            If you didn't get a notification like the one above, either the transaction has not yet been confirmed by miners (give it a few minutes) or your browser just sucks, sorry.
+            Lmeow just kidding. 
+            First check your $MATIC balance- if it hasn't changed from the amount the faucet sent you (0.001 MATIC), keep reading. 
+            If the balance is lower than before, gas was spent and your transaction was successful but your browser really does suck. 
+            ¯\_ (ツ)_/¯
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            If MetaMask for some reason didn't set a high enough gas value, it might be temporarily stuck because no miner wants to confirm a transaction that pays them too little.
             If you think that's the error, click the "Activity" tab on the right of your MetaMask UI and you'll see a pending transaction queue at the top where your most recent activity resides.
             It'd look something like this:
           </p>
@@ -370,17 +399,108 @@ export default function Tutorial() {
             In the case it actually is stuck on the "Pending" state like that, just click on the "Speed Up" button, which will increase the gas amount and resend the transaction.
             If you're having issues with this or you run into some other issue, again just DM me using one of the social media links at the bottom of the page and I'll help you out.
           </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              Where are my HuskyCoins!?
+            </h1>
+          </div>
           <p className='justify-center indent-8 mb-2'>
-            Assuming you successfully claimed your HuskyCoins, you'll notice that your $MATIC token balance went down from 0.001 MATIC to 0.0009something
+            Assuming you successfully claimed your HuskyCoins, you'll notice that your $MATIC token balance went down from 0.001 MATIC to 0.0009something.
+            That's because you spent a tiny amount of MATIC on gas to claim the $HUSKY tokens.
+            But wait, what gives!? Where are those 69420 HuskyCoins!? Shouldn't they display under the "Assets" tab in MetaMask?
           </p>
-
-          
-
-          obtaining a (small) amount of crypto to pay for the gas needed to make transactions on the Ethereum network.
-
-
-
-
+          <p className='justify-center indent-8 mb-2'>
+            Yes indeed they should- but don't worry if they don't yet.
+            Sometimes MetaMask doesn't automatically pick up on when you've received or claimed tokens in your wallet.
+            This is actually to keep you from interacting with malicious tokens that were sent to you by an attacker.
+            You'll remember that Web3 is entirely permissionless, so you can't yet filter out jerks who send you spam or malware.
+            That's a feature currently being worked on.
+            Thankfully for the time being you can just ignore them; that way you're immune to any malicious tokens.
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={tokenImport} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            But $HUSKY tokens are not malicious, they're just adorable! 
+            To get MetaMask to display them, all we need to do is import them.
+            The next and last step of this tutorial will be to stake them, so you'll get to watch your balance tick up in real time!
+            That sounds fun, so let's first check the bottom of the MetaMask UI for the 
+            </p>
+            <a className='flex justify-center mb-2'>"Don't see your token? Import tokens"</a>
+          <p>
+            link (pictured above) and click on it. 
+            On doing so, you'll be taken to a screen that looks like this:
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={importFields} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            The only field you need to fill out on this page is the "Token Contract Address" field; the rest of the fields will be populated for you by MetaMask.
+            This is the HuskyCoin token contract address:
+          </p>
+          <a href='https://polygonscan.com' className='justify-center mb-2 text-blue-500 text-3xl txext-sm'>
+            CHANGE HREF AND PUT POLYGON ADDRESS HERE
+          </a>
+          <p className='justify-center indent-8 mt-2 mb-2'>
+            Copy and paste that address into the token contract address field and the Symbol field should automatically populate with "HUSKY" and the Decimal field should likewise populate with "18".
+            Click "Add Custom Token" on the bottom to confirm.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Congratulations! You can now see your 69420 $HUSKY balance in MetaMask under the "Assets" tab.
+            This "Import Custom Token" process is great to know because you'll need to import most of the tokens you interact with on-chain.
+            For example, if you wanted to display your $USDC or $USDT or $LINK balance (or whatever token you want), just google the token contract address and import it!
+          </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            {/*<Image>ADD HUSKYCOIN SCREENSHOT HERE </Image>*/}
+          </div>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl mb-2'>
+              Now I want MOAR HuskyCoins
+            </h1>
+            <h2 className='flex justify-center text-lg'>
+              Time to stake them & watch number go up
+            </h2>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            The last skill for you to learn in this tutorial is how to stake a token to earn passive income.
+            Nothing beats watching your token balance slowly tick upward, so I've build a staking page that reads your on-chain token balance each block and relays that information to you.
+            Head back to the HuskyCoin dApp home page and click the box titled "4. Stake to earn more HuskyCoins"
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            This will take you to the Staking page of the dApp, where both your Available $HUSKY balance and your Currently staked $HUSKY balance are displayed to you.
+            MetaMask may prompt you to connect your wallet again, in which case click the connect button.
+            Then enter an amount that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
+            MetaMask will open a prompt for you to view the $MATIC required to pay gas- hit confirm and wait for your transaction to be mined.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Once your transaction is mined and written to the EVM, your "Available $HUSKY balance" will decrease by the amount you specified and your "Currently staked $HUSKY balance" will increase by that same amount.
+            Feel free to refresh the page if necessary. Now you can watch your staked $HUSKY balance increase roughly every 10 seconds, or when every block is mined.
+          </p>
+          <p className='flex justify-center indent-8 text-sm mb-2 ml-10 mr-10'>
+            Note: If it's been a couple minutes and you haven't get a browser notification from MetaMask saying "Transaction Confirmed," scroll back up to the "Quick Troubleshooting" section and follow the outlined steps.
+            If you can't figure it out, don't hesitate to reach out to me using one of the social media links at the bottom of the page.
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              Congratulations! You've completed the tutorial!
+            </h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            I know it's a lot of reading and a lot of information but understanding and properly navigating Web3 is an invaluable skill.
+            This space is almost certainly today's fastest growing industry, and it innovates on itself daily.
+            I spent a lot of time making sure that you are aware of the cybersecurity practices that are vital to safely exploring the new digital world we call the "Metaverse".
+            Rest assured that it only gets crazier from here, but you completing the tutorial proves you are now equipped to face anything.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Unfortunately, the widespread scams and rugpulls in the DeFi and NFT spaces mean that I have to finish out with a lengthy disclaimer on crypto blockchains other than Bitcoin and Ethereum.
+            Basically it boils down to one thing: you're infinitely less likely to get scammed/rugged if you stick to the Ethereum ecosystem.
+            BSC and Solana in particular are full of scams that draw you in with cheap fees and fast blocktimes. 
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            That's not to say that it doesn't happen in the Ethereum ecosystem, but it's much less common.
+            Not all cryptos are made equal.
+            At the end of the day, the more you learn about how these protocols work on a technical level, the safer (and maybe richer ¯\_ (ツ)_/¯ ) you'll be.
+          </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
               On Alternative L1 Blockchains
@@ -407,18 +527,16 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>
             This tutorial focuses on Ethereum and its layer 2 rollups (Arbitrum, Optimism, zkSync, Starkware, Polygon) because they are home to by far the largest and safest Web3 ecosystem.
             Other L1 blockchains that advertise extremely low fees or fast speeds have invariably made a tradeoff in one of the other trilemma categories.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
             You may encounter cheap fees and fast block times, but as a result of lowered decentralization your risk of being "rugpulled" or scammed are significantly higher.
             Mess around with the other aforementioned crypto networks at your own risk.
-          </p>
+          </p>  
 
-
-
-
-  On gas:
-  I thought you told me HuskyCoin was free! Why is there a transaction/gas fee?!
-  -Gas costs serve two main purposes: 
-  1. Preventing spam on the network by incurring costs that disincentivize clogging the network with low-quality transactions.
-  2. Paying the miners/validators who maintain the state of the network by solving and finalizing blocks in chronological sequences. These are the maintainers of a distributed blockchain architecture who facilitate every transfer and transaction on the network, and they don't work for free!
+          <div className={styles.description}>
+          <h1 className='text-4xl mb-4'>Thanks for reading!</h1>
+          <h1 className='text-4xl'>~~👦🏻👦🏻.eth~~</h1>
+          </div>
         </div>
       </div>
     )

@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import husky from '../assets/husky.gif'
+import Modal from '../components/modal'
 import Web3Modal from 'web3modal'
+import { isMobile } from 'react-device-detect'
 
 import { huskycoinaddress } from '../config'
 import HuskyCoin from '../artifacts/contracts/HuskyCoin.sol/HuskyCoin.json'
@@ -87,8 +89,85 @@ export default function Stake () {
       loadStaked()
     }
     
-
-    return (
+    if (isMobile) {
+      return (
+        <div>
+          <div><Modal></Modal></div>
+          <div className={styles.container}>
+            <main className={styles.description}>
+              <div className={styles.description}>
+                <h1 className='text-5xl p-4'>
+                  Introduction to 
+                  <a 
+                    href='https://www.coinbase.com/learn/crypto-basics/what-is-proof-of-work-or-proof-of-stake'
+                    className='text-blue-500'>
+                    {' '} Staking
+                  </a>
+                </h1>
+              </div>
+            </main>
+            <div className='flex justify-center -mt-4 mb-6'>
+              <div className=' max-w-xl'>
+                <Image src={husky} layout='intrinsic'></Image>
+              </div>
+            </div>
+            <div className='flex justify-center'>
+              <div className='justify-center sm:flex'>
+                <div className={styles.card}>
+                  <h1 className='text-base flex justify-center'>
+                    Available $HUSKY balance: 
+                  </h1>
+                  <div className='flex justify-center'>
+                    <a className='font-bold p-1 text-2xl'>{balance}</a>
+                  </div>
+                  <div>
+                    <p className='flex justify-center p-1'>
+                      Minimum stake: 100 $HUSKY
+                    </p>
+                    <form className='justify-center'>
+                      <input 
+                        className='flex justify-center mt-3 border-2 rounded-md'
+                        placeholder=' Amount to stake' 
+                        onChange={e => setInput({...input, amount: e.target.value })}
+                      />
+                      <div className='flex justify-center'>
+                        <button 
+                          className={`flex w-${"36"} mt-3 p-2 rounded-full bg-green-500 hover:bg-green-700 shadow-xl justify-center text-white`}
+                          onClick={stake}>Stake
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div className={styles.card}>
+                  <h1 className='text-base flex justify-center'>
+                    Currently staked $HUSKY balance: 
+                  </h1>
+                  <div className='flex justify-center'>
+                    <a className='font-bold p-1 text-2xl'>{staked}</a>
+                  </div>
+                  <div>
+                    <p className='flex justify-center p-1'>
+                      Staked $HUSKY balances increase every block
+                    </p>
+                    <form className='justify-center'>
+                      <input className='flex justify-center mt-4'></input>
+                      <div className='flex justify-center'>
+                        <button 
+                          className={`flex w-${"36"} mt-3 p-2 rounded-full bg-green-500 hover:bg-green-700 shadow-xl justify-center text-white`}
+                          onClick={unstake}>Withdraw All
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+      return (
         <div className={styles.container}>
           <main className={styles.description}>
             <div className={styles.description}>
@@ -160,5 +239,6 @@ export default function Stake () {
             </div>
           </div>
         </div>
-    )
+      )
+    }
 }
