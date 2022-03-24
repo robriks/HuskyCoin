@@ -5,6 +5,9 @@ import warren from '../assets/warren.png'
 import MMwallet from '../assets/MMwallet.png'
 import MMsetup from '../assets/MMsetup.png'
 import MMbalance from '../assets/MMbalance.png'
+import rollups from '../assets/rollups.png'
+import networks from '../assets/network.png'
+import chainlist from '../assets/chainlist.png'
 
 export default function Tutorial() {
     return(
@@ -78,7 +81,7 @@ export default function Tutorial() {
           </div>
           <ol className='list-disc justify-center ml-12'> 
             <li className=''>Financial advice, lel.</li>
-            <p className='text-xs mt-1 -ml-4'>($HUSKY is for educational purposes only)</p>
+            <p className='text-xs mt-1 -ml-1'>($HUSKY is for educational purposes only)</p>
           </ol>
           <div className={styles.description}>
             <h1 className='flex justify-center text-4xl font-bold'>Let's Get Started!</h1>
@@ -140,8 +143,17 @@ export default function Tutorial() {
             Congratulations on generating your first Ethereum address!
             You can see it at the top of MetaMask, under "Account 1".
             Your address is a long string of hexadecimal digits starting with 0x, which indicates hexadecimal. 
-            For example, my address is: 0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe.
-            This long address can be represented by a .eth domain, such as 👦🏻👦🏻.eth - this is called an ENS domain.
+            For example, my address is: 
+          </p>
+          <div className='flex justify-center'>
+          <a 
+            href='https://etherscan.io/address/0x65b54a4646369d8ad83cb58a5a6b39f22fcd8cee' 
+            className='text-sm text-center justify-center text-blue-500 mb-2'>{' '}
+              0x65b54A4646369D8ad83CB58A5a6b39F22fcd8cEe
+          </a>
+          </div>
+          <p className='indent-8 mb-2'>
+            {' '}This long address can be represented by a .eth domain, such as 👦🏻👦🏻.eth - this is called an ENS domain.
           </p>
           <p className='justify-center indent-8 mb-2'>
             The address displayed on your MetaMask is your public-facing account where you can store any tokens, fungible or not, on the network. 
@@ -195,6 +207,9 @@ export default function Tutorial() {
             The technical details between either L2 rollup type are not important for me to go over here but rest assured they are cutting-edge and extremely interesting.
             Definitely worth further reading if you're interested.
           </p>
+          <div className='flex justify-center'>
+            <Image src={rollups} layout='intrinsic'></Image>
+          </div>
           <p className='justify-center indent-8 mb-2'>
             Anyway, these rollup chains run alongside the layer 1 mainnet, handling their own ecosystem of users and smart contracts.
             They essentially lock up tokens like $ETH on mainnet and then only periodically settle hashes called merkle roots from the L2 to the L1, to prove that all funds are accounted for and all transactions are valid.
@@ -204,18 +219,60 @@ export default function Tutorial() {
             <a href='https://polygonscan.com' className='text-blue-500'>{' '}Polygon layer 2 rollup chain.</a>
             {' '}Technically it's a side-chain, but again that's beside the point.
             The point is that the bytecode I wrote and compiled for the HuskyCoin token exists at the following smart contract address on Polygon L2:
-            <a href='https://polygonscan.com' className='text-blue-500 text-4xl'>CHANGE THIS ADDRESS ONCE DEPLOYED</a>
-          </p>
-          <p className='justify-center indent-8 mb-2'>
+            </p>
+            <a 
+              href='https://polygonscan.com' 
+              className='text-blue-500 text-4xl'>
+                CHANGE THIS HREF ADDRESS ONCE DEPLOYED
+            </a>
+          <p className='justify-center indent-8 mb-2 mt-2'>
             Keep in mind that this smart contract address only exists on the Polygon L2; if you try to find it on mainnet or any of Ethereum's other rollup networks, you won't find it.
             While developing HuskyCoin, I also deployed to Ethereum's Rinkeby testnet at this address:
-            <a 
-              href='https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee' 
-              className='text-blue-500'>
-                {' '}0x8cfb42a80291737cb62cef7b665fe1304d112fee
-            </a>
-            {' '}Feel free to interact with it however you like there.
           </p>
+          <div className='flex justify-center'>
+          <a 
+            href='https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee' 
+            className='text-blue-500 text-sm'>
+              {' '}0x8cfb42a80291737cb62cef7b665fe1304d112fee
+          </a>
+          </div>
+          <p className='indent-8 mt-2'>
+            Feel free to interact with it however you like there.
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>Connect to the Polygon L2 network</h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            After all that, you're finally ready for the next step, configuring MetaMask to connect to the Polygon Layer 2 network.
+            To do so, open your MetaMask extension and click the dropdown button labeled with a colored dot and the text "Ethereum Mainnet V".
+            Lmeow I used a V since I couldn't figure out how to copy that dropdown arrow next to the word 'Mainnet,' but here's a picture if the V confused you:
+          </p>
+          <div className='flex justify-center mt-4 mb-5'>
+            <Image src={networks} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            It will be located in the top right of your UI.
+            This dropdown menu is where you switch between layer 2 networks on the blockchain- you'll note that only the Ethereum Mainnet is available to you at the moment.
+          </p>
+          <p className='justify-center indent-8'>
+            To add the Polygon L2 mainnet to your MetaMask configuration simply navigate to 
+          </p>
+          <a className='text-blue-500'>{' '}https://chainlist.org.{' '}</a>
+          <p className='justify-center indent-8'>
+            Scroll down the grid to the block labeled "Polygon Mainnet" and click the button labeled "Connect Wallet."
+            Note that you also may need to connect your wallet to the site in the top right first.
+          </p>
+          <div className='flex justify-center mt-6 mb-6'>
+            <Image src={chainlist} layout='intrinsic'></Image>
+          </div>
+          <p>
+          If for some reason chainlist has gone offline, I've included Polygon's RPC endpoint information for you below so that you may enter it manually should you need to.</p>
+
+          
+
+          obtaining a (small) amount of crypto to pay for the gas needed to make transactions on the Ethereum network.
+
+
 
 
           <div className={styles.description}>
@@ -242,22 +299,14 @@ export default function Tutorial() {
             The Scalability Trilemma refers to the balance between the three most important aspects of a blockchain: decentralization, speed, and fees.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            This tutorial focuses on Ethereum and its layer 2 rollups (Arbitrum, Optimism, zkSync, Starkware) because they are home to by far the largest and safest Web3 ecosystem.
+            This tutorial focuses on Ethereum and its layer 2 rollups (Arbitrum, Optimism, zkSync, Starkware, Polygon) because they are home to by far the largest and safest Web3 ecosystem.
             Other L1 blockchains that advertise extremely low fees or fast speeds have invariably made a tradeoff in one of the other trilemma categories.
             You may encounter cheap fees and fast block times, but as a result of lowered decentralization your risk of being "rugpulled" or scammed are significantly higher.
             Mess around with the other aforementioned crypto networks at your own risk.
           </p>
 
 
-  
-  #### Understanding Ethereum Layer 2s
-  We've covered that Ethereum is a blockchain that permanently stores code and functions as a global computer housing all sorts of programs mostly comprising of various tokens. But transacting on Ethereum's mainnet is very expensive as it prioritizes decentralization, security, and immutability above all else; foregoing speed and cheap transaction/gas fees in favor of the former attributes.  This is important as it provides net neutrality (yes, that thing that the Trump administration absolutely destroyed by handing over throttling priveleges and other dystopian controls over the internet to corporations like Verizon/ATT/TMobile/Google. Screw you, Ajit Pai!) But it comes at high cost, making transacting on the Ethereum network very expensive.
 
-  So smart developers had an idea: why not put more blockchains on the Ethereum blockchain?
-
-
-
-  Now you're finally ready for the next step, obtaining a (small) amount of crypto to pay for the gas needed to make transactions on the Ethereum network.
 
   On gas:
   I thought you told me HuskyCoin was free! Why is there a transaction/gas fee?!
