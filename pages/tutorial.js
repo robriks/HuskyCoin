@@ -8,6 +8,7 @@ import MMbalance from '../assets/MMbalance.png'
 import rollups from '../assets/rollups.png'
 import networks from '../assets/network.png'
 import chainlist from '../assets/chainlist.png'
+import polygon from '../assets/polygon.png'
 
 export default function Tutorial() {
     return(
@@ -256,17 +257,65 @@ export default function Tutorial() {
           </p>
           <p className='justify-center indent-8'>
             To add the Polygon L2 mainnet to your MetaMask configuration simply navigate to 
-          </p>
-          <a className='text-blue-500'>{' '}https://chainlist.org.{' '}</a>
-          <p className='justify-center indent-8'>
-            Scroll down the grid to the block labeled "Polygon Mainnet" and click the button labeled "Connect Wallet."
-            Note that you also may need to connect your wallet to the site in the top right first.
+            <a className='text-blue-500'>{' '}https://chainlist.org.{' '}</a>
+            This is where you'll find any EVM-compatible network RPC endpoints, including any Ethereum L2 rollups.
+            I love using Chainlist because you don't risk mistyping any of the network configuration since it's as easy as clicking a button.
           </p>
           <div className='flex justify-center mt-6 mb-6'>
             <Image src={chainlist} layout='intrinsic'></Image>
           </div>
-          <p>
-          If for some reason chainlist has gone offline, I've included Polygon's RPC endpoint information for you below so that you may enter it manually should you need to.</p>
+          <p className='justify-center indent-8'>
+            Scroll down the grid to the block labeled "Polygon Mainnet" and click the button labeled "Connect Wallet."
+            Note that you also may need to connect your wallet to the site in the top right first.
+            Once you've done so, that button should change to one labeled "Add to Metamask", click it and hit "Approve" and then "Switch network" in the Metamask popup that follows.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            If you were successful with those steps, you can skip to the next section titled "Using $MATIC for gas". 
+            The next bit is just backup information in case Chainlist is down.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            If for some reason Chainlist has gone offline, I've included Polygon's RPC endpoint information for you below so that you may enter it manually should you need to.
+            Should you need enter this information manually in case of Chainlist being down, open the networks dropdown menu labeled "Ethereum Mainnet V" and click the "Add Network" button. 
+            Fill out the required fields with the following Polygon Mainnet information:
+          </p>
+          <ol className='list-disc justify-center mt-4 mb-4'>
+            <li className='text-center text-sm'>Network Name: Polygon</li>
+            <li className='text-center text-sm'>New RPC URL: https://polygon-rpc.com/</li>
+            <li className='text-center text-sm'>Chain Id: 137</li>
+            <li className='text-center text-sm'>Currency Symbol: MATIC</li>
+            <li className='text-center text-sm'>Block Explorer URL: https://polygonscan.com</li>
+          </ol>
+          <div className='flex justify-center mt-6 mb-6'>
+            <Image src={polygon} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            You'll know you're connected to the Polygon L2 network once the network dropdown box at the top displays "Polygon Mainnet V" instead of "Ethereum Mainnet V" as it did before.
+            (Again, those "V"s are my substitution for that dropdown arrow.)
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              Using $MATIC for gas
+            </h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Almost there! The last step before you can claim your 69420 HuskyCoins is to obtain a small amount of $MATIC to pay the gas needed to execute any transaction on the Polygon network.
+            I know I went on and on about how $ETH is the base-layer token that pays gas on Ethereum, but the Polygon L2 is slightly different because it uses its own custom token to pay gas.
+            All the concepts I discussed still apply to Polygon, the only difference being that $MATIC is the base-layer token on this rollup instead of $ETH.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Thankfully gas fees on the Polygon L2 are extraordinarily cheap!
+            Each transaction costs a fraction of a cent: roughly 0.004 $MATIC each, which in USD terms is roughly $0.006.
+            That's about half a cent! Much cheaper than the gas fees you'll see on Ethereum Mainnet, upward of $50 each!
+            What can I say, demand for Web3 activity is extremely high!
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              Hit up a $MATIC faucet
+            </h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Moving on, in order to make your first transaction claiming your $HUSKY allocation, we first must hit up a faucet to collect a bit of $MATIC.
+          </p>
 
           
 
