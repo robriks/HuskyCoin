@@ -304,8 +304,8 @@ export default function Tutorial() {
           </p>
           <p className='justify-center indent-8 mb-2'>
             Thankfully gas fees on the Polygon L2 are extraordinarily cheap!
-            Each transaction costs a fraction of a cent: roughly 0.004 $MATIC each, which in USD terms is roughly $0.006.
-            That's about half a cent! Much cheaper than the gas fees you'll see on Ethereum Mainnet, upward of $50 each!
+            Each transaction costs a fraction of a cent: roughly 0.0004 $MATIC each, which in USD terms is roughly $0.0006.
+            That's about 1/16th of a cent! Much cheaper than the gas fees you'll see on Ethereum Mainnet, upward of $50 each!
             What can I say, demand for Web3 activity is extremely high!
           </p>
           <div className={styles.description}>
@@ -315,6 +315,10 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             Moving on, in order to make your first transaction claiming your $HUSKY allocation, we first must hit up a faucet to collect a bit of $MATIC.
+            Go to:
+            <a href='https://matic.zayd.info/' className='text-blue-500'>{' '}https://matic.zayd.info/</a>
+            And click "Connect Wallet".
+            Once you've done so, click the same button now labeled "Get Some MATIC" to be sent a dust amount of $MATIC to pay for your first polygon transaction.
           </p>
 
           
