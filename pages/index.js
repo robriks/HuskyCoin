@@ -36,18 +36,22 @@ export default function Home() {
         </div>
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
-            <h2>1. Set up a Crypto wallet with MetaMask &rarr;</h2>
+            <h2>1. Set up a Crypto wallet using MetaMask 
+            <a>&rarr;</a>
+            </h2>
             <p>A crypto wallet is your gateway to Web3 infrastructure. Learn about the insane things an Ethereum address is capable of.</p>
           </a>
           <a href="https://polygon.technology/" className={styles.card}>
-            <h2>2. Use the Polygon Network on Ethereum &rarr;</h2>
+            <h2>2. Connect to the Polygon Network on Ethereum &rarr;</h2>
             <p>Enjoy near-zero gas fees by using cutting-edge blockchain scaling technology. Ditch mainnet's expensive fees in favor of Polygon's Layer 2 rollup.</p>
           </a>
           <Link href="/faucet">
             <a
               className={styles.card}
             >
-              <h2>3. Claim HuskyCoins for free from my faucet &rarr;</h2>
+              <h2>3. Claim HuskyCoins for free from my faucet 
+              <a>&rarr;</a>
+              </h2>
               <p>Claim your first 69420 ERC20 tokens from the HuskyCoin faucet. HuskyCoin is a cryptocurrency that I've designed for educational purposes.</p>
             </a>
           </Link>
@@ -55,7 +59,9 @@ export default function Home() {
             <a
               className={styles.card}
             >
-              <h2>4. Stake your tokens to earn more HuskyCoins &rarr;</h2>
+              <h2>4. Stake your tokens to earn more HuskyCoins 
+              <a>&rarr;</a>
+              </h2>
               <p>
                 Watch your token balance grow in real time by staking HuskyCoins. Learn how you can earn passive income on any stakeable token!
               </p>
