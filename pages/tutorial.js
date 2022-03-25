@@ -65,8 +65,11 @@ export default function Tutorial() {
               iS KrIpT0 PoNZi ScHeME, sEr???
             </p>
             <p className='flex justify-center text-xs mb-2'>(no, lmeow...)</p>
-          <p className='justify-center indent-8 mb-2'>All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to follow as possible for you.</p>
-          <p className='justify-center indent-8'>Again, if you're just looking to read about these concepts head over to the 
+          <p className='justify-center indent-8 mb-2'>
+            All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to follow as possible for you.
+          </p>
+          <p className='justify-center indent-8'>
+            Again, if you're just looking to read about these concepts head over to the 
             <a href='/about' className='text-blue-500'>{' '}Web3{' '}</a>
             section.
           </p>
@@ -111,7 +114,7 @@ export default function Tutorial() {
           </p>
           <p className='justify-center indent-8 mb-2'>
             With that out of the way, let's get started. 
-            On the home page, click the box titled: "1. Setting up MetaMask" and follow the instructions on downloading and installing the MetaMask browser extension.
+            On the HuskyCoin dApp home page, click the box titled: "1. Setting up MetaMask" and follow the instructions on downloading and installing the MetaMask browser extension.
             Keep in mind that Safari is not supported;{' '} 
               <a href='https://brave.com' className='text-blue-500'>Brave</a> 
             {' '}is the most Web3-friendly (and my favorite!) browser.
@@ -278,6 +281,11 @@ export default function Tutorial() {
             If you were successful with those steps, you can skip to the next section titled "Using $MATIC for gas". 
             The next bit is just backup information in case Chainlist is down.
           </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              In case Chainlist is down
+            </h1>
+          </div>
           <p className='justify-center indent-8 mb-2'>
             If for some reason Chainlist has gone offline, I've included Polygon's RPC endpoint information for you below so that you may enter it manually should you need to.
             Should you need enter this information manually in case of Chainlist being down, open the networks dropdown menu labeled "Ethereum Mainnet V" and click the "Add Network" button. 
@@ -469,12 +477,13 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>
             This will take you to the Staking page of the dApp, where both your Available $HUSKY balance and your Currently staked $HUSKY balance are displayed to you.
             MetaMask may prompt you to connect your wallet again, in which case click the connect button.
-            Then enter an amount that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
+            Then enter an amount (>100) that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
             MetaMask will open a prompt for you to view the $MATIC required to pay gas- hit confirm and wait for your transaction to be mined.
           </p>
           <p className='justify-center indent-8 mb-2'>
             Once your transaction is mined and written to the EVM, your "Available $HUSKY balance" will decrease by the amount you specified and your "Currently staked $HUSKY balance" will increase by that same amount.
-            Feel free to refresh the page if necessary. Now you can watch your staked $HUSKY balance increase roughly every 10 seconds, or when every block is mined.
+            Feel free to refresh the page if necessary. 
+            Now you can watch your staked $HUSKY balance tick upward roughly every 10 seconds, or when every block is mined!
           </p>
           <p className='flex justify-center indent-8 text-sm mb-2 ml-10 mr-10'>
             Note: If it's been a couple minutes and you haven't get a browser notification from MetaMask saying "Transaction Confirmed," scroll back up to the "Quick Troubleshooting" section and follow the outlined steps.
@@ -486,7 +495,7 @@ export default function Tutorial() {
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            I know it's a lot of reading and a lot of information but understanding and properly navigating Web3 is an invaluable skill.
+            I know it was a lot of reading and a lot of information but understanding and properly navigating Web3 is an invaluable skill.
             This space is almost certainly today's fastest growing industry, and it innovates on itself daily.
             I spent a lot of time making sure that you are aware of the cybersecurity practices that are vital to safely exploring the new digital world we call the "Metaverse".
             Rest assured that it only gets crazier from here, but you completing the tutorial proves you are now equipped to face anything.
@@ -503,7 +512,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              On Alternative L1 Blockchains
+              Safety Disclaimer: Alternative L1 Blockchains
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
@@ -530,12 +539,12 @@ export default function Tutorial() {
           </p>
           <p className='justify-center indent-8 mb-2'>
             You may encounter cheap fees and fast block times, but as a result of lowered decentralization your risk of being "rugpulled" or scammed are significantly higher.
-            Mess around with the other aforementioned crypto networks at your own risk.
+            Mess around with the aforementioned alternative crypto networks at your own risk.
           </p>  
 
           <div className={styles.description}>
           <h1 className='text-4xl mb-4'>Thanks for reading!</h1>
-          <h1 className='text-4xl'>~~👦🏻👦🏻.eth~~</h1>
+          <h1 className='text-xl'>📯~~👦🏻👦🏻.eth~~📯</h1>
           </div>
         </div>
       </div>

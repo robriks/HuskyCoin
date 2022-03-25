@@ -18,7 +18,7 @@ export default function Header() {
                     href='https://github.com/robriks/HuskyCoin' 
                     > A Web3 Tutorial by {' '}
                     <a className='text-blue-500'>
-                      &nbsp; Robriks / 👦🏻👦🏻.eth
+                      &nbsp; 📯 Robriks / 👦🏻👦🏻.eth 📯
                     </a>
                   </a>
                 </div>
