@@ -36,7 +36,7 @@ export default function Home() {
         </div>
         <div className={styles.grid}>
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask" className={styles.card}>
-            <h2>1. Set up a Crypto wallet using MetaMask 
+            <h2>1. Download MetaMask and set up a Crypto wallet
             <a>&rarr;</a>
             </h2>
             <p>A crypto wallet is your gateway to Web3 infrastructure. Learn about the insane things an Ethereum address is capable of.</p>
@@ -49,7 +49,7 @@ export default function Home() {
             <a
               className={styles.card}
             >
-              <h2>3. Claim HuskyCoins for free from my faucet 
+              <h2>3. Claim HuskyCoins free of charge from my faucet 
               <a>&rarr;</a>
               </h2>
               <p>Claim your first 69420 ERC20 tokens from the HuskyCoin faucet. HuskyCoin is a cryptocurrency that I've designed for educational purposes.</p>
