@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/robriks/HuskyCoin/contracts/HuskyCoin.sol": {
-      "lastModificationDate": 1646683696896,
-      "contentHash": "119faf47e5042e6465650e3374eef7a0",
+      "lastModificationDate": 1648232321913,
+      "contentHash": "2ce3b2745c270b1cc9ededec21398589",
       "sourceName": "contracts/HuskyCoin.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -40,7 +40,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1646538847418,
+      "lastModificationDate": 1647225793724,
       "contentHash": "f48de0eaae9544072b8766e2eac528a7",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -79,8 +79,8 @@
       ]
     },
     "/home/robriks/HuskyCoin/contracts/Stakeable.sol": {
-      "lastModificationDate": 1646686155551,
-      "contentHash": "82635c6e6d065054fd3dbbc7db6c5a61",
+      "lastModificationDate": 1648229577389,
+      "contentHash": "fd132ce06b40ea502ffbe9f04ed19240",
       "sourceName": "contracts/Stakeable.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -114,7 +114,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1646538847418,
+      "lastModificationDate": 1647225793724,
       "contentHash": "302d9755e46bc69d7058b0cbe7185e37",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -149,7 +149,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1646538847418,
+      "lastModificationDate": 1647225793724,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -186,7 +186,7 @@
       ]
     },
     "/home/robriks/HuskyCoin/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1646538847422,
+      "lastModificationDate": 1647225793728,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {

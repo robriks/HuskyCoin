@@ -4,7 +4,7 @@ require('dotenv').config()
 
 module.exports = {
   
-  defaultNetwork: "rinkeby",
+  defaultNetwork: "mumbai",
   networks: {
     hardhat: {
       chainId: 1337
@@ -12,6 +12,14 @@ module.exports = {
     rinkeby: {
       url: process.env.DEPLOY_API_RINKEBY,
       accounts: [process.env.DEPLOY_SECRET_RINKEBY]
+    },
+    mumbai: {
+      url: process.env.DEPLOY_API_MUMBAI,
+      accounts: [process.env.DEPLOY_SECRET_MUMBAI]
+    },
+    matic: {
+      url: process.env.DEPLOY_API_MATIC,
+      accounts: [process.env.DEPLOY_SECRET_MATIC]
     }
   },
   
