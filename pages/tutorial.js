@@ -238,13 +238,13 @@ export default function Tutorial() {
             The point is that the bytecode I wrote and compiled for the HuskyCoin token exists at the following smart contract address on Polygon L2:
             </p>
             <a 
-              href='https://polygonscan.com' 
-              className='text-blue-500 text-4xl'>
-                CHANGE THIS HREF ADDRESS ONCE DEPLOYED
+              href='https://polygonscan.com/address/0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee' 
+              className='flex justify-center text-blue-500 text-sm'>
+                0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee
             </a>
           <p className='justify-center indent-8 mb-2 mt-2'>
             Keep in mind that this smart contract address only exists on the Polygon L2; if you try to find it on mainnet or any of Ethereum's other rollup networks, you won't find it.
-            While developing HuskyCoin, I also deployed to Ethereum's Rinkeby testnet at this address:
+            It also exists on Ethereum's Rinkeby testnet at the same address (the following link will take you to Etherscan's Rinkeby block explorer):
           </p>
           <div className='flex justify-center'>
           <a 
@@ -255,12 +255,13 @@ export default function Tutorial() {
           </div>
           <p className='indent-8 mt-2'>
             Feel free to interact with it however you like there.
+            There's actually a bug (that I have since fixed!) so any of you hackers are welcome to break that testnet deployment of HuskyCoin. 😏 😏 😏
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>2. Connect to the Polygon L2 network</h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            After all that, you're finally ready for the next step, configuring MetaMask to connect to the Polygon Layer 2 network.
+            Now that you understand rollups, you're finally ready for the next step: configuring MetaMask to connect to the Polygon Layer 2 network.
             To do so, open your MetaMask extension and click the dropdown button labeled with a colored dot and the text "Ethereum Mainnet V".
             Lmeow I used a V since I couldn't figure out how to copy that dropdown arrow next to the word 'Mainnet,' but here's a picture if the V confused you:
           </p>
@@ -452,8 +453,10 @@ export default function Tutorial() {
             The only field you need to fill out on this page is the "Token Contract Address" field; the rest of the fields will be populated for you by MetaMask.
             This is the HuskyCoin token contract address:
           </p>
-          <a href='https://polygonscan.com' className='flex justify-center mb-2 text-blue-500 text-3xl txext-sm'>
-            CHANGE HREF AND PUT POLYGON ADDRESS HERE
+          <a 
+            href='https://polygonscan.com/address/0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee' 
+            className='flex justify-center mb-2 text-blue-500 text-sm'>
+              0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee
           </a>
           <p className='justify-center indent-8 mt-2 mb-2'>
             Copy and paste that address into the token contract address field and the Symbol field should automatically populate with "HUSKY" and the Decimal field should likewise populate with "18".
@@ -481,10 +484,16 @@ export default function Tutorial() {
             Head back to the HuskyCoin dApp home page and click the box titled "4. Stake to earn more HuskyCoins"
           </p>
           <p className='justify-center indent-8 mb-2'>
-            This will take you to the Staking page of the dApp, where both your Available $HUSKY balance and your Currently staked $HUSKY balance are displayed to you.
+            This will take you to the Staking page of the dApp, where both your 
+            <a className='font-semibold'> "Available $HUSKY balance" </a> 
+            and your 
+            <a className='font-semibold'> "Currently staked $HUSKY balance" </a>
+            are displayed to you. 
             MetaMask may prompt you to connect your wallet again, in which case click the connect button.
-            Then enter an amount (>100) that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
-            MetaMask will open a prompt for you to view the $MATIC required to pay gas- hit confirm and wait for your transaction to be mined.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Enter an amount (>100) that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
+            MetaMask will then open a prompt for you displaying the amount of $MATIC required to pay gas; hit confirm and wait for your transaction to be mined.
           </p>
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={prestake} layout='intrinsic'></Image>

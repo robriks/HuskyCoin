@@ -37,7 +37,7 @@ export default function Faucet () {
           <main className={styles.description}>
             <div className={styles.description}>
               <a 
-                href='https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee' 
+                href='https://polygonscan.com/address/0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee' 
                 className='justify-center text-5xl text-blue-500 p-4'>HuskyCoin
               </a>
               <div className='flex justify-center'>
@@ -77,7 +77,7 @@ export default function Faucet () {
         <main className={styles.description}>
           <div className={styles.description}>
             <a 
-              href='https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee' 
+              href='https://polygonscan.com/address/0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee' 
               className='justify-center text-5xl text-blue-500 p-4'>HuskyCoin
             </a>
             <div className='flex justify-center'>

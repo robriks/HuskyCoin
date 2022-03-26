@@ -16,7 +16,7 @@ export default function Home() {
           Welcome to the 
           <a 
             className='font-bold text-6xl text-blue-500'
-            href="https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee">{' '}HuskyCoin
+            href="https://polygonscan.com/address/0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee">{' '}HuskyCoin
           </a> Dapp!
         </h1>
         <div className={styles.description}>

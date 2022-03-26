@@ -4,7 +4,7 @@ require('dotenv').config()
 
 module.exports = {
   
-  defaultNetwork: "mumbai",
+  defaultNetwork: "matic",
   networks: {
     hardhat: {
       chainId: 1337

@@ -1,2 +1,2 @@
 // Enter the desired HuskyCoin contract address below
-export const huskycoinaddress = "0x436fb835Aa6f25D9698655f93d0d79229EF4E770"
+export const huskycoinaddress = "0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee"
