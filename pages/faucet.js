@@ -49,7 +49,7 @@ export default function Faucet () {
           </main>
           <div className='flex justify-center mt-8'>
             <div className='justify-center'>
-              <div className='flex justify-center max-w-2xl'>
+              <div className='flex justify-center max-w-xl'>
                 <Image src={husky} layout='intrinsic'></Image>
               </div>
               <div className='flex justify-center mt-6'>
@@ -89,7 +89,7 @@ export default function Faucet () {
         </main>
         <div className='flex justify-center mt-8'>
           <div className='justify-center'>
-            <div className='flex justify-center max-w-2xl'>
+            <div className='flex justify-center max-w-xl'>
               <Image src={husky} layout='intrinsic'></Image>
             </div>
             <div className='flex justify-center mt-6'>

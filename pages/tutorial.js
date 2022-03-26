@@ -14,6 +14,8 @@ import txConfirmed from '../assets/tx-confirmed.png'
 import pending from '../assets/pending.png'
 import tokenImport from '../assets/import.png'
 import importFields from '../assets/importFields.png'
+import huskyBalance from '../assets/huskyBalance.png'
+import prestake from '../assets/prestake.png'
 
 export default function Tutorial() {
     return(
@@ -48,8 +50,10 @@ export default function Tutorial() {
             What about NFTs!? 
             Is the wild west of DeFi only for shadowy super coders like robriks/👦🏻👦🏻.eth/@marsterlund? Elizabeth Warren seems to think so!
           </p>
-          <div className='flex justify-center mt-8 mb-8'>
+          <div className='flex justify-center'>
+          <div className='max-w-xl mt-8 mb-8'>
             <Image src={warren}></Image>
+          </div>
           </div>
           <p className='indent-8'>
             What are crypto loans? How does Cryptography work? 
@@ -145,7 +149,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              2. Understanding Your Ethereum Address
+              1.a Understanding Your Ethereum Address
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
@@ -170,8 +174,10 @@ export default function Tutorial() {
             It can also store any fungible ERC20 tokens such as $UNI, $SHIB, or $LINK as well as any NFTs that you purchase from an NFT marketplace like 
             <a href='https://opensea.io' className='text-blue-500'>{' '}OpenSea.</a>
           </p>
-          <div className='flex justify-center mt-8 mb-8'>
-            <Image src={MMbalance} layout='intrinsic'></Image>
+          <div className='flex justify-center'>
+            <div className='max-w-2xl mt-8 mb-8'>
+              <Image src={MMbalance} layout='intrinsic'></Image>
+            </div>
           </div>
           <p className='justify-center indent-8 mb-2'>
             Back on the subject of $ETH, not only does $ETH secure the network but it also is necessary to maintain the ever-changing state of the global computer known as the Ethereum Virtual Machine, called the EVM for short.
@@ -207,7 +213,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              Understanding Ethereum Layer 2s
+              1.b Understanding Ethereum Layer 2s
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
@@ -217,7 +223,9 @@ export default function Tutorial() {
             Definitely worth further reading if you're interested.
           </p>
           <div className='flex justify-center'>
-            <Image src={rollups} layout='intrinsic'></Image>
+            <div className='max-w-4xl'>
+              <Image src={rollups} layout='intrinsic'></Image>
+            </div>
           </div>
           <p className='justify-center indent-8 mb-2'>
             Anyway, these rollup chains run alongside the layer 1 mainnet, handling their own ecosystem of users and smart contracts.
@@ -249,7 +257,7 @@ export default function Tutorial() {
             Feel free to interact with it however you like there.
           </p>
           <div className={styles.description}>
-            <h1 className='flex justify-center text-3xl'>Connect to the Polygon L2 network</h1>
+            <h1 className='flex justify-center text-3xl'>2. Connect to the Polygon L2 network</h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
             After all that, you're finally ready for the next step, configuring MetaMask to connect to the Polygon Layer 2 network.
@@ -307,7 +315,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              Using $MATIC for gas
+              2.a Using $MATIC for gas
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
@@ -335,7 +343,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              Hit up a $MATIC faucet
+              2.b Hit up a $MATIC faucet
             </h1>
           </div>
           <p className='justify-center indent-8 mb-4'>
@@ -360,7 +368,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              The moment you've been waiting for! Claim your $HUSKY tokens!
+              3. The moment you've been waiting for! Claim your $HUSKY tokens!
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
@@ -409,7 +417,7 @@ export default function Tutorial() {
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
-              Where are my HuskyCoins!?
+              3.a Where are my HuskyCoins!?
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
@@ -433,9 +441,7 @@ export default function Tutorial() {
             To get MetaMask to display them, all we need to do is import them.
             The next and last step of this tutorial will be to stake them, so you'll get to watch your balance tick up in real time!
             That sounds fun, so let's first check the bottom of the MetaMask UI for the 
-            </p>
-            <a className='flex justify-center mb-2'>"Don't see your token? Import tokens"</a>
-          <p>
+            <a className='font-semibold'>{' '}"Don't see your token? Import tokens" {' '}</a>
             link (pictured above) and click on it. 
             On doing so, you'll be taken to a screen that looks like this:
           </p>
@@ -446,7 +452,7 @@ export default function Tutorial() {
             The only field you need to fill out on this page is the "Token Contract Address" field; the rest of the fields will be populated for you by MetaMask.
             This is the HuskyCoin token contract address:
           </p>
-          <a href='https://polygonscan.com' className='justify-center mb-2 text-blue-500 text-3xl txext-sm'>
+          <a href='https://polygonscan.com' className='flex justify-center mb-2 text-blue-500 text-3xl txext-sm'>
             CHANGE HREF AND PUT POLYGON ADDRESS HERE
           </a>
           <p className='justify-center indent-8 mt-2 mb-2'>
@@ -456,14 +462,14 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>
             Congratulations! You can now see your 69420 $HUSKY balance in MetaMask under the "Assets" tab.
             This "Import Custom Token" process is great to know because you'll need to import most of the tokens you interact with on-chain.
-            For example, if you wanted to display your $USDC or $USDT or $LINK balance (or whatever token you want), just google the token contract address and import it!
+            For example, if you wanted to display your $USDC or $USDT or $LINK balance (or whatever token you want), just Google the token contract address and import it!
           </p>
           <div className='flex justify-center mt-8 mb-8'>
-            {/*<Image>ADD HUSKYCOIN SCREENSHOT HERE </Image>*/}
+            <Image src={huskyBalance} layout='intrinsic'></Image>
           </div>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl mb-2'>
-              Now I want MOAR HuskyCoins
+              4. Now I want MOAR HuskyCoins
             </h1>
             <h2 className='flex justify-center text-lg'>
               Time to stake them & watch number go up
@@ -480,6 +486,9 @@ export default function Tutorial() {
             Then enter an amount (>100) that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
             MetaMask will open a prompt for you to view the $MATIC required to pay gas- hit confirm and wait for your transaction to be mined.
           </p>
+          <div className='flex justify-center mt-8 mb-8'>
+            <Image src={prestake} layout='intrinsic'></Image>
+          </div>
           <p className='justify-center indent-8 mb-2'>
             Once your transaction is mined and written to the EVM, your "Available $HUSKY balance" will decrease by the amount you specified and your "Currently staked $HUSKY balance" will increase by that same amount.
             Feel free to refresh the page if necessary. 
@@ -496,10 +505,50 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             I know it was a lot of reading and a lot of information but understanding and properly navigating Web3 is an invaluable skill.
-            This space is almost certainly today's fastest growing industry, and it innovates on itself daily.
+            This space is arguably today's fastest growing industry, and due to its open-source values with regards to code, it innovates on itself daily.
             I spent a lot of time making sure that you are aware of the cybersecurity practices that are vital to safely exploring the new digital world we call the "Metaverse".
             Rest assured that it only gets crazier from here, but you completing the tutorial proves you are now equipped to face anything.
           </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl mb-4'>
+              What's next?
+            </h1>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            If, like yours truly, you're mostly interested in DeFi, head over to 
+            <a href='https://zapper.fi/' className='text-blue-500'> Zapper.fi </a>
+            to start learning about the insane innovations of tokenomics and the digital economy.
+            Aave, Curve, and Yearn will be your home bases for obtaining loans and earning yields unparalleled in the legacy finance world.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            If you're mostly interested in learning about buying and selling NFTs,
+            <a href='https://opensea.io' className='text-blue-500'> OpenSea </a>
+            and <a href='https://zora.co/' className='text-blue-500'> Zora </a>
+            will be where you want to look.
+            Remember that NFTs can be much more than just boring old JPEGs!
+            For example, Mila Kunis and Ashton Cutcher's NFT project 'Stoner Cats' serves as a cryptographic club membership, where only owners of Stoner Cats NFTs can watch an animated show about weed-loving cats.
+            They both voice characters on the NFT show! And so does Vitalik.
+            You can also look into playing games built using NFTs, like <a href='https://axieinfinity.com' className='text-blue-500'> Axies. </a>
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            If you're not sure what you'd like to do next in Web3,
+            check out <a href='https://rabbithole.gg/' className='text-blue-500'> RabbitHole, </a>
+            where you can get token rewards for completing various Web3 quests.
+            Most of these quests are very simple and simply involve making transactions and using protocols.
+            Your on-chain history, viewable on <a href='https://etherscan.io' className='text-blue-500'> Etherscan, </a>
+            proves your completion of these tasks.
+            And it gives you an awesome historical record of your Web3 abilities and accomplishments!
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            Lastly, if you'd like to learn to code on blockchains and go the developer route like I did, <a href='https://cryptozombies.io' className='text-blue-500'> CryptoZombies </a>
+            is your place to start.
+            Here you'll learn Ethereum's programming language, Solidity, in combination with Javascript to build your own on-chain blockchain game using NFTs!
+          </p>
+          <div className={styles.description}>
+            <h1 className='flex justify-center text-3xl'>
+              Safety Disclaimer: Alternative L1 Blockchains
+            </h1>
+          </div>
           <p className='justify-center indent-8 mb-2'>
             Unfortunately, the widespread scams and rugpulls in the DeFi and NFT spaces mean that I have to finish out with a lengthy disclaimer on crypto blockchains other than Bitcoin and Ethereum.
             Basically it boils down to one thing: you're infinitely less likely to get scammed/rugged if you stick to the Ethereum ecosystem.
@@ -510,11 +559,6 @@ export default function Tutorial() {
             Not all cryptos are made equal.
             At the end of the day, the more you learn about how these protocols work on a technical level, the safer (and maybe richer ¯\_ (ツ)_/¯ ) you'll be.
           </p>
-          <div className={styles.description}>
-            <h1 className='flex justify-center text-3xl'>
-              Safety Disclaimer: Alternative L1 Blockchains
-            </h1>
-          </div>
           <p className='justify-center indent-8 mb-2'>
             MetaMask, in combination with these skills & concepts, is transferable between any EVM-compatible blockchain. 
             The term 'EVM-compatible' refers to blockchains that are modeled after Ethereum's implementation.

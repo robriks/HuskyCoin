@@ -100,8 +100,8 @@ contract HuskyCoin is ERC20, Stakeable {
     }
 
     // Withdrawal function
-    function withdraw(uint256 amount, uint256 stakeIndex) public {
-        uint256 amountToMint = _withdrawStake(amount, stakeIndex);
+    function withdraw() public {
+        uint256 amountToMint = _withdrawStake(msg.sender);
         _mint(msg.sender, amountToMint);
     }
 

@@ -14,8 +14,8 @@ describe("HuskyCoin", function () {
       await huskyCoin.deployed();
 
       [owner, staker] = await ethers.getSigners();
-      await huskyCoin.mint(staker.address, 10000);
-      await huskyCoin.mint(owner.address, 10000);
+      await huskyCoin.mint(staker.address, 30000000);
+      await huskyCoin.mint(owner.address, 30000000);
     });
 
     it("Should stake correct amount and return stakeIndex", async function () {
@@ -24,7 +24,7 @@ describe("HuskyCoin", function () {
     });
 
     it("Should reject stake attempts that exceed msg.sender balance", async () => {
-        await expect(huskyCoin.connect(staker).stake(100000))
+        await expect(huskyCoin.connect(staker).stake(100000000))
           .to.be.revertedWith("You don't have enough tokens to stake that amount");
     });
 
@@ -34,15 +34,15 @@ describe("HuskyCoin", function () {
         let stakeSummary = await huskyCoin.connect(staker).hasStake(staker.address);
         expect(stakeSummary.totalAmount).to.equal(100);
         
-        expect(await huskyCoin.connect(staker).withdraw(25, 0))
+        expect(await huskyCoin.connect(staker).withdraw())
           .to.emit(huskyCoin, 'Unstaked');
 
         let withdrawnSummary = await huskyCoin.connect(staker).hasStake(staker.address);
-        expect(withdrawnSummary.totalAmount).to.equal(75);
+        expect(withdrawnSummary.totalAmount).to.equal(0);
     });
 
     it("Should properly award staking rewards given a set amount of time", async () => {
-        await huskyCoin.connect(staker).stake(100);
+        await huskyCoin.connect(staker).stake(10000000);
 
         await ethers.provider.send("evm_increaseTime", [10]);
         await ethers.provider.send("evm_mine", []);
@@ -56,34 +56,47 @@ describe("HuskyCoin", function () {
         */
 
          let grownStake = await huskyCoin.connect(staker).hasStake(staker.address);
-         expect(grownStake.totalAmount).to.equal(101);
+         expect(grownStake.totalAmount).to.equal(10000001);
     });
 
     it("Should properly calculate rewards for multiple stakes", async() => {
-      await huskyCoin.connect(staker).stake(100);
+      await huskyCoin.connect(staker).stake(10000000);
       await ethers.provider.send("evm_increaseTime", [10]);
       await ethers.provider.send("evm_mine", []);
       let test1 = await huskyCoin.hasStake(staker.address);
       let stake1 = test1.stakes[0];
       expect(stake1.claimable).to.equal(1);
 
-      await huskyCoin.connect(staker).stake(200);
+      await huskyCoin.connect(staker).stake(10000000);
       await ethers.provider.send("evm_increaseTime", [10]);
       await ethers.provider.send("evm_mine", []);
       let test2 = await huskyCoin.hasStake(staker.address);
       let stake2 = test2.stakes[1];
-      expect(stake2.claimable).to.equal(2);
+      expect(stake2.claimable).to.equal(1);
     });
 
     it("Should clear claimable rewards upon withdrawal and delete empty stakes", async () => {
-      await huskyCoin.connect(staker).stake(100);
+      await huskyCoin.connect(staker).stake(10000000);
       await ethers.provider.send("evm_increaseTime", [20]);
       await ethers.provider.send("evm_mine", []);
-      await huskyCoin.connect(staker).withdraw(100, 0);
+      await huskyCoin.connect(staker).withdraw();
       let summary = await huskyCoin.hasStake(staker.address);
       let newBalance = await huskyCoin.connect(staker).balanceOf(staker.address);
 
       expect(summary.user).to.equal(undefined);
-      expect(newBalance).to.equal(10002);
+      expect(newBalance).to.equal(30000002);
     });
+
+    it("Should properly handle withdrawing multiple stakes", async () => {
+      await huskyCoin.connect(staker).stake(10000000);
+      await ethers.provider.send("evm_increaseTime", [10]);
+      await ethers.provider.send("evm_mine", []);
+      await huskyCoin.connect(staker).stake(10000000);
+      await ethers.provider.send("evm_increaseTime", [10]);
+      await ethers.provider.send("evm_mine", []);
+      await huskyCoin.connect(staker).withdraw();
+      let newBalance = await huskyCoin.connect(staker).balanceOf(staker.address)
+
+      expect(newBalance).to.equal(30000003);
+    })
 });

@@ -36,7 +36,7 @@ contract Stakeable {
     mapping(address => uint256) internal stakes;
 
     event Staked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
-    event Unstaked(address indexed user, uint256 amount, uint256 index, uint256 timestamp);
+    event Unstaked(address indexed user, uint256 amount, uint256 timestamp);
     
     constructor() {
         stakeholders.push();
@@ -71,29 +71,31 @@ contract Stakeable {
     }
 
     // Internal function to complete the logic of withdrawing staked funds, including clearing deleted array values and timestamps
-    function _withdrawStake(uint _amount, uint _index) internal returns (uint) {
-        // Grab index from the stakes mapping
-        uint userIndex = stakes[msg.sender];
-        Stake memory currentStake = stakeholders[userIndex].address_stakes[_index];
-        require(currentStake.amount >= _amount, "Cannot unstake more than your staked balance");
-        
-        uint currentTime = block.timestamp;
-        uint reward = calculateStakeReward(currentStake);
-        currentStake.amount = currentStake.amount - _amount;
-        
-        // If stake is empty, remove it
-        if (currentStake.amount == 0) {
-            delete stakeholders[userIndex].address_stakes[_index];
-        } else {
-            // If stake is not empty, update its value
-            stakeholders[userIndex].address_stakes[_index].amount = currentStake.amount;
-            // Reset timer of stake
-            stakeholders[userIndex].address_stakes[_index].timeStamp = block.timestamp;
+    function _withdrawStake(address staker) internal returns (uint) {
+        uint originalAmount;
+        uint totalStakeAmount;
+        StakingSummary memory summary = StakingSummary(0, 0, stakeholders[stakes[staker]].address_stakes);
+        for (uint i; i < summary.stakes.length; i++) {
+            // Set local variable _amtStaked to original stake amount so that the stakes[i].amount can be zeroed out 
+            uint _amtStaked = summary.stakes[i].amount;
+            // Iterate through all stakes for this address, add up staked originalAmounts
+            originalAmount += _amtStaked;
+            uint availableReward = calculateStakeReward(summary.stakes[i]);
+            // Zero out stake amount must happen after CalculateStakeReward is called
+            summary.stakes[i].amount = 0;
+            // Set claimable amount to 0 after having executed calculateStakeReward()
+            summary.stakes[i].claimable = 0;
+            delete summary.stakes[i]; //stakeholders[userIndex].address_stakes[_index] 
+            // Continuously add staked amounts to the variable declared outside of this for loop's scope
+            totalStakeAmount = totalStakeAmount + _amtStaked + availableReward;
         }
+        delete stakeholders[stakes[staker]].address_stakes;
 
-        emit Unstaked(msg.sender, _amount, _index, currentTime);
+        uint currentTime = block.timestamp;
 
-        return _amount + reward;
+        emit Unstaked(staker, totalStakeAmount, currentTime);
+
+        return totalStakeAmount;
     }
 
     function hasStake(address _staker) public view returns (StakingSummary memory) {
