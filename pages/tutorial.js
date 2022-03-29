@@ -466,10 +466,11 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             The last skill for you to learn in this tutorial is how to stake a token to earn passive income.
-            Nothing beats watching your token balance slowly tick upward, so I've build a staking page that reads your on-chain token balance each block and relays that information to you.
-            Head back to the HuskyCoin dApp home page and click the box titled "4. Stake to earn more HuskyCoins"
+            Nothing beats watching your staked token balance slowly tick upward, so I made HuskyCoin support staking!
           </p>
           <p className='justify-center indent-8 mb-2'>
+            Head back to the HuskyCoin dApp home page and click the box titled 
+            <a className='font-semibold'>"4. Stake to earn more HuskyCoins".{' '}</a>
             This will take you to the Staking page of the dApp, where both your 
             <a className='font-semibold'> "Available $HUSKY balance" </a> 
             and your 
