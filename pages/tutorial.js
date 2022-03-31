@@ -16,6 +16,7 @@ import tokenImport from '../assets/import.png'
 import importFields from '../assets/importFields.png'
 import huskyBalance from '../assets/huskyBalance.png'
 import prestake from '../assets/prestake.png'
+import addNetwork from '../assets/addNetwork.png'
 
 export default function Tutorial() {
     return(
@@ -47,11 +48,15 @@ export default function Tutorial() {
           </div>
           <p className='indent-8'>
             While you're at it, wtf is a blockchain anyway? Private key? Public address? 
-            What about NFTs!? 
-            What are self-repaying crypto loans? How does Cryptography work? 
-            Can I mine cryptocurrency with my computer to make money? 
-            How do I stake crypto for passive income? 
-            Are ENS (.eth) domains comparable to the more familiar DNS (.com or .org) domains? 
+            What about <a href='https://ethereum.org/en/nft/' className='text-blue-500'>NFTs!? </a>
+            What are <a href='https://alchemix.fi/' className='text-blue-500'>self-repaying crypto loans?{' '}</a>
+            How does 
+              <a href='https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3' className='text-blue-500'>
+              {' '}Cryptography{' '}
+              </a>work?
+            Can I <a href='https://ethermine.org/' className='text-blue-500'>mine cryptocurrency</a> with my computer to make money? 
+            How do I <a href='https://www.coinbase.com/learn/crypto-basics/what-is-staking' className='text-blue-500'>stake crypto</a> for passive income? 
+            Are <a href='https://ens.domains/' className='text-blue-500'>ENS (.eth)</a> domains comparable to the more familiar DNS (.com or .org) domains? 
             Facebook = Meta... verse...? Right? 
             By the way, I also heard on Reddit that 
               <a href='https://dogecoin.com/' className='font-bold text-blue-500'>{' '}_insertRandomDogCoinTokenHere_</a> 
@@ -63,7 +68,10 @@ export default function Tutorial() {
             </div>
           </div>
           <p className='indent-8'>
-            Isn't the wild west of DeFi only for people that Elizabeth Warren calls "shadowy super coders"?
+            Isn't the {' '}
+            <a href='https://www.coinbase.com/learn/crypto-basics/what-is-defi' className='text-blue-500'>
+             wild west of DeFi
+            </a> only for people that Elizabeth Warren calls "shadowy super coders"?
             And most importantly: 
           </p>
           <p className='flex justify-center text-lg font-bold mt-4'>
@@ -216,9 +224,12 @@ export default function Tutorial() {
             No way! 
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Thankfully Ethereum's big-brained core protocol developers have come up with a wild idea to solve these high gas fees:
-            why not have even more blockchains settle bundled transaction hashes onto Ethereum blocks?
-            I get that you're probably drooling for HuskyCoins right now, but you won't know how to claim them until I teach you how to access these nested blockchains that live on Ethereum.
+            Thankfully Ethereum's big-brain core protocol developers proposed a wild idea to solve these high gas fees:
+            why not add another layer of blockchains on top of Ethereum?
+            This is achieved by having new blockchains settle bundled transaction hashes onto Ethereum blocks.
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            I get that you're probably drooling for HuskyCoins right now, but you won't know how to claim them until I teach you how to access these nested blockchains that live on Ethereum!
             You'll get your $HUSKY soon enough, I promise.
           </p>
           <div className={styles.description}>
@@ -229,7 +240,9 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>
             Separate blockchains that execute computation off of the Ethereum mainnet and then settle their hashed proofs to mainnet are called layer 2 (aka L2) blockchains.
             These layer 2 chains, called rollups, generally make use of either optimistic execution which is checked by fraud proofs or zero-knowledge proofs which is an actively researched field in mathematics.
-            The technical details between either L2 rollup type are not important for me to go over here, but definitely worth further reading if you're interested.
+            <a href='https://www.gemini.com/cryptopedia/layer-2-scaling-zk-rollup-optimistic-rollup-ethereum' className='text-blue-500'>
+              {' '}The technical details between either L2 rollup type are not important for me to go over, but definitely worth further reading if you're interested.
+            </a>
           </p>
           <div className='flex justify-center'>
             <div className='max-w-4xl'>
@@ -237,66 +250,73 @@ export default function Tutorial() {
             </div>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Anyway, these rollup chains run alongside the layer 1 mainnet, handling their own ecosystem of users and smart contracts.
-            They essentially lock up tokens like $ETH on mainnet and then only periodically settle hashes called merkle roots from the L2 to the L1, to prove that all funds are accounted for and all transactions are valid.
+            Anyway, these rollup chains run separate to the layer 1 mainnet, handling their own ecosystem of users and smart contracts.
+            Using fancy math, they periodically settle hashes called merkle roots from the L2 to the L1, to prove that all funds are accounted for and all transactions are valid.
           </p>
           <p className='justify-center indent-8 mb-2'>
             It's important for you to understand this concept because the smart contract I've written and deployed for you, HuskyCoin, exists on the 
-            <a href='https://polygonscan.com' className='text-blue-500'>{' '}Polygon layer 2 rollup chain.</a>
-            {' '}Technically it's a side-chain, but again that's beside the point.
+            <a href='https://polygon.technology/' className='text-blue-500'>{' '}Polygon layer 2 rollup chain.</a>
+            {' '}Technically it's a side-chain, but that's beside the point.
             The point is that the bytecode I wrote and compiled for the HuskyCoin token exists at the following smart contract address on Polygon L2:
             </p>
             <a 
               href='https://polygonscan.com/address/0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee' 
               className='flex justify-center text-blue-500 text-sm'>
-                0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee
+                Polygon: 0x8CFb42a80291737Cb62cEF7B665Fe1304D112Fee
             </a>
           <p className='justify-center indent-8 mb-2 mt-2'>
-            Keep in mind that this smart contract address only exists on the Polygon L2; if you try to find it on mainnet or any of Ethereum's other rollup networks, you won't find it.
-            It also exists on Ethereum's Rinkeby testnet at the same address (the following link will take you to Etherscan's Rinkeby block explorer):
+            Keep in mind that this smart contract address only exists on the Polygon L2; if you try to find it on mainnet or any other rollup, you won't find it.
+            It also exists on Ethereum's Rinkeby testnet at the same address.
+            The following link will take you to Etherscan's Rinkeby block explorer:
           </p>
           <div className='flex justify-center'>
           <a 
             href='https://rinkeby.etherscan.io/address/0x8cfb42a80291737cb62cef7b665fe1304d112fee' 
             className='text-blue-500 text-sm'>
-              {' '}0x8cfb42a80291737cb62cef7b665fe1304d112fee
+              {' '}Rinkeby: 0x8cfb42a80291737cb62cef7b665fe1304d112fee
           </a>
           </div>
           <p className='indent-8 mt-2'>
             Feel free to interact with it however you like there.
-            There's actually a bug (that I have since fixed!) so any of you hackers are welcome to break that testnet deployment of HuskyCoin. 😏 😏 😏
+            There's actually a bug (that I have since fixed!), so any of you 🎭👨🏻‍💻 hackers 👨🏻‍💻🎭 are welcome to break that testnet deployment of HuskyCoin. 😏 😏 😏
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>2. Connect to the Polygon L2 network</h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
             Now that you understand rollups, you're finally ready for the next step: configuring MetaMask to connect to the Polygon Layer 2 network.
-            To do so, open your MetaMask extension and click the dropdown button labeled with a colored dot and the text "Ethereum Mainnet V".
-            Lmeow I used a V since I couldn't figure out how to copy that dropdown arrow next to the word 'Mainnet,' but here's a picture if the V confused you:
+            To do so, open your MetaMask extension at the top right of your browser and click the dropdown button labeled <a className='font-semibold'>"Ethereum Mainnet V"</a>
+          </p>
+          <p className='text-center indent-4 mt-4 mb-4 mr-8 ml-8 text-xs'>
+            Lmeow I know it's an arrow and not a V but I couldn't figure out how to copy that dropdown arrow. 
+            Here's a picture if the V confused you:
           </p>
           <div className='flex justify-center mt-4 mb-5'>
             <Image src={networks} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            It will be located in the top right of your UI.
-            This dropdown menu is where you switch between layer 2 networks on the blockchain- you'll note that only the Ethereum Mainnet is available to you at the moment.
+            This button is located at the top right of your MetaMask UI.
+            It is the button you'll use to switch between layer 2 networks on the blockchain- note that only the Ethereum Mainnet is available to you at the moment.
           </p>
           <p className='justify-center indent-8'>
-            To add the Polygon L2 mainnet to your MetaMask configuration simply navigate to 
+            We'll add the Polygon L2 mainnet to your MetaMask configuration by using 
             <a className='text-blue-500'>{' '}https://chainlist.org.{' '}</a>
-            This is where you'll find any EVM-compatible network RPC endpoints, including any Ethereum L2 rollups.
+            This site is where you'll find any EVM-compatible network RPC endpoints, such as rollups.
             I love using Chainlist because you don't risk mistyping any of the network configuration since it's as easy as clicking a button.
           </p>
           <div className='flex justify-center mt-6 mb-6'>
             <Image src={chainlist} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8'>
-            Scroll down the grid to the block labeled "Polygon Mainnet" and click the button labeled "Connect Wallet."
-            Note that you also may need to connect your wallet to the site in the top right first.
-            Once you've done so, that button should change to one labeled "Add to Metamask", click it and hit "Approve" and then "Switch network" in the Metamask popup that follows.
+            On Chainlist, scroll down the grid to the block labeled 
+            <a className='font-semibold'> "Polygon Mainnet"</a> and click the button labeled 
+            <a className='font-semibold'> "Connect Wallet"</a>.
+            Once you've done so, that button will change to one labeled <a className='font-semibold'> "Add to Metamask"</a>, 
+            click it and then in the MetaMask popup that follows, hit <a className='font-semibold'>"Approve"</a> 
+            and then <a className='font-semibold'>"Switch network"</a>.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            If you were successful with those steps, you can skip to the next section titled "Using $MATIC for gas". 
+            If you were successful with those steps, you can skip to the next section titled <a className='font-semibold'>"Using $MATIC for gas"</a>.
             The next bit is just backup information in case Chainlist is down.
           </p>
           <div className={styles.description}>
@@ -306,8 +326,15 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             If for some reason Chainlist has gone offline, I've included Polygon's RPC endpoint information for you below so that you may enter it manually should you need to.
-            Should you need enter this information manually in case of Chainlist being down, open the networks dropdown menu labeled "Ethereum Mainnet V" and click the "Add Network" button. 
-            Fill out the required fields with the following Polygon Mainnet information:
+            In that case, enter this information manually by opening the networks dropdown menu labeled 
+            <a className='font-semibold'> "Ethereum Mainnet V" </a> 
+            and click the <a className='font-semibold'> "Add Network" </a> button. 
+          </p>
+          <div className='flex justify-center mt-6 mb-6'>
+            <Image src={addNetwork} layout='intrinsic'></Image>
+          </div>
+          <p className='justify-center indent-8 mb-2'>
+            Fill out the required fields with the following information:
           </p>
           <ol className='list-disc justify-center mt-4 mb-4'>
             <li className='text-center text-sm'>Network Name: Polygon</li>
@@ -316,12 +343,12 @@ export default function Tutorial() {
             <li className='text-center text-sm'>Currency Symbol: MATIC</li>
             <li className='text-center text-sm'>Block Explorer URL: https://polygonscan.com</li>
           </ol>
-          <div className='flex justify-center mt-6 mb-6'>
-            <Image src={polygon} layout='intrinsic'></Image>
-          </div>
           <p className='justify-center indent-8 mb-2'>
-            You'll know you're connected to the Polygon L2 network once the network dropdown box at the top displays "Polygon Mainnet V" instead of "Ethereum Mainnet V" as it did before.
-            (Again, those "V"s are my substitution for that dropdown arrow.)
+            You'll know you're connected to the Polygon L2 network once the network dropdown box at the top displays
+            <a className='font-semibold'> "Polygon Mainnet V" </a>
+            instead of <a className='font-semibold'> "Ethereum Mainnet V" </a>as it did before.
+            Again, those V's are my substitution for that dropdown arrow.
+            MetaMask will also display a token balance of 0 MATIC instead of 0 ETH, since $MATIC is the Layer 1 token of Polygon instead of $ETH, 
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
@@ -330,8 +357,9 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             Almost there! The last step before you can claim your 69420 HuskyCoins is to obtain a small amount of $MATIC to pay the gas needed to execute any transaction on the Polygon network.
-            I know I went on and on about how $ETH is the base-layer token that pays gas on Ethereum, but the Polygon L2 is slightly different because it uses its own custom token to pay gas.
-            All the concepts I discussed still apply, the only difference being that $MATIC is the base-layer token on this rollup instead of $ETH.
+            I know I went on and on about how $ETH is the base-layer token that pays gas on Ethereum, but the Polygon L2 is slightly different because it uses its own separate token to pay gas.
+            This is the case for a few of Ethereum's rollups.
+            All the concepts discussed still apply, the only difference being that $MATIC on Polygon serves the same role as $ETH on mainnet.
           </p>
           <p className='justify-center indent-8 mb-4'>
             You'll recall that gas is a mechanic which serves two main purposes:
@@ -346,8 +374,8 @@ export default function Tutorial() {
             </li>
           </ol>
           <p className='justify-center indent-8 mb-2'>
-            Thankfully gas fees on the Polygon L2 are extraordinarily cheap!
-            Each transaction costs a fraction of a cent: roughly 0.004 $MATIC each, which in USD terms is roughly $0.006.
+            I chose to deploy $HUSKY on the Polygon L2 because gas fees here are extraordinarily cheap!
+            Each transaction costs a fraction of a cent: roughly 0.004 $MATIC each, which in USD terms at time of writing is roughly $0.006.
             Much cheaper than the gas fees you'll see on Ethereum Layer 1!
           </p>
           <div className={styles.description}>
@@ -356,13 +384,14 @@ export default function Tutorial() {
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Moving on, in order to make your claim your $HUSKY allocation, we first must hit up a faucet to collect a bit of $MATIC.
+            Moving on, in order to claim your $HUSKY allocation, we first must hit up a faucet to collect a bit of $MATIC.
             Go to:
             <a href='https://polygon-faucet.m00n.city/' className='text-blue-500'>{' '}https://polygon-faucet.m00n.city/{' '}</a>
-            and click "Connect Wallet".
+            and click <a className='font-semibold'> "Connect Wallet"</a>.
           </p>
           <p className='justify-center indent-8 mb-4'>
-            Once you've done so, click the same button now labeled "Get Some MATIC" to be sent a dust amount of $MATIC to pay for your first polygon transaction.
+            Once you've done so, click the same button now labeled <a className='font-semibold'> "Get Some MATIC" </a> 
+              to be sent a dust amount of $MATIC to pay for your first polygon transaction.
           </p>
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={faucet} layout='intrinsic'></Image>
@@ -385,15 +414,15 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             It's finally time to do what you came here for!
-            By this point, we've discussed all the prerequisite knowledge you need to understand wtf is going on when you use a crypto network.
+            By this point, we've discussed all the prerequisite knowledge you need to understand wtf is going on when you transact on Ethereum.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Head back to the HuskyCoin dApp home page and click on the box marked "3. Claim HuskyCoins from my faucet".
-            On the faucet page, click "Receive HuskyCoins" and a MetaMask transaction prompt should appear.
+            Head back to the HuskyCoin dApp home page and click on the box marked <a className='font-semibold'> "3. Claim HuskyCoins from my faucet"</a>.
+            On the faucet page, click <a className='font-semibold'> "Receive HuskyCoins" </a> and a MetaMask transaction prompt will appear.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Feel free to observe the uber cheap $MATIC gas fee and click "Confirm".
-            Once the transaction is confirmed by miners, you'll receive a browser notification from MetaMask that looks something like the one below.
+            Feel free to observe the uber cheap $MATIC gas fee and click <a className='font-semibold'> "Confirm"</a>.
+            Once the transaction is mined, you'll receive a browser notification from MetaMask that looks something like the one below.
             This means you've received 69420 $HUSKY tokens to your address!
           </p>
           <div className='flex justify-center mt-8 mb-8'>
@@ -409,14 +438,14 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             If you didn't get a notification like the one above, give it a few minutes as network conditions constantly vary. 
-            Check the "Activity" tab on the right of your MetaMask UI for something like this:
+            Check the <a className='font-semibold'> "Activity" </a> tab on the right of your MetaMask UI for something like this:
           </p>
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={pending} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8 mb-2'>
             This just means network conditions require a higher gas amount. 
-            Click on the "Speed Up" button, which will increase the gas amount and resend the transaction.
+            Click on the <a className='font-semibold'> "Speed Up" </a> button, which will increase the gas amount and resubmit the transaction.
             If you're having still issues, just DM me using one of the social media links at the bottom of the page and I'll help you out.
           </p>
           <div className={styles.description}>
@@ -425,9 +454,9 @@ export default function Tutorial() {
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Assuming you successfully claimed your HuskyCoins, you'll notice that your $MATIC token balance went down.
+            Assuming you successfully claimed your HuskyCoins, you'll notice that your $MATIC token balance decreased slightly.
             That's because you spent a tiny amount on gas to the network.
-            But wait, where do I find those 69420 HuskyCoins?
+            But wait, where are those 69420 HuskyCoins?
           </p>
           <p className='justify-center indent-8 mb-2'>
             Sometimes MetaMask doesn't automatically pick up on when you've received or claimed tokens in your wallet.
@@ -446,7 +475,8 @@ export default function Tutorial() {
             <Image src={importFields} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            The only field you need to fill out on this page is the "Token Contract Address" field; the rest of the fields will be populated for you by MetaMask.
+            The only field you need to fill out on this page is the 
+            <a className='font-semibold'> "Token Contract Address" </a> field; the rest of the fields will be populated for you by MetaMask.
             This is the HuskyCoin token contract address:
           </p>
           <a 
@@ -456,11 +486,11 @@ export default function Tutorial() {
           </a>
           <p className='justify-center indent-8 mt-2 mb-2'>
             Paste that address into the token contract address field.
-            Click "Add Custom Token" on the bottom to confirm.
+            Then click <a className='font-semibold'> "Add Custom Token" </a> on the bottom to confirm.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Congratulations! You can now see your 69420 $HUSKY balance in MetaMask under the "Assets" tab.
-            This "Import Custom Token" process is great to know because you'll need to import many of the tokens you interact with on-chain.
+            Congratulations! You can now see your 69420 $HUSKY balance in MetaMask under the <a className='font-semibold'> "Assets" </a> tab.
+            This process of importing tokens is a vital Web3 skill because you'll need to import many of the tokens you interact with on-chain.
           </p>
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={huskyBalance} layout='intrinsic'></Image>
@@ -474,34 +504,38 @@ export default function Tutorial() {
             </h2>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            The last skill for you to learn in this tutorial is how to stake a token to earn passive income.
+            The last concept for you to learn in this tutorial is how to stake a token to earn passive income.
             Nothing beats watching your staked token balance slowly tick upward, so I made HuskyCoin support staking!
           </p>
           <p className='justify-center indent-8 mb-2'>
             Head back to the HuskyCoin dApp home page and click the box titled 
-            <a className='font-semibold'>"4. Stake to earn more HuskyCoins".{' '}</a>
-            This will take you to the Staking page of the dApp, where both your 
+            <a className='font-semibold'> "4. Stake to earn more HuskyCoins"</a>.
+            This will take you to the Staking page, where both your 
             <a className='font-semibold'> "Available $HUSKY balance" </a> 
             and your 
             <a className='font-semibold'> "Currently staked $HUSKY balance" </a>
-            are displayed to you. 
+            are displayed. 
             MetaMask may prompt you to connect your wallet again, in which case click the connect button.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Enter an amount (>100) that you wish to stake in the "Amount to stake" form and click the pretty green "Stake" button!
-            MetaMask will then open a prompt for you displaying the amount of $MATIC required to pay gas; hit confirm and wait for your transaction to be mined.
+            Enter an amount (>100) that you wish to stake in the 
+            <a className='font-semibold'> "Amount to stake" </a> 
+            form and click the pretty green <a className='font-semibold'> "Stake" </a> button!
+            MetaMask will then open a prompt for you displaying the amount of $MATIC required to pay gas; click confirm and wait a minute for your transaction to be mined.
           </p>
           <div className='flex justify-center mt-8 mb-8'>
             <Image src={prestake} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Once your transaction is mined and written to the EVM, your "Available $HUSKY balance" will decrease by the amount you specified and your "Currently staked $HUSKY balance" will increase by that same amount.
-            Feel free to refresh the page if necessary. 
-            Now you can watch your staked $HUSKY balance tick upward roughly every 10 seconds, or when every block is mined!
+            Once your transaction is mined and written to the EVM, your 
+            <a className='font-semibold'> "Available $HUSKY balance" </a>will decrease by the amount you specified and your 
+            <a className='font-semibold'> "Currently staked $HUSKY balance" </a>will increase by that same amount.
+            Now you can watch your staked $HUSKY balance tick upward roughly every 10 seconds, when every block is mined!
           </p>
-          <p className='flex justify-center indent-8 text-sm mb-2 ml-8 mr-8'>
-            Note: If it's been a couple minutes and you haven't get a browser notification from MetaMask saying "Transaction Confirmed," scroll back up to the "Quick Troubleshooting" section and follow the outlined steps.
-            If you can't figure it out, don't hesitate to reach out to me using one of the social media links at the bottom of the page.
+          <p className='justify-center indent-8 text-sm mb-2 ml-8 mr-8'>
+            Note: If it's been a couple minutes without a confirmation notification and your available and staked balances are unchanged, scroll back up to the 
+            <a className='font-semibold'> "Quick Troubleshooting" </a> section and follow the outlined steps.
+            If you still can't figure it out, reach out to me and we'll get you sorted out.
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl'>
@@ -509,10 +543,10 @@ export default function Tutorial() {
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            I know it was a lot of reading and a lot of information but understanding and properly navigating Web3 is an invaluable skill.
-            This space is arguably today's fastest growing industry, and due to its open-source values with regards to code, it innovates on itself daily.
-            I spent a lot of time making sure that you are aware of the cybersecurity practices that are vital to safely exploring the new digital world we call the "Metaverse".
-            Rest assured that it only gets crazier from here, but you completing the tutorial proves you are now equipped to face anything.
+            I know it was a lot of reading and a lot of new information, but safely navigating Web3 has proven an extremely valuable skill in recent years.
+            The crypto space is arguably today's fastest growing industry, and as a result of its open-source values with regards to code, it innovates on itself daily.
+            I spent a lot of time making sure that you are aware of the cybersecurity practices that are vital to properly exploring the rapidly emerging new digital world we call the Metaverse.
+            Rest assured that it only gets crazier from here, but completing the tutorial proves you are now equipped to face it all head on.
           </p>
           <div className={styles.description}>
             <h1 className='flex justify-center text-3xl mb-4'>
@@ -523,7 +557,8 @@ export default function Tutorial() {
             If, like yours truly, you're mostly interested in DeFi, head over to 
             <a href='https://zapper.fi/' className='text-blue-500'> Zapper.fi </a>
             to start learning about the insane innovations of tokenomics and the digital economy.
-            Aave, Curve, and Yearn will be your home bases for obtaining loans and earning yields unparalleled in the legacy finance world.
+            Platforms like Aave, Alchemix, and Yearn will be your home bases for obtaining self-repaying crypto loans and earning yields that are unparalleled in the legacy finance world.
+            Did you know you can use staked <a href='https://lido.fi/' className='text-blue-500'> $ETH ($stETH) </a>as collateral to obtain loans while simultaneously earning staking yield?
           </p>
           <p className='justify-center indent-8 mb-2'>
             If you're mostly interested in learning about buying and selling NFTs,
@@ -532,14 +567,17 @@ export default function Tutorial() {
             will be where you want to look.
             Remember that NFTs can be much more than just boring old JPEGs!
             For example, Mila Kunis and Ashton Cutcher's NFT project 'Stoner Cats' serves as a cryptographic club membership, where only owners of Stoner Cats NFTs can watch an animated show about weed-loving cats.
-            They both voice characters on the NFT show! And so does Vitalik.
-            You can also look into playing games built using NFTs, like <a href='https://axieinfinity.com' className='text-blue-500'> Axies. </a>
+            They both voice characters on the NFT show!
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            You can also look into playing games built using NFTs, like <a href='https://godsunchained.com' className='text-blue-500'> Gods Unchained. </a>
+            If you're into Fantasy Football, there's an NFT version called <a href='https://sorare.com/' className='text-blue-500'>SoRare. </a>
+            And of course you can monitor Twitter for the newest NFT art mints.
           </p>
           <p className='justify-center indent-8 mb-2'>
             If you're not sure what you'd like to do next in Web3,
             check out <a href='https://rabbithole.gg/' className='text-blue-500'> RabbitHole, </a>
             where you can get token rewards for completing various Web3 quests.
-            Most of these quests are very simple and simply involve making transactions and using protocols.
             Your on-chain history, viewable on <a href='https://etherscan.io' className='text-blue-500'> Etherscan, </a>
             proves your completion of these tasks.
             And it gives you an awesome historical record of your Web3 abilities and accomplishments!
