@@ -30,14 +30,15 @@ export default function Tutorial() {
         </div>
         <div className='p-2 sm:p-6 sm:mr-8 sm:ml-8'>
           <p className='justify-center indent-8 mb-2'>
-            Welcome to your first Web3 tutorial! If you have never generated a cryptocurrency address or submitted a transaction on-chain but want to try it out, start here. 
-            If you're just looking for my writeup with generalized information on Web3 and Crypto, head to the 
+            Welcome to your first Web3 tutorial! 
+            If you have never generated a cryptocurrency address or submitted a transaction on-chain, start here. 
+            If you're just looking for my writeup with general information on Web3 and Crypto, head to the 
             <a href='/about' className='text-blue-500'>{' '}Web3</a> section.
           </p>
           <p className='justify-center indent-8'>
-            This tutorial assumes you're unfamiliar with the cryptography, math, and computer science concepts happening behind the scenes in Web3, so don't be discouraged if you get confused at any point. 
+            This tutorial assumes you're unfamiliar with the cryptography, math, and computer science concepts happening behind the scenes in crypto, so don't be discouraged if at any point you get confused. 
             Don't hesitate to contact me with any questions or issues while you work through this tutorial- it shouldn't take more than an hour or so.
-            If you want recommendations for further Web3/DeFi exploration, shoot me a DM on GitHub/Twitter or Instagram (see icons at the bottom of the page) and I will happily assist.
+            If you want recommendations for further Web3/DeFi exploration, shoot me a DM on GitHub/Twitter/Instagram (linked at the bottom of the page) and I will happily assist.
           </p>
           <div className={styles.description}> 
             <h1 className='flex justify-center text-4xl'>
@@ -46,31 +47,37 @@ export default function Tutorial() {
           </div>
           <p className='indent-8'>
             While you're at it, wtf is a blockchain anyway? Private key? Public address? 
-            Are ENS (.eth) domains comparable to the more familiar DNS (.com or .org) domains? 
             What about NFTs!? 
-            Is the wild west of DeFi only for shadowy super coders like robriks/👦🏻👦🏻.eth/@marsterlund? Elizabeth Warren seems to think so!
-          </p>
-          <div className='flex justify-center'>
-          <div className='max-w-xl mt-8 mb-8'>
-            <Image src={warren}></Image>
-          </div>
-          </div>
-          <p className='indent-8'>
-            What are crypto loans? How does Cryptography work? 
+            What are self-repaying crypto loans? How does Cryptography work? 
             Can I mine cryptocurrency with my computer to make money? 
             How do I stake crypto for passive income? 
+            Are ENS (.eth) domains comparable to the more familiar DNS (.com or .org) domains? 
             Facebook = Meta... verse...? Right? 
-            Also, I heard on Reddit that 
+            By the way, I also heard on Reddit that 
               <a href='https://dogecoin.com/' className='font-bold text-blue-500'>{' '}_insertRandomDogCoinTokenHere_</a> 
             {' '}is the next Bitcoin?! 
-            And most importantly, 
           </p>
-            <p className='flex justify-center text-lg font-bold mt-4'>
-              iS KrIpT0 PoNZi ScHeME, sEr???
-            </p>
-            <p className='flex justify-center text-xs mb-2'>(no, lmeow...)</p>
+          <div className='flex justify-center'>
+            <div className='max-w-xl mt-8 mb-8'>
+              <Image src={warren}></Image>
+            </div>
+          </div>
+          <p className='indent-8'>
+            Isn't the wild west of DeFi only for people that Elizabeth Warren calls "shadowy super coders"?
+            And most importantly: 
+          </p>
+          <p className='flex justify-center text-lg font-bold mt-4'>
+            iS KrIpT0 PoNZi ScHeME, sEr???
+          </p>
+          <p className='flex justify-center text-xs mb-2'>(no, lmeow...)</p>
           <p className='justify-center indent-8 mb-2'>
-            All of these complicated questions need to be answered and explained to the public in a concise, educational format. This is my attempt to educate people on the equitable, censorship resistant, self-custodial world of digital assets known as Web3. I'll try to keep it as non-technical, digestible, and easy to follow as possible for you.
+            In this tutorial, I (robriks/👦🏻👦🏻.eth/@marsterlund) will show you that crypto is not shadowy at all!
+            Not to mention that we crypto/computer nerds are not "shadowy super coders"!
+          </p>
+          <p className='justify-center indent-8 mb-2'>
+            All these questions need to be answered and explained to the public in a concise, educational format. 
+            This is my attempt to educate people on the equitable, self-custodial world of digital assets known as Web3. 
+            I'll try to keep it as non-technical and digestible as possible for you.
           </p>
           <p className='justify-center indent-8'>
             Again, if you're just looking to read about these concepts head over to the 
@@ -82,10 +89,10 @@ export default function Tutorial() {
           </div>
           <ol className='list-disc justify-center ml-12'>
             <li>Set up a crypto wallet via MetaMask</li>
-            <li>Make your first on-chain transaction by claiming 69420 free tokens (HuskyCoins $HUSKY) that I have coded and deployed for your convenience</li>
+            <li>Make your first on-chain transaction by claiming 69420 free tokens (HuskyCoins / $HUSKY) that I have coded and deployed on Polygon</li>
             <li>
               How to earn passive income by contributing to network security and decentralization via staking. 
-              I've implemented staking functionality for $HUSKY so you can watch your balance grow in real time! 
+              (I've implemented staking functionality for $HUSKY so you can watch your balance grow in real time!) 
             </li>
             <li>There is no next Bitcorn. Sry. :(</li>
           </ol>
@@ -106,25 +113,26 @@ export default function Tutorial() {
             <Image src={MMwallet} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8 mb-4'>
-            This tutorial focuses on the industry standards that are ubiquitous and have rich documentation. 
-            MetaMask is the most widespread crypto wallet, although other awesome wallets like Coinbase Wallet/Brave Wallet/Rainbow Wallet are available too.
-            All of these wallets connect to the blockchain for you and safely handle your private keys, but here I'll focus on MetaMask.
+            MetaMask is the most ubiquitous crypto wallet around, although other great wallets like Coinbase Wallet/Brave Wallet/Rainbow Wallet are available too.
+            Each of these wallets connect to the blockchain for you and safely handle your private keys, but here I'll focus on MetaMask since it has the richest documentation.
           </p>
           <p className='justify-center indent-8 text-xs mb-4 mr-8 ml-8'>
             Note: I have been asked many times if a Coinbase, Robinhood, Venmo, CashApp, or Paypal account will adequately serve as a crypto wallet. 
-            As of writing, these companies/services do NOT offer a native web3 wallet that allow you to interact with the Ethereum or Bitcoin networks. 
+            As of writing, these companies/services do NOT offer a native web3 wallet. 
             (Coinbase Wallet is a separate app/browser extension than the Coinbase app you use to buy crypto). 
             These services simply allow you to buy and sell the assets for price speculation. Boring!
           </p>
           <p className='justify-center indent-8 mb-2'>
             With that out of the way, let's get started. 
-            On the HuskyCoin dApp home page, click the box titled: "1. Setting up MetaMask" and follow the instructions on downloading and installing the MetaMask browser extension.
+            On the HuskyCoin home page, click the box titled: <a className='font-semibold'>"1. Setting up MetaMask"</a> and follow the external MetaMask instructions on downloading and installing the MetaMask browser extension.
             Keep in mind that Safari is not supported;{' '} 
               <a href='https://brave.com' className='text-blue-500'>Brave</a> 
             {' '}is the most Web3-friendly (and my favorite!) browser.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Once you've successfully installed MetaMask for your browser, click "Create a Wallet" under the "New to MetaMask" page. 
+            Once you've successfully installed MetaMask for your browser, open the extension at the top right of the browser and click 
+              <a className='font-semibold'> "Create a Wallet"</a> under the 
+              <a className='font-semibold'> "New to MetaMask"</a> page. 
             Select whichever data sharing option you wish and set a secure passphrase.
             Unless you are using a hardware wallet, this passphrase will grant access to your funds on this device so be sure to take security seriously.
           </p>
@@ -132,18 +140,17 @@ export default function Tutorial() {
             <Image src={MMsetup} layout='intrinsic'></Image>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Be sure to watch the short video on your secret recovery phrase.
+            Take a couple minutes to watch the short video about your secret recovery phrase.
             This phrase is derived to obtain your private key, which controls all of the tokens associated with your Ethereum address.
             Write it down out of view of any cameras and store it safely!
             If you plan to store any valuable sum of tokens, you should absolutely obtain a hardware wallet.
-            In fact, this is so important to understand, that I've reiterated it for you just below this paragraph.
           </p>
           <p className='justify-center text-xs indent-4 mb-2 mr-8 ml-8'>
             <a className='font-bold'>URGENT:{' '}</a> 
             Never share your seed phrase (12-24 words) or your private key in any way to anybody. Ever.
             Do not enter, copy-paste, or visibly/physically reveal your seed phrase anywhere, unless you are recovering a wallet.
             Do not respond to the "customer support" scammers that litter social media. 
-            Your seed/private key controls your money, so store it in a safe place on paper (or metal!)
+            Your seed/private key controls your money, so store physically it in a safe place on paper (or metal!)
             Advanced crypto users should always use a hardware wallet like a 
             <a href='https://ledger.com' className='text-blue-500'>{' '}Ledger.</a>
           </p>
@@ -154,7 +161,7 @@ export default function Tutorial() {
           </div>
           <p className='justify-center indent-8 mb-2'>
             Congratulations on generating your first Ethereum address!
-            You can see it at the top of MetaMask, under "Account 1".
+            You can see it at the top of MetaMask, under <a className='font-semibold'>"Account 1"</a>. 
             Your address is a long string of hexadecimal digits starting with 0x, which indicates hexadecimal. 
             For example, my address is: 
           </p>
@@ -167,9 +174,10 @@ export default function Tutorial() {
           </div>
           <p className='indent-8 mb-2'>
             {' '}This long address can be represented by a .eth domain, such as 👦🏻👦🏻.eth - this is called an ENS domain.
+            Just like how DNS domains such as google.com and meatspin.com represent IP addresses, ENS domains help make Web3 addresses more human-readable.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            The address displayed on your MetaMask is your public-facing account where you can store any tokens, fungible or not, on the network. 
+            The address displayed on your MetaMask is your public-facing account where you can store any tokens on the network, fungible or not. 
             This includes cryptocurrencies like $ETH, which is the base layer token of the Ethereum blockchain and is responsible for securing the network.
             It can also store any fungible ERC20 tokens such as $UNI, $SHIB, or $LINK as well as any NFTs that you purchase from an NFT marketplace like 
             <a href='https://opensea.io' className='text-blue-500'>{' '}OpenSea.</a>
@@ -184,16 +192,18 @@ export default function Tutorial() {
             It's used to pay for all EVM computation, what we call transactions, in the form of gas. 
           </p>
           <p className='justify-center indent-8 mb-2'>
-            We'll cover gas a bit more later, but basically you must pay $ETH for every transaction you make since it results in a change in the global Ethereum Virtual Machine state.
+            We'll cover gas a bit more later, but basically you must pay $ETH for every transaction you make since it changes account balances in the global EVM state.
             Not only does every transaction change the state of the EVM, but more computationally intensive transactions require more gas to execute and are therefore more expensive.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            This kind of fee mechanic may be frustrating and confusing at times, but some form of it exists on all blockchains in order to prevent spammers from clogging the network.
+            This fee mechanic may be frustrating and confusing at first, but some form of it must exist on any blockchain in order to deter spammers.
             Think of it this way: if transactions were totally free to change computational state, a disgruntled person would write bots to send an infinite number of spam transactions and crowd out legitimate users submitting their transactions.
           </p>
           <p className='justify-center indent-8 mb-2'>
-            Even though it is annoying and sometimes very expensive on Ethereum's mainnet to pay gas fees for every little transaction, the alternative is a broken blockchain completely clogged by spam.
-            How many spam emails do you think are sent every day? 
+            As a result, it can be very expensive to pay gas fees on Ethereum's mainnet during times of high network traffic.
+            Even still, it's better than the alternative: a broken blockchain completely clogged by spam.
+            Think of how many spam emails you get every day!
+            What percentage of all email traffic do you think is spam? 
             <a href='https://securelist.com/spam-and-phishing-in-2021/105713/' className='text-blue-500'>{' '}It's roughly 50% of all emails. Yikes.</a>
           </p>
           <div className={styles.description}>
@@ -202,13 +212,13 @@ export default function Tutorial() {
           <p className='justify-center indent-8 mb-2'>
             Not so fast!
             I just got through explaining how annoyingly expensive gas fees are on Ethereum's mainnet!
-            You think I'm gonna make you transact on Ethereum mainnet?!
+            You think I'm gonna make you transact on mainnet?!
             No way! 
           </p>
           <p className='justify-center indent-8 mb-2'>
             Thankfully Ethereum's big-brained core protocol developers have come up with a wild idea to solve these high gas fees:
             why not have even more blockchains settle bundled transaction hashes onto Ethereum blocks?
-            I get that you're probably drooling for HuskyCoins right now, but you won't know how to claim them until I teach you how to access these aforementioned nested blockchains that live on Ethereum.
+            I get that you're probably drooling for HuskyCoins right now, but you won't know how to claim them until I teach you how to access these nested blockchains that live on Ethereum.
             You'll get your $HUSKY soon enough, I promise.
           </p>
           <div className={styles.description}>
@@ -217,10 +227,9 @@ export default function Tutorial() {
             </h1>
           </div>
           <p className='justify-center indent-8 mb-2'>
-            Separate blockchains that execute computation off of the Ethereum mainnet (also referred to as layer 1) and then settle their hashed proofs to Ethereum's layer 1 are called layer 2 blockchains.
-            These layer 2 chains, also known as rollups, generally make use of either optimistic execution which is checked by fraud proofs or zero-knowledge proofs which is an actively researched field in mathematics.
-            The technical details between either L2 rollup type are not important for me to go over here but rest assured they are cutting-edge and extremely interesting.
-            Definitely worth further reading if you're interested.
+            Separate blockchains that execute computation off of the Ethereum mainnet and then settle their hashed proofs to mainnet are called layer 2 (aka L2) blockchains.
+            These layer 2 chains, called rollups, generally make use of either optimistic execution which is checked by fraud proofs or zero-knowledge proofs which is an actively researched field in mathematics.
+            The technical details between either L2 rollup type are not important for me to go over here, but definitely worth further reading if you're interested.
           </p>
           <div className='flex justify-center'>
             <div className='max-w-4xl'>
