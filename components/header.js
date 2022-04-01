@@ -26,22 +26,22 @@ export default function Header() {
           </nav>
         </header>
         <div className='flex justify-center w-auto'>
-          <div className=' bg-gray-100 p-4 sm:p-6 shadow-2xl rounded-full'>
+          <div className='bg-gradient-to-r from-sky-100 to-sky-300 p-4 sm:p-6 shadow-2xl rounded-full'>
             <div className='flex justify-items-stretch sm:text-2xl space-x-6 sm:space-x-10 w-auto'>
               <Link href="/">
-                <a className="nav-link text-blue-500">Home</a>
+                <a className="nav-link text-blue-700">Home</a>
               </Link>
               <Link href='/faucet'>
-                <a className='nav-link text-blue-500'>Faucet</a>
+                <a className='nav-link text-blue-700'>Faucet</a>
               </Link>
               <Link href='/stake'>
-                <a className='nav-link text-blue-500'>Staking</a>
+                <a className='nav-link text-blue-700'>Staking</a>
               </Link>
               <Link href='/about'>
-                <a className='nav-link text-blue-500'>Web3</a>
+                <a className='nav-link text-blue-700'>Web3</a>
               </Link>
               <Link href='/tutorial'>
-                <a className='nav-link text-blue-500'>Tutorial</a>
+                <a className='nav-link text-blue-700'>Tutorial</a>
               </Link>
             </div>
           </div>
