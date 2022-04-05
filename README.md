@@ -13,7 +13,7 @@ If you find this tutorial helpful, feel free to send tips to either:
 #### HuskyCoin Contract Addresses:
 Depending on what network you'd like to connect to, update the config.js file in the root directory to contain the corresponding deployment address
 
-Polygon: TODO
+Polygon: 0x8cfb42a80291737cb62cef7b665fe1304d112fee
 Rinkeby: 0x8cfb42a80291737cb62cef7b665fe1304d112fee
 HardHat Localhost: 0x5FbDB2315678afecb367f032d93F642f64180aa3 
 
